@@ -1,0 +1,1197 @@
+<ICECAT-interface xsi:noNamespaceSchemaLocation="http://data.icecat.biz/xsd/ICECAT-interface_response.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Product HighPic="http://images.icecat.biz/img/norm/high/26976109-Sony.jpg" Prod_id="DSC-WX500W.CE3" ThumbPicSize="1896" HighPicSize="129757" LowPicSize="7818" Title="Sony DSC-WX500" HighPicWidth="1000" ThumbPic="http://images.icecat.biz/thumbs/26976109.jpg" ReleaseDate="2015-04-15" Code="1" Pic500x500Height="500" Name="DSC-WX500" Pic500x500="http://images.icecat.biz/img/norm/medium/26976109-Sony.jpg" LowPicHeight="200" LowPicWidth="200" LowPic="http://images.icecat.biz/img/norm/low/26976109-Sony.jpg" Quality="ICECAT" Pic500x500Size="37058" HighPicHeight="1000" ID="26976109" Pic500x500Width="500">
+    <Category ID="575">
+      <Name Value="ψηφιακές κάμερες" ID="1241808" langid="18"/>
+      <VirtualCategories>
+        <VirtualCategory UNCATID="45121599" ID="141">
+          <Name Value="compact cameras" ID="1025774" langid="1"/>
+        </VirtualCategory>
+      </VirtualCategories>
+    </Category>
+    <CategoryFeatureGroup No="-100" ID="11095">
+      <FeatureGroup ID="0">
+        <Name Value="Τεχνικές λεπτομέρειες" ID="269530" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="24" ID="42">
+      <FeatureGroup ID="3">
+        <Name Value="Μνήμη" ID="269505" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="21" ID="41">
+      <FeatureGroup ID="5">
+        <Name Value="Οθόνη" ID="269507" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="-8" ID="26">
+      <FeatureGroup ID="8">
+        <Name Value="Απαιτήσεις Συστήματος" ID="269510" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="62" ID="2760">
+      <FeatureGroup ID="9">
+        <Name Value="Ηχος/ audio" ID="269511" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="19" ID="56">
+      <FeatureGroup ID="12">
+        <Name Value="Συνδεσιμότητα" ID="269513" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="95" ID="39">
+      <FeatureGroup ID="13">
+        <Name Value="Σύστημα Φακών" ID="269514" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="-10" ID="40">
+      <FeatureGroup ID="14">
+        <Name Value="Βάρος και διαστάσεις" ID="269515" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="85" ID="55">
+      <FeatureGroup ID="21">
+        <Name Value="Έκθεση φωτός" ID="269522" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="100" ID="57">
+      <FeatureGroup ID="22">
+        <Name Value="Ποιότητα εικόνας" ID="269523" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="-6" ID="1196">
+      <FeatureGroup ID="28">
+        <Name Value="Περιβαλλοντικές συνθήκες" ID="269528" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="18" ID="3472">
+      <FeatureGroup ID="35">
+        <Name Value="Δικτύωση" ID="269535" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="65" ID="2757">
+      <FeatureGroup ID="45">
+        <Name Value="Βίντεο/ Video" ID="269545" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="-15" ID="3909">
+      <FeatureGroup ID="76">
+        <Name Value="Πιστοποιητικά" ID="269573" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="90" ID="2759">
+      <FeatureGroup ID="85">
+        <Name Value="Εστίαση" ID="269580" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="75" ID="2761">
+      <FeatureGroup ID="86">
+        <Name Value="Φλας/ Flash" ID="269581" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="20" ID="3020">
+      <FeatureGroup ID="94">
+        <Name Value="Σκόπευτρο" ID="269589" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="17" ID="3149">
+      <FeatureGroup ID="95">
+        <Name Value="Φωτογραφική μηχανή" ID="269590" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="-20" ID="3910">
+      <FeatureGroup ID="116">
+        <Name Value="Περιεχόμενο πακέτου" ID="269610" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="15" ID="6148">
+      <FeatureGroup ID="143">
+        <Name Value="Battery" ID="618829" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="80" ID="6134">
+      <FeatureGroup ID="145">
+        <Name Value="Shutter" ID="620376" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="-100" ID="6705">
+      <FeatureGroup ID="146">
+        <Name Value="Other features" ID="624346" langid="1"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="0" ID="11094">
+      <FeatureGroup ID="148">
+        <Name Value="Design" ID="630474" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <EANCode EAN="4548736014183"/>
+    <ReasonsToBuy/>
+    <ProductBundled/>
+    <ProductDescription LongDesc="Φακός ζουμ 30x με ενσωματωμένη ποιότητα ZEISS®: Το αποτέλεσμα της εξειδίκευσης της ZEISS® που υπερβαίνει τα 150 χρόνια στην κατασκευή οπτικών υψηλής ακρίβειας είναι ξεκάθαρο: αυτός ο φακός 24-720mm αποδίδει τα πορτραίτα, τα κοντινά πλάνα και τα τοπία με μοναδικό ρεαλισμό από κάθε οπτική γωνία, με απόλυτη ευκρίνεια και υψηλή αντίθεση. Η αντιανακλαστική επίστρωση πολλαπλών στρώσεων ZEISS® T* εξαλείφει αποτελεσματικά την εμφάνιση ειδώλων και τις αντανακλάσεις από τη επιφάνεια..&lt;br/>\nΑισθητήρας Exmor R® CMOS για πρόσθετη ευαισθησία: Όσο περισσότερο φως εισέρχεται στον αισθητήρα, τόσο πιο φωτεινή είναι η εικόνα που προκύπτει. Για το λόγο αυτό, ο αισθητήρας Exmor R® CMOS με 18,2 ενεργά megapixel χρησιμοποιεί σχεδίαση με οπίσθιο φωτισμό ώστε να επιτρέπει τέσσερις φορές περισσότερο φως από έναν πιο συμβατικό αισθητήρα, έχει διπλάσια ευαισθησία στο φως και διαθέτει τεχνολογία κατακόρυφου μετατροπέα A/D της Sony για μείωση του θορύβου της εικόνας..&lt;br/>\nBIONZ X™ για μεγαλύτερη ακρίβεια και λιγότερο θόρυβο: Για τη μετατροπή των δεδομένων από τον αισθητήρα Exmor R® CMOS σε εικόνες υψηλής ανάλυσης, οι επεξεργαστής εικόνας BIONZ X ενσωματώνει τεχνολογίες αναπαραγωγής λεπτομερειών, μείωσης της περίθλασης και μείωσης του θορύβου ανάλογα με την περιοχή. Αυτός ο συνδυασμός επιτρέπει την αναπαραγωγή ρεαλιστικών εικόνων με πιο φυσικά χρώματα και υφών με εντυπωσιακή ακρίβεια σε πραγματικό χρόνο..&lt;br/>\nΑνακλινόμενη οθόνη LCD 180° για εύκολο καδράρισμα: Η οθόνη LCD υψηλής ανάλυσης στο πίσω μέρος της μηχανής έχει δυνατότητα κλίσης έως και 180°. Έτσι, όταν βρίσκεστε μπροστά από τη μηχανή, μπορείτε εύκολα να κοιτάξετε στην οθόνη LCD για να ελέγξετε το κάδρο πριν τραβήξετε π.χ. μια selfie. Αυτή η ευελιξία σάς επιτρέπει επίσης να διατηρήσετε εύκολα τη στάση που θέλετε ενώ παρακολουθείτε μια σκηνή που θέλετε να τραβήξετε από χαμηλή θέση..&lt;br/>\nΕφέ διόρθωσης για βελτίωση της εμφάνισης των θεμάτων: Διορθώστε γρήγορα και έξυπνα την εμφάνιση των ατόμων στις φωτογραφίες. Χάρη στις πέντε λειτουργίες του Εφέ διόρθωσης, μπορείτε να εξομαλύνετε το δέρμα ή τους τόνους της επιδερμίδας, να μειώσετε την υπερβολική γυαλάδα του δέρματος, να μεγαλώσετε τα μάτια και να λευκάνετε τα δόντια — όλα από τη μηχανή, χωρίς να χρειάζεστε υπολογιστή. Τα θέματά σας θα λατρέψουν τη σχεδόν μαγική βελτίωση της εμφάνισής τους στα πορτραίτα σας..&lt;br/>\nΑπλοποιημένη κοινή χρήση με γρήγορη σύνδεση Wi-Fi®/NFC: Μπορείτε να χρησιμοποιήσετε την ενσωματωμένη λειτουργία NFC (Επικοινωνία κοντινού πεδίου) για να δημιουργήσετε γρήγορα μια σύνδεση μέσω Wi-Fi® με κινητές συσκευές Android. Στη συνέχεια μπορείτε να μοιραστείτε τις αγαπημένες σας φωτογραφίες και ταινίες μέσα σε λίγα λεπτά, στέλνοντάς τις απευθείας από τη μηχανή σε smartphone και tablet  ή σε φίλους και μέλη της οικογένειας. Κατεβάστε την εφαρμογή PlayMemories Mobile στην κινητή συσκευή σας για να ελέγξετε τη μηχανή από απόσταση..&lt;br/>\nΛειτουργίες έκθεσης P/A/S/M και Photo Creativity: Εκφράστε το δημιουργικό σας όραμα με τις στατικές εικόνες που καταγράφετε με τις λειτουργίες έκθεσης Προγράμματα AE (P)/Προτεραιότητα διαφράγματος (A)/Προτεραιότητα ταχύτητες κλείστρου (S)/Χειροκίνητη (M). Χρησιμοποιήστε αυτές τις λειτουργίες για χειροκίνητο έλεγχο της έκθεσης, ώστε να ρυθμίσετε π.χ. το θόλωμα του φόντου. Χάρη στη λειτουργία Photo Creativity, μπορείτε επίσης να επιλέξετε εύκολα ρυθμίσεις για να αλλάξετε τη φωτεινότητα, το χρώμα, τη ζωντάνια των χρωμάτων και άλλα χαρακτηριστικά της εικόνας..&lt;br/>\nΠιο ευέλικτα φορμά ταινιών: Το νέο φορμά XAVC S  καταγράφει ταινίες με εξαιρετική λεπτομέρεια και ομαλότητα στις σκηνές δράσης, καθώς και με ήχο υψηλής ποιότητας με μεγαλύτερη πιστότητα στις αρχικές πηγές. Αν τραβάτε ταινίες σε XAVC S ή στο φορμά AVCHD υψηλής ευκρίνειας, μπορείτε επίσης να καταγράψετε ταυτόχρονα μια άλλη έκδοση της ίδια σκηνής σε συμπιεσμένη μορφή MP4 για εύκολη κοινή χρήση στο διαδίκτυο..&lt;br/>\nΙσχυρές δυνατότητες για συνεχή λήψη: Δεν χρειάζεται να ανησυχείτε για την εκφόρτιση της μπαταρίας της μηχανής όταν βρίσκεστε στο δρόμο. Η πλήρως φορτισμένη μπαταρία ιόντων λιθίου της WX500 προσφέρει αρκετή ισχύ για τη λήψη περίπου 400  στατικών εικόνων ή την εγγραφή ταινίας με διάρκεια περίπου 75  λεπτά, για να μην χάνετε ποτέ μια σπουδαία φωτογραφική ευκαιρία..&lt;br/>\nΕπιλογές χρώματος  που ταιριάζουν στο στυλ σας: Η WX500 είναι διαθέσιμη σε μαύρο, λευκό ή κόκκινο χρώμα. Επίσης, το σετ που περιλαμβάνει μαλακή θήκη μηχανής Sony/κάλυμμα φακού/λουράκι ώμου είναι ένα πρακτικό και κομψό προαιρετικό κιτ αξεσουάρ σε τρία χρώματα που μπορείτε να επιλέξετε, ώστε να ταιριάζουν με τη διάθεση ή τη μηχανή σας..&lt;br/>\nΈξυπνη ενεργή λειτουργία για αποφυγή της θόλωσης: Τραβήξτε ταινίες χωρίς τρίποδο με σιγουριά. Η έξυπνη ενεργή λειτουργία, η οποία χρησιμοποιεί την προηγμένη τεχνολογία ανάλυσης καρέ της Sony και τη σταθεροποίηση εικόνας σε 5 άξονες, αντισταθμίζει την αστάθεια της μηχανής. Η λειτουργία αυτή μειώνει τη θόλωση που προκύπτει στις εικόνες κατά τη λήψη χωρίς τρίποδο ή ενώ παρακολουθείτε ένα κινούμενο θέμα..&lt;br/>\nΠροσαρμοζόμενες ρυθμίσεις για εξειδικευμένο έλεγχο: Αντιστοιχίστε τις λειτουργίες που χρησιμοποιείτε συχνά (Λειτουργία εστίασης, Ισορροπία λευκού,Εφέ εικόνας κ.λπ.) σε προσαρμοζόμενα κουμπιά και πλήκτρα για ευκολότερη, πιο γρήγορη πρόσβαση σε αυτές τις λειτουργίες κατά τη λήψη. Για παράδειγμα, μπορείτε να αντιστοιχίσετε 12 λειτουργίες στο κουμπί λειτουργιών και κατόπιν να το πατήσετε, να επιλέξετε μια λειτουργία και να ρυθμίσετε τις παραμέτρους της μέσω του δακτυλίου ελέγχου ή του πίσω περιστροφικού χειριστηρίου..&lt;br/>\nΓρήγορη, έξυπνη αυτόματη εστίαση υψηλής ακρίβειας: Ο βελτιωμένος αλγόριθμος χωρικής ανίχνευσης αντικειμένων βελτιστοποιεί την ακρίβεια της οδήγησης του φακού, για ακόμα ταχύτερη αυτόματη εστίαση και αποτύπωση περισσότερων φευγαλέων στιγμών με ευκολία..&lt;br/>\nΕφαρμογές PlayMemories Camera Apps  για προσαρμοσμένη λειτουργικότητα: Ενισχύστε τη δημιουργική σας έκφραση με τις εφαρμογές PlayMemories Camera Apps. Περιλαμβάνουν μια μεγάλη σειρά διασκεδαστικών εφαρμογών που μπορείτε να κατεβάσετε εύκολα. Οι εφαρμογές αυτές δεν προσφέρουν μόνο εξαιρετική λειτουργικότητα, αλλά είναι το απόλυτο μέσο για να εξατομικεύσετε τη μηχανή σας για να εκπληρώσετε τους φωτογραφικούς στόχους σας..&lt;br/>\n" ManualPDFURL="" ShortDesc="" ManualPDFSize="0" WarrantyInfo="" ID="45441052" langid="18" MiddleDesc="" PDFSize="0" PDFURL="" URL=""/>
+    <Disclaimers>
+      <Disclaimer langid="18" value=""/>
+    </Disclaimers>
+    <ProductFeature No="10108702" Presentation_Value="18,2 MP" CategoryFeatureGroup_ID="57" Value="18.2" CategoryFeature_ID="96" Local_ID="0" Translated="0" ID="176212558" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="18.2">
+        <Measure ID="165">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="63">
+        <Measure Sign="" ID="165">
+          <Signs>
+            <Sign ID="3126" langid="1">
+<![CDATA[MP]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Megapixel" ID="266707" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="10100110" Presentation_Value="Compact camera" CategoryFeatureGroup_ID="57" Value="Compact camera" CategoryFeature_ID="48094" Local_ID="0" Translated="0" ID="176212559" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="Compact camera">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="8053">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Κάμερα τύπου" ID="621795" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="10100100" Presentation_Value="25,4/58,4 mm (1/2.3&quot;)" CategoryFeatureGroup_ID="57" Value="1/2.3" CategoryFeature_ID="94896" Local_ID="0" Translated="0" ID="176212560" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="25.4/58.4">
+        <Measure ID="24">
+          <Signs>
+            <Sign ID="2603" langid="18">
+<![CDATA[mm]]>            </Sign>
+          </Signs>
+        </Measure>
+      </LocalValue>
+      <Feature ID="16482">
+        <Measure Sign="" ID="16">
+          <Signs>
+            <Sign ID="3162" langid="18">
+<![CDATA["]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Μέγεθος αισθητήρα εικόνας" ID="1280650" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="10100095" Presentation_Value="CMOS" CategoryFeatureGroup_ID="57" Value="CMOS" CategoryFeature_ID="8549" Local_ID="0" Translated="0" ID="176212561" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="CMOS">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1574">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Τύπος αισθητήρα" ID="267864" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="10100090" Presentation_Value="4896 x 3264 pixels" CategoryFeatureGroup_ID="57" Value="4896 x 3264" CategoryFeature_ID="47995" Local_ID="0" Translated="0" ID="176212562" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="4896 x 3264">
+        <Measure ID="39">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7570">
+        <Measure Sign="" ID="39">
+          <Signs>
+            <Sign ID="23" langid="1">
+<![CDATA[pixels]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Μέγιστη ανάλυση εικόνας" ID="1268519" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100089" Presentation_Value="4896x3264, 3648x2432, 2592x1728, 4896x3672, 3648x2736, 2592x1944, 4896x2752, 3648x2056, 1920x1080, 3664x3664, 2736x2736, 1920x1920, 7152x1080, 4912x1920, 4912x1080, 3424x1920, 11520x1080" CategoryFeatureGroup_ID="57" Value="4896x3264, 3648x2432, 2592x1728, 4896x3672, 3648x2736, 2592x1944, 4896x2752, 3648x2056, 1920x1080, 3664x3664, 2736x2736, 1920x1920, 7152x1080, 4912x1920, 4912x1080, 3424x1920, 11520x1080" CategoryFeature_ID="47974" Local_ID="0" Translated="0" ID="176212563" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="4896x3264, 3648x2432, 2592x1728, 4896x3672, 3648x2736, 2592x1944, 4896x2752, 3648x2056, 1920x1080, 3664x3664, 2736x2736, 1920x1920, 7152x1080, 4912x1920, 4912x1080, 3424x1920, 11520x1080">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1598">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Ανάλυση λήψης ακίνητης εικόνας" ID="267888" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100070" Presentation_Value="Y" CategoryFeatureGroup_ID="57" Value="Y" CategoryFeature_ID="18505" Local_ID="0" Translated="0" ID="176212564" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1578">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Σταθεροποιητής εικόνας" ID="267868" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100065" Presentation_Value="1:1, 3:2, 4:3, 16:9" CategoryFeatureGroup_ID="57" Value="1:1, 3:2, 4:3, 16:9" CategoryFeature_ID="86736" Local_ID="0" Translated="0" ID="176212565" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="1:1, 3:2, 4:3, 16:9">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="11418">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Υποστηριζόμενες αναλογίες εικόνας" ID="1274571" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="99999" Presentation_Value="JPG" CategoryFeatureGroup_ID="57" Value="JPG" CategoryFeature_ID="25901" Local_ID="0" Translated="0" ID="176212566" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="JPG">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="2417">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Τύποι φωτογραφικών μορφών" ID="268520" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="10218700" Presentation_Value="30x" CategoryFeatureGroup_ID="39" Value="30" CategoryFeature_ID="95" Local_ID="0" Translated="0" ID="176212567" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="30">
+        <Measure ID="33">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="74">
+        <Measure Sign="" ID="33">
+          <Signs>
+            <Sign ID="17" langid="1">
+<![CDATA[x]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Οπτική εστίαση (zoom)" ID="266717" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="10108704" Presentation_Value="120x" CategoryFeatureGroup_ID="39" Value="120" CategoryFeature_ID="94" Local_ID="0" Translated="0" ID="176212568" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="120">
+        <Measure ID="33">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="48">
+        <Measure Sign="" ID="33">
+          <Signs>
+            <Sign ID="17" langid="1">
+<![CDATA[x]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Ψηφιακή εστίαση (Ψηφιακό zoom)" ID="266696" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100100" Presentation_Value="4.1 - 123 mm" CategoryFeatureGroup_ID="39" Value="4.1 - 123" CategoryFeature_ID="5294" Local_ID="0" Translated="0" ID="176212569" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="4.1 - 123">
+        <Measure ID="24">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1522">
+        <Measure Sign="" ID="24">
+          <Signs>
+            <Sign ID="3" langid="1">
+<![CDATA[mm]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Εστιακή απόσταση" ID="267820" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100095" Presentation_Value="3.5" CategoryFeatureGroup_ID="39" Value="3.5" CategoryFeature_ID="54286" Local_ID="0" Translated="0" ID="176212572" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="3.5">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="5546">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Ελάχιστη οπή" ID="269351" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100094" Presentation_Value="6.4" CategoryFeatureGroup_ID="39" Value="6.4" CategoryFeature_ID="54287" Local_ID="0" Translated="0" ID="176212573" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="6.4">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="5548">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Μέγιστη οπή" ID="269353" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100098" Presentation_Value="Συνεχής αυτόματη εστίαση, Contrast Detection Auto Focus" CategoryFeatureGroup_ID="2759" Value="Continuous Auto Focus, Contrast Detection Auto Focus" CategoryFeature_ID="42661" Local_ID="0" Translated="1" ID="176212574" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Συνεχής αυτόματη εστίαση, Contrast Detection Auto Focus">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7365">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Auto focusing (AF) modes" ID="513667" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100100" Presentation_Value="80, 12800" CategoryFeatureGroup_ID="55" Value="80, 12800" CategoryFeature_ID="10063" Local_ID="0" Translated="0" ID="176212575" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="80, 12800">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="2102">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Ευαισθησία ISO" ID="268266" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100049" Presentation_Value="Πρόγραμμα AE" CategoryFeatureGroup_ID="55" Value="Program AE" CategoryFeature_ID="2319" Local_ID="0" Translated="1" ID="176212577" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Πρόγραμμα AE">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="711">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Έλεγχος έκθεσης στο φως" ID="267110" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100048" Presentation_Value="± 3EV (1/3EV step)" CategoryFeatureGroup_ID="55" Value="± 3EV (1/3EV step)" CategoryFeature_ID="2318" Local_ID="0" Translated="0" ID="176212578" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="± 3EV (1/3EV step)">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="670">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Διόρθωση έκθεσης στο φως" ID="267067" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100040" Presentation_Value="Κέντρο βάρους, Αξιολογική ( Multi-pattern ), Spot" CategoryFeatureGroup_ID="55" Value="Centre-weighted, Evaluative (Multi-pattern), Spot" CategoryFeature_ID="47985" Local_ID="0" Translated="1" ID="176212579" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Κέντρο βάρους, Αξιολογική ( Multi-pattern ), Spot">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="8033">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Φωτομέτρηση" ID="620265" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="80" CategoryFeatureGroup_ID="55" Value="80" CategoryFeature_ID="54307" Local_ID="0" Translated="0" ID="176212580" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="80">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="9160">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="ISO sensitivity (min)" ID="763603" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="12800" CategoryFeatureGroup_ID="55" Value="12800" CategoryFeature_ID="54308" Local_ID="0" Translated="0" ID="176212581" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="12800">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="9161">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="ISO sensitivity (max)" ID="763644" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100099" Presentation_Value="1/2000s" CategoryFeatureGroup_ID="6134" Value="1/2000" CategoryFeature_ID="54305" Local_ID="0" Translated="0" ID="176212582" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="1/2000">
+        <Measure ID="60">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="9158">
+        <Measure Sign="" ID="60">
+          <Signs>
+            <Sign ID="43" langid="1">
+<![CDATA[s]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Camera shutter speed (min)" ID="763521" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100098" Presentation_Value="30s" CategoryFeatureGroup_ID="6134" Value="30" CategoryFeature_ID="54306" Local_ID="0" Translated="0" ID="176212583" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="30">
+        <Measure ID="60">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="9159">
+        <Measure Sign="" ID="60">
+          <Signs>
+            <Sign ID="43" langid="1">
+<![CDATA[s]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Camera shutter speed (max)" ID="763562" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100100" Presentation_Value="Αυτοκίνητο, Χωρίς φλας, Flash on, Αργός συγχρονισμός" CategoryFeatureGroup_ID="2761" Value="Auto, Flash off, Flash on, Slow synchronization" CategoryFeature_ID="42603" Local_ID="0" Translated="1" ID="176212584" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Αυτοκίνητο, Χωρίς φλας, Flash on, Αργός συγχρονισμός">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7357">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Λειτουργίες φλας" ID="510658" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="0,3 - 5,4m" CategoryFeatureGroup_ID="2761" Value="0.3 - 5.4" CategoryFeature_ID="20824" Local_ID="0" Translated="0" ID="176212585" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="0.3 - 5.4">
+        <Measure ID="54">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="3725">
+        <Measure Sign="" ID="54">
+          <Signs>
+            <Sign ID="37" langid="1">
+<![CDATA[m]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Εμβέλεια του φλας (πλάτος)" ID="1262197" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="2,5 - 3,0m" CategoryFeatureGroup_ID="2761" Value="2.5 - 3.0" CategoryFeature_ID="20825" Local_ID="0" Translated="0" ID="176212586" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="2.5 - 3.0">
+        <Measure ID="54">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="3726">
+        <Measure Sign="" ID="54">
+          <Signs>
+            <Sign ID="37" langid="1">
+<![CDATA[m]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Εμβέλεια του φλας (τηλε)" ID="1262198" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="10100100" Presentation_Value="1920 x 1080 pixels" CategoryFeatureGroup_ID="2757" Value="1920 x 1080" CategoryFeature_ID="47997" Local_ID="0" Translated="0" ID="176212587" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="1920 x 1080">
+        <Measure ID="39">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7514">
+        <Measure Sign="" ID="39">
+          <Signs>
+            <Sign ID="23" langid="1">
+<![CDATA[pixels]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Μέγιστη ανάλυση βίντεο" ID="566456" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100090" Presentation_Value="1920 x 1080 pixels" CategoryFeatureGroup_ID="2757" Value="1920 x 1080" CategoryFeature_ID="47998" Local_ID="0" Translated="0" ID="176212588" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="1920 x 1080">
+        <Measure ID="39">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="8036">
+        <Measure Sign="" ID="39">
+          <Signs>
+            <Sign ID="23" langid="1">
+<![CDATA[pixels]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Ψηφίσματα βίντεο" ID="620460" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="1920x1080@50fps, 1920x1080@60fps" CategoryFeatureGroup_ID="2757" Value="1920x1080@50fps, 1920x1080@60fps" CategoryFeature_ID="18027" Local_ID="0" Translated="0" ID="176212589" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="1920x1080@50fps, 1920x1080@60fps">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="2963">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Ανάλυση στην ταχύτητα λήψης" ID="1261012" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="NTSC, PAL" CategoryFeatureGroup_ID="2757" Value="NTSC, PAL" CategoryFeature_ID="45785" Local_ID="0" Translated="0" ID="176212590" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="NTSC, PAL">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1533">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Analog signal format system" ID="267829" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="2757" Value="Y" CategoryFeature_ID="45987" Local_ID="0" Translated="0" ID="176212591" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="2905">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Full HD" ID="117718" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="AVCHD, MP4" CategoryFeatureGroup_ID="2757" Value="AVCHD, MP4" CategoryFeature_ID="47999" Local_ID="0" Translated="0" ID="176212592" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="AVCHD, MP4">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="6893">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Φορμά συμπίεσης" ID="581786" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100100" Presentation_Value="Y" CategoryFeatureGroup_ID="2760" Value="Y" CategoryFeature_ID="5932" Local_ID="0" Translated="0" ID="176212593" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1025">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Ενσωματωμένο μικρόφωνο" ID="267405" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100095" Presentation_Value="Y" CategoryFeatureGroup_ID="2760" Value="Y" CategoryFeature_ID="18639" Local_ID="0" Translated="0" ID="176212594" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="2171">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Καταγραφή φωνής" ID="268324" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100095" Presentation_Value="MicroSD (TransFlash), MicroSDHC, MicroSDXC, MS Duo, MS Micro (M2), MS PRO Duo, MS Pro-HG Duo, SD, SDHC, SDXC" CategoryFeatureGroup_ID="42" Value="MicroSD (TransFlash), MicroSDHC, MicroSDXC, MS Duo, MS Micro (M2), MS PRO Duo, MS Pro-HG Duo, SD, SDHC, SDXC" CategoryFeature_ID="5397" Local_ID="0" Translated="0" ID="176212596" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="MicroSD (TransFlash), MicroSDHC, MicroSDXC, MS Duo, MS Micro (M2), MS PRO Duo, MS Pro-HG Duo, SD, SDHC, SDXC">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="730">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Συσκευή κάρτας μνήμης" ID="267129" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100090" Presentation_Value="1" CategoryFeatureGroup_ID="42" Value="1" CategoryFeature_ID="2309" Local_ID="0" Translated="0" ID="176212597" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="1">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="672">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Υποδοχές μνήμης" ID="267069" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100100" Presentation_Value="LCD" CategoryFeatureGroup_ID="41" Value="LCD" CategoryFeature_ID="2312" Local_ID="0" Translated="0" ID="176212598" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="LCD">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="83">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Τύπος οθόνης" ID="266723" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100095" Presentation_Value="7,62 cm (3.0&quot;)" CategoryFeatureGroup_ID="41" Value="3.0" CategoryFeature_ID="11606" Local_ID="0" Translated="0" ID="176212599" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="76.2">
+        <Measure ID="24">
+          <Signs>
+            <Sign ID="2603" langid="18">
+<![CDATA[mm]]>            </Sign>
+          </Signs>
+        </Measure>
+      </LocalValue>
+      <Feature ID="944">
+        <Measure Sign="" ID="16">
+          <Signs>
+            <Sign ID="3162" langid="18">
+<![CDATA["]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Μέγεθος οθόνης" ID="267330" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100084" Presentation_Value="921600 pixels" CategoryFeatureGroup_ID="41" Value="921600" CategoryFeature_ID="30863" Local_ID="0" Translated="0" ID="176212600" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="921600">
+        <Measure ID="39">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="6205">
+        <Measure Sign="" ID="39">
+          <Signs>
+            <Sign ID="23" langid="1">
+<![CDATA[pixels]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Ανάλυση οθόνης (αριθμητικά)" ID="138953" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100080" Presentation_Value="4:3" CategoryFeatureGroup_ID="41" Value="4:3" CategoryFeature_ID="86738" Local_ID="0" Translated="0" ID="176212601" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="4:3">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="13887">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Αναλογία διαστάσεων οθόνης" ID="1280013" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Όχι" CategoryFeatureGroup_ID="41" Value="N" CategoryFeature_ID="39655" Local_ID="0" Translated="1" ID="176212603" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Όχι">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="4963">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Οθόνη αφής" ID="268839" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="5,08 mm (0.2&quot;)" CategoryFeatureGroup_ID="3020" Value="0.2" CategoryFeature_ID="48006" Local_ID="0" Translated="0" ID="176212604" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="5.08">
+        <Measure ID="24">
+          <Signs>
+            <Sign ID="2603" langid="18">
+<![CDATA[mm]]>            </Sign>
+          </Signs>
+        </Measure>
+      </LocalValue>
+      <Feature ID="3275">
+        <Measure Sign="" ID="16">
+          <Signs>
+            <Sign ID="3162" langid="18">
+<![CDATA["]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Μέγεθος οθόνης  εικονοσκόπιου" ID="1261208" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100090" Presentation_Value="2.0" CategoryFeatureGroup_ID="56" Value="2.0" CategoryFeature_ID="95028" Local_ID="0" Translated="0" ID="176212606" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="2.0">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="8541">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="USB version" ID="718619" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100089" Presentation_Value="Micro-USB" CategoryFeatureGroup_ID="56" Value="Micro-USB" CategoryFeature_ID="48011" Local_ID="0" Translated="0" ID="176212607" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Micro-USB">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1742">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Σύνδεσμος USB" ID="268051" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100080" Presentation_Value="Y" CategoryFeatureGroup_ID="56" Value="Y" CategoryFeature_ID="58129" Local_ID="0" Translated="0" ID="176212608" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="5620">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="HDMI" ID="269419" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100078" Presentation_Value="Μικρο" CategoryFeatureGroup_ID="56" Value="Micro" CategoryFeature_ID="95030" Local_ID="0" Translated="1" ID="176212609" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Μικρο">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="16655">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Τύπος σύνδεσης HDMI" ID="1280661" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100007" Presentation_Value="Y" CategoryFeatureGroup_ID="3472" Value="Y" CategoryFeature_ID="49887" Local_ID="0" Translated="0" ID="176212610" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="3239">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Wi-Fi" ID="356773" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100004" Presentation_Value="Y" CategoryFeatureGroup_ID="3472" Value="Y" CategoryFeature_ID="79103" Local_ID="0" Translated="0" ID="176212611" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="10157">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Near Field Communication (NFC)" ID="878171" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100999" Presentation_Value="Αυτοκίνητο, Συννεφιασμένο, Φως της ημέρας, Πυρακτώσεως, Σκιά" CategoryFeatureGroup_ID="3149" Value="Auto, Cloudy, Daylight, Incandescent, Shade" CategoryFeature_ID="21102" Local_ID="0" Translated="1" ID="176212612" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Αυτοκίνητο, Συννεφιασμένο, Φως της ημέρας, Πυρακτώσεως, Σκιά">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="682">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Ισορροπία λευκού" ID="267079" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100990" Presentation_Value="Παραλία, Πυροτεχνήματα, Τοπίο, Night portrait, Πορτραίτο, Χιόνι, Sports, Ηλιοβασίλεμα, Λυκόφως" CategoryFeatureGroup_ID="3149" Value="Beach, Fireworks, Landscape, Night portrait, Portrait, Snow, Sports, Sunset, Twilight" CategoryFeature_ID="42599" Local_ID="0" Translated="1" ID="176212613" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Παραλία, Πυροτεχνήματα, Τοπίο, Night portrait, Πορτραίτο, Χιόνι, Sports, Ηλιοβασίλεμα, Λυκόφως">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7356">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Scene modes" ID="510565" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100980" Presentation_Value="Προτεραιότητα διαφράγματος, Αυτοκίνητο, Εγχειρίδιο, Ταινία, Scene, Προτεραιότητα κλείστρου" CategoryFeatureGroup_ID="3149" Value="Aperture priority, Auto, Manual, Movie, Scene, Shutter priority" CategoryFeature_ID="9919" Local_ID="0" Translated="1" ID="176212614" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Προτεραιότητα διαφράγματος, Αυτοκίνητο, Εγχειρίδιο, Ταινία, Scene, Προτεραιότητα κλείστρου">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1577">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Λειτουργία αποτύπωσης" ID="267867" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100960" Presentation_Value="Μαύρο και Λευκό(Άσπρο)" CategoryFeatureGroup_ID="3149" Value="Black&amp;White" CategoryFeature_ID="42601" Local_ID="0" Translated="1" ID="176212615" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Μαύρο και Λευκό(Άσπρο)">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="4279">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Εφέ φωτογραφιών" ID="1279321" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100950" Presentation_Value="2, 5, 10s" CategoryFeatureGroup_ID="3149" Value="2, 5, 10" CategoryFeature_ID="2326" Local_ID="0" Translated="0" ID="176212616" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="2, 5, 10">
+        <Measure ID="60">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="765">
+        <Measure Sign="" ID="60">
+          <Signs>
+            <Sign ID="43" langid="1">
+<![CDATA[s]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Αυτοχρονομέτρηση" ID="267163" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100899" Presentation_Value="Y" CategoryFeatureGroup_ID="3149" Value="Y" CategoryFeature_ID="58115" Local_ID="0" Translated="0" ID="176212617" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="3758">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Ρύθμιση φωτεινότητας" ID="1279123" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="DCF, Exif 2.3" CategoryFeatureGroup_ID="3149" Value="DCF, Exif 2.3" CategoryFeature_ID="48795" Local_ID="0" Translated="0" ID="176212620" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="DCF, Exif 2.3">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="8179">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Κάμερα σύστημα αρχείων" ID="631128" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Slideshow" CategoryFeatureGroup_ID="3149" Value="Slideshow" CategoryFeature_ID="88777" Local_ID="0" Translated="0" ID="176212621" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Slideshow">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="4283">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Λειτουργίες αναπαραγωγής" ID="1279323" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100120" Presentation_Value="Μπαταρία" CategoryFeatureGroup_ID="6148" Value="Battery" CategoryFeature_ID="48794" Local_ID="0" Translated="1" ID="176212622" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Μπαταρία">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="8005">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Τύπος πηγής ρεύματος" ID="1279604" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100090" Presentation_Value="400 shots" CategoryFeatureGroup_ID="6148" Value="400" CategoryFeature_ID="31273" Local_ID="0" Translated="0" ID="176212624" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="400">
+        <Measure ID="163">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="6231">
+        <Measure Sign="" ID="163">
+          <Signs>
+            <Sign ID="3076" langid="1">
+<![CDATA[shots]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Battery life (CIPA standard)" ID="153586" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100080" Presentation_Value="3,33h" CategoryFeatureGroup_ID="6148" Value="3.33" CategoryFeature_ID="9170" Local_ID="0" Translated="0" ID="176212625" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="3.33">
+        <Measure ID="46">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1721">
+        <Measure Sign="" ID="46">
+          <Signs>
+            <Sign ID="30" langid="1">
+<![CDATA[h]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Διάρκεια μπαταρίας" ID="267999" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="10100000" Presentation_Value="Λευκός (Άσπρος)" CategoryFeatureGroup_ID="11094" Value="White" CategoryFeature_ID="12818" Local_ID="0" Translated="1" ID="174871621" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="Λευκός (Άσπρος)">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1766">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Χρώμα προϊόντος" ID="268034" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100100" Presentation_Value="10,16 cm" CategoryFeatureGroup_ID="40" Value="101.6" CategoryFeature_ID="16209" Local_ID="0" Translated="0" ID="176212626" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="101.6">
+        <Measure ID="24">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1649">
+        <Measure Sign="" ID="24">
+          <Signs>
+            <Sign ID="3" langid="1">
+<![CDATA[mm]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Πλάτος" ID="267931" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100099" Presentation_Value="3,55 cm" CategoryFeatureGroup_ID="40" Value="35.5" CategoryFeature_ID="16211" Local_ID="0" Translated="0" ID="176212627" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="35.5">
+        <Measure ID="24">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1650">
+        <Measure Sign="" ID="24">
+          <Signs>
+            <Sign ID="3" langid="1">
+<![CDATA[mm]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Βάθος" ID="267932" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100098" Presentation_Value="5,81 cm" CategoryFeatureGroup_ID="40" Value="58.1" CategoryFeature_ID="16210" Local_ID="0" Translated="0" ID="176212628" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="58.1">
+        <Measure ID="24">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1464">
+        <Measure Sign="" ID="24">
+          <Signs>
+            <Sign ID="3" langid="1">
+<![CDATA[mm]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Ύψος" ID="267775" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100090" Presentation_Value="209g" CategoryFeatureGroup_ID="40" Value="209" CategoryFeature_ID="87" Local_ID="0" Translated="0" ID="176212629" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="209">
+        <Measure ID="38">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="94">
+        <Measure Sign="" ID="38">
+          <Signs>
+            <Sign ID="22" langid="1">
+<![CDATA[g]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Βάρος" ID="266733" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="236g" CategoryFeatureGroup_ID="40" Value="236" CategoryFeature_ID="48075" Local_ID="0" Translated="0" ID="176212630" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="236">
+        <Measure ID="38">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7418">
+        <Measure Sign="" ID="38">
+          <Signs>
+            <Sign ID="22" langid="1">
+<![CDATA[g]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Weight (including battery)" ID="550312" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="3910" Value="Y" CategoryFeature_ID="4643" Local_ID="0" Translated="0" ID="176212632" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1230">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Δεσμίδα προσαρμογέων AC" ID="267585" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="micro USB" CategoryFeatureGroup_ID="3910" Value="micro USB" CategoryFeature_ID="34826" Local_ID="0" Translated="0" ID="176212633" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="micro USB">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1830">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Συμπεριλαμβάνονται καλώδια" ID="267002" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="3910" Value="Y" CategoryFeature_ID="48082" Local_ID="0" Translated="0" ID="176212634" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="5529">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Φορτιστής μπαταρίας" ID="269338" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="3910" Value="Y" CategoryFeature_ID="48083" Local_ID="0" Translated="0" ID="176212635" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="4949">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Περιλαμβάνονται οι μπαταρίες" ID="268825" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="3910" Value="Y" CategoryFeature_ID="76299" Local_ID="0" Translated="0" ID="176212636" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="3981">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Οδηγός γρήγορης εκκίνησης" ID="1262331" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="3910" Value="Y" CategoryFeature_ID="78782" Local_ID="0" Translated="0" ID="176212637" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="11247">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Περιλαμβάνεται λουράκι καρπού" ID="1279617" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6705" Value="Y" CategoryFeature_ID="84293" Local_ID="0" Translated="0" ID="176212639" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="10496">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="USB connectivity" ID="908256" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="BIONZ X" CategoryFeatureGroup_ID="11095" Value="BIONZ X" CategoryFeature_ID="99487" Local_ID="0" Translated="0" ID="176212638" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="BIONZ X">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="8059">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Image processor" ID="622217" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductGallery>
+      <ProductPicture No="0" LowSize="7207" ThumbSize="1961" ProductPicture_ID="10717575" Size="104094" OriginalSize="285515" Pic="http://images.icecat.biz/img/gallery/26976109-Sony-DSCWX500W.CE3-58641.jpg" PicWidth="1000" ThumbPic="http://images.icecat.biz/img/gallery_thumbs/26976109-Sony-DSCWX500W.CE3-58641.jpg" Pic500x500Height="196" Pic500x500="http://images.icecat.biz/img/gallery_mediums/26976109-Sony-DSCWX500W.CE3-58641.jpg" LowPicHeight="78" LowPicWidth="200" LowPic="http://images.icecat.biz/img/gallery_lows/26976109-Sony-DSCWX500W.CE3-58641.jpg" PicHeight="391" Pic500x500Size="32993" Original="" Pic500x500Width="500"/>
+      <ProductPicture No="0" LowSize="7108" ThumbSize="1869" ProductPicture_ID="10717576" Size="98327" OriginalSize="269299" Pic="http://images.icecat.biz/img/gallery/26976109-Sony-DSCWX500W.CE3-58642.jpg" PicWidth="1000" ThumbPic="http://images.icecat.biz/img/gallery_thumbs/26976109-Sony-DSCWX500W.CE3-58642.jpg" Pic500x500Height="196" Pic500x500="http://images.icecat.biz/img/gallery_mediums/26976109-Sony-DSCWX500W.CE3-58642.jpg" LowPicHeight="78" LowPicWidth="200" LowPic="http://images.icecat.biz/img/gallery_lows/26976109-Sony-DSCWX500W.CE3-58642.jpg" PicHeight="391" Pic500x500Size="31394" Original="" Pic500x500Width="500"/>
+      <ProductPicture No="0" LowSize="6917" ThumbSize="1778" ProductPicture_ID="10717577" Size="93322" OriginalSize="251178" Pic="http://images.icecat.biz/img/gallery/26976109-Sony-DSCWX500W.CE3-58643.jpg" PicWidth="1000" ThumbPic="http://images.icecat.biz/img/gallery_thumbs/26976109-Sony-DSCWX500W.CE3-58643.jpg" Pic500x500Height="196" Pic500x500="http://images.icecat.biz/img/gallery_mediums/26976109-Sony-DSCWX500W.CE3-58643.jpg" LowPicHeight="78" LowPicWidth="200" LowPic="http://images.icecat.biz/img/gallery_lows/26976109-Sony-DSCWX500W.CE3-58643.jpg" PicHeight="391" Pic500x500Size="30202" Original="" Pic500x500Width="500"/>
+      <ProductPicture No="0" LowSize="5727" ThumbSize="1706" ProductPicture_ID="10717578" Size="82117" OriginalSize="231316" Pic="http://images.icecat.biz/img/gallery/26976109-Sony-DSCWX500W.CE3-58644.jpg" PicWidth="1000" ThumbPic="http://images.icecat.biz/img/gallery_thumbs/26976109-Sony-DSCWX500W.CE3-58644.jpg" Pic500x500Height="196" Pic500x500="http://images.icecat.biz/img/gallery_mediums/26976109-Sony-DSCWX500W.CE3-58644.jpg" LowPicHeight="78" LowPicWidth="200" LowPic="http://images.icecat.biz/img/gallery_lows/26976109-Sony-DSCWX500W.CE3-58644.jpg" PicHeight="391" Pic500x500Size="24753" Original="" Pic500x500Width="500"/>
+      <ProductPicture No="0" LowSize="4023" ThumbSize="1477" ProductPicture_ID="10717579" Size="50878" OriginalSize="142803" Pic="http://images.icecat.biz/img/gallery/26976109-Sony-DSCWX500W.CE3-58645.jpg" PicWidth="1000" ThumbPic="http://images.icecat.biz/img/gallery_thumbs/26976109-Sony-DSCWX500W.CE3-58645.jpg" Pic500x500Height="196" Pic500x500="http://images.icecat.biz/img/gallery_mediums/26976109-Sony-DSCWX500W.CE3-58645.jpg" LowPicHeight="78" LowPicWidth="200" LowPic="http://images.icecat.biz/img/gallery_lows/26976109-Sony-DSCWX500W.CE3-58645.jpg" PicHeight="391" Pic500x500Size="16415" Original="" Pic500x500Width="500"/>
+    </ProductGallery>
+    <ProductMultimediaObject/>
+    <ProductRelated Preferred="0" Reversed="0" ID="151715586" Category_ID="587">
+      <Product Prod_id="VCT-VPR1" ID="18659421" ThumbPic="http://images.icecat.biz/thumbs/18659421.jpg" Name="VCT-VPR1">
+        <Supplier ID="5" Name="Sony"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="151715585" Category_ID="829">
+      <Product Prod_id="BC-TRX" ID="17649626" ThumbPic="http://images.icecat.biz/thumbs/17649626.jpg" Name="BC-TRX">
+        <Supplier ID="5" Name="Sony"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="151715588" Category_ID="1290">
+      <Product Prod_id="LCJ-HWA" ID="27008867" ThumbPic="http://images.icecat.biz/thumbs/27008867.jpg" Name="LCJ-HWA">
+        <Supplier ID="5" Name="Sony"/>
+      </Product>
+    </ProductRelated>
+    <SEOs>
+      <SEO Description="" Keywords="" Title="" langid="18"/>
+    </SEOs>
+    <SummaryDescription>
+      <ShortSummaryDescription langid="18">
+        Sony DSC-WX500, 18,2, Compact camera, 25,4/58,4 mm (1/2.3"), 4.1 - 123, 3.5, 6.4
+      </ShortSummaryDescription>
+      <LongSummaryDescription langid="18">
+        Sony DSC-WX500. Megapixel: 18,2, Κάμερα τύπου: Compact camera, Μέγεθος αισθητήρα εικόνας: 25,4/58,4 mm (1/2.3"). Εστιακή απόσταση: 4.1 - 123, Ελάχιστη οπή: 3.5, Μέγιστη οπή: 6.4. Auto focusing (AF) modes: Συνεχής αυτόματη εστίαση, Contrast Detection Auto Focus. Ευαισθησία ISO: 80, 12800, Έλεγχος έκθεσης στο φως: Πρόγραμμα AE, Διόρθωση έκθεσης στο φως: ± 3EV (1/3EV step). Camera shutter speed (min): 1/2000
+      </LongSummaryDescription>
+    </SummaryDescription>
+    <Supplier ID="5" Name="Sony"/>
+  </Product>
+</ICECAT-interface>
+

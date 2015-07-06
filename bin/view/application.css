@@ -1,0 +1,30 @@
+/* @CHARSET "UTF-8";*/
+
+#simpleText {
+    -fx-font: 150% Tahoma;
+}
+
+#title{
+	-fx-font: 300% Tahoma;
+	-fx-padding: 10 20 10 20;
+}
+
+#cBox{
+	-fx-padding: 15 0 0 0;
+}
+
+#topBox{
+	-fx-padding: 10 60 10 60;
+}
+
+#mainPane{
+	-fx-padding: 10 20 10 20;
+}
+
+#leftButtons{
+	-fx-font-size: 18px;
+}
+
+#leftTitle{
+	-fx-font-size: 22px;
+}

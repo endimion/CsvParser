@@ -1,0 +1,192 @@
+<ICECAT-interface xsi:noNamespaceSchemaLocation="http://data.icecat.biz/xsd/ICECAT-interface_response.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Product HighPic="http://images.icecat.biz/img/norm/high/20883461-3541.jpg" Prod_id="INSTAX 210 INSTANT CAMERA" ThumbPicSize="4494" HighPicSize="102562" LowPicSize="19957" Title="Fujifilm instax 210" HighPicWidth="768" ThumbPic="http://images.icecat.biz/thumbs/20883461.jpg" ReleaseDate="2013-12-05" Code="1" Pic500x500Height="500" Name="instax 210" Pic500x500="http://images.icecat.biz/img/norm/medium/20883461-3541.jpg" LowPicHeight="200" LowPicWidth="200" LowPic="http://images.icecat.biz/img/norm/low/20883461-3541.jpg" Quality="ICECAT" Pic500x500Size="88617" HighPicHeight="768" ID="20883461" Pic500x500Width="500">
+    <Category ID="1918">
+      <Name Value="φωτογραφικές μηχανές άμεσης εκτύπωσης" ID="1242565" langid="18"/>
+    </Category>
+    <CategoryFeatureGroup No="90" ID="8271">
+      <FeatureGroup ID="0">
+        <Name Value="Τεχνικές λεπτομέρειες" ID="269530" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="60" ID="8272">
+      <FeatureGroup ID="14">
+        <Name Value="Βάρος και διαστάσεις" ID="269515" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="70" ID="8273">
+      <FeatureGroup ID="27">
+        <Name Value="Διαχείρηση ενέργειας" ID="269527" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="0" ID="8277">
+      <FeatureGroup ID="76">
+        <Name Value="Πιστοποιητικά" ID="269573" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="0" ID="8276">
+      <FeatureGroup ID="79">
+        <Name Value="Indication" ID="28858" langid="1"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="80" ID="8274">
+      <FeatureGroup ID="86">
+        <Name Value="Φλας/ Flash" ID="269581" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="0" ID="11955">
+      <FeatureGroup ID="94">
+        <Name Value="Σκόπευτρο" ID="269589" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="0" ID="8275">
+      <FeatureGroup ID="116">
+        <Name Value="Περιεχόμενο πακέτου" ID="269610" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <EANCode EAN="4547410093988"/>
+    <ReasonsToBuy/>
+    <ProductBundled/>
+    <ProductDescription/>
+    <Disclaimers/>
+    <ProductFeature No="100099" Presentation_Value="62 x 99 mm" CategoryFeatureGroup_ID="8271" Value="62 x 99" CategoryFeature_ID="62908" Local_ID="0" Translated="0" ID="149143037" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="62 x 99">
+        <Measure ID="24">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="9168">
+        <Measure Sign="" ID="24">
+          <Signs>
+            <Sign ID="3" langid="1">
+<![CDATA[mm]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Film size" ID="764058" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100043" Presentation_Value="Ηλεκτρονικός" CategoryFeatureGroup_ID="8271" Value="Electronic" CategoryFeature_ID="62988" Local_ID="0" Translated="1" ID="149143038" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Ηλεκτρονικός">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="8034">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Τύπος κλείστρου κάμερας" ID="1268523" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100042" Presentation_Value="1/200s" CategoryFeatureGroup_ID="8271" Value="1/200" CategoryFeature_ID="62985" Local_ID="0" Translated="0" ID="149143039" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="1/200">
+        <Measure ID="60">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="9158">
+        <Measure Sign="" ID="60">
+          <Signs>
+            <Sign ID="43" langid="1">
+<![CDATA[s]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Camera shutter speed (min)" ID="763521" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100040" Presentation_Value="0,015625s" CategoryFeatureGroup_ID="8271" Value="0.015625" CategoryFeature_ID="62986" Local_ID="0" Translated="0" ID="149143040" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="0.015625">
+        <Measure ID="60">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="9159">
+        <Measure Sign="" ID="60">
+          <Signs>
+            <Sign ID="43" langid="1">
+<![CDATA[s]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Camera shutter speed (max)" ID="763562" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100010" Presentation_Value="Μαύρος (Μαύρο)" CategoryFeatureGroup_ID="8271" Value="Black" CategoryFeature_ID="62989" Local_ID="0" Translated="1" ID="149143041" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Μαύρος (Μαύρο)">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1766">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Χρώμα προϊόντος" ID="268034" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100090" Presentation_Value="Y" CategoryFeatureGroup_ID="8274" Value="Y" CategoryFeature_ID="62983" Local_ID="0" Translated="0" ID="149143042" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1289">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Ενσωματωμένο φλας" ID="267640" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100090" Presentation_Value="4" CategoryFeatureGroup_ID="8273" Value="4" CategoryFeature_ID="62980" Local_ID="0" Translated="0" ID="149143043" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="4">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1211">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Αριθμός υποστηριζόμενων μπαταριών" ID="267567" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="LR6/AA-size 1.5V alkaline" CategoryFeatureGroup_ID="8273" Value="LR6/AA-size 1.5V alkaline" CategoryFeature_ID="62981" Local_ID="0" Translated="0" ID="149143044" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="LR6/AA-size 1.5V alkaline">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="908">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Τύπος μπαταρίας" ID="267296" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100020" Presentation_Value="Y" CategoryFeatureGroup_ID="8275" Value="Y" CategoryFeature_ID="62990" Local_ID="0" Translated="0" ID="149143045" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="8051">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Hand strap" ID="621713" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductGallery/>
+    <ProductMultimediaObject/>
+    <ProductRelated/>
+    <SEOs/>
+    <SummaryDescription>
+      <ShortSummaryDescription langid="18">
+        Fujifilm instax 210, LR6/AA-size 1.5V alkaline
+      </ShortSummaryDescription>
+      <LongSummaryDescription langid="18">
+        Fujifilm instax 210. Τύπος μπαταρίας: LR6/AA-size 1.5V alkaline
+      </LongSummaryDescription>
+    </SummaryDescription>
+    <Supplier ID="75" Name="Fujifilm"/>
+  </Product>
+</ICECAT-interface>
+
