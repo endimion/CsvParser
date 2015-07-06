@@ -189,6 +189,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 				
 				if(add){ 
 					output.add(prod); //ADD the product to the output
+					fh.saveParsedProduct(supplier, prod);
 					//System.out.println("ProductHelper.expandProducts processed :  ADDED" + prod.toString(supplier) );
 				}
 			}//end if the product does nto exist in teh vaildate file 			
@@ -197,7 +198,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 			progress++;	
 		}//end of looping through the products
 		
-		
+		output = fh.validateSupplierProductList(output, supplier);
 		return output;
 	
 	}//end of call

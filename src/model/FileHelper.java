@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.URISyntaxException;
+import java.util.HashMap;
 import java.util.Vector;
 
 public class FileHelper {
@@ -314,9 +315,10 @@ public class FileHelper {
 				priceString += d+";";
 			}//end of looping through the variables of the formula
 			priceString = priceString.substring(0, priceString.length() -1);
-		
-			try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(priceFile, false)))) {
-				out.print(priceString);
+			
+			//apend the string at the end of the file
+			try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(priceFile, true)))) {
+				out.println(priceString);
 			}catch (IOException e) { e.printStackTrace();}
 
 		}//end if th e formula is not null and it has a size of 6
@@ -337,6 +339,64 @@ public class FileHelper {
 	}//end of saveValidProd
 	
 	
+	
+	/**
+	 * Saves the product to a file, which contains all the products of the given supplier we have already parsed
+	 * @param supplier, the name of the supplierProducts
+	 * @param prod, the product we want to save
+	 */
+	public void saveParsedProduct(String supplier, Product prod){
+		File valid = new File(getExecFolder() +"/config/"+supplier+".prods"); 
+		try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
+		    out.println(prod.toCsv());
+		}catch (IOException e) { e.printStackTrace();}
+		
+	}//end of saveParsedProducts
+	
+	
+	/**
+	 *  takes as input a vector of Product objects and returns a HashMap where the model of the product is the key
+	 * @param prodVect
+	 * @return
+	 */
+	public HashMap<String, Product> turnProdVectToMap(Vector<Product> prodVect){
+		HashMap<String, Product> map = new HashMap<String,Product>(); 
+		for(Product prod: prodVect){
+			map.put(prod.getModel(), prod);
+		}//end of looping through the products of the vector
+		
+		return map;
+	}//end of turnProdVectToMap
+	
+	
+	/**
+	 * Takes as input a vector of products and a supplier name. It searches all the products which where previously 
+	 * parsed by this supplier. IF a product Exists on the old list but not on the New one, then it is added to the result with
+	 * a status attribute of 0, which indicates that the product is no longer valid
+	 * @param prods
+	 * @param supplier
+	 * @return
+	 */
+	public Vector<Product> validateSupplierProductList(Vector<Product> prods, String supplier){
+		
+		File old = new File(getExecFolder() +"/config/"+supplier+".prods");
+		HashMap<String, Product> newProds = turnProdVectToMap(prods);
+		Vector<Product> oldProds = ProductHelper.getOldProdFromFile(old, supplier);
+		
+		Vector<Product> validatedProd = prods;
+		
+		for(Product oldProd: oldProds){
+			if(!newProds.containsKey(oldProd.getModel())){ 		
+				// If an old product does not exist in the new ones then it should be made invalid
+				Product invalidProd = oldProd;
+				System.out.println("FileHelper.ValidateSupplierPRoductList:: works!!!");
+				invalidProd.setStatus("0");
+				validatedProd.add(invalidProd);
+			}
+		}//end of looping through the products
+		
+		return prods;
+	}//end of validateSupplierProductList
 	
 	
 	

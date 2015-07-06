@@ -4,6 +4,7 @@ import java.util.Vector;
 
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
@@ -26,7 +27,7 @@ public class PriceFormulaView {
 	
 	public PriceFormulaView(Stage st, Vector<Double> priceVars, TextField lessF,
 	TextField betweenF, TextField kiloPriceF, 	TextField lessExtraF, 	
-	TextField betweenPercentF,	TextField morePercentF, Button save){
+	TextField betweenPercentF,	TextField morePercentF, Button save, ChoiceBox<String> cBox){
 		this.stage = st;
 		
 		this.lessF = lessF;
@@ -60,9 +61,9 @@ public class PriceFormulaView {
 		Text morePercentTxt = new Text("else, additional charge: ");
 		Text kiloTxt = new Text("finally charge each kilo: ");
 		
-		leftBox.getChildren().addAll(lesstxt,lessExtratxt,
+		leftBox.getChildren().addAll(new Text("Supplier: "),lesstxt,lessExtratxt,
 				betweentxt, betweenPercenttxt, morePercentTxt, kiloTxt);
-		rightBox.getChildren().addAll(lessF, lessExtraF,betweenF,
+		rightBox.getChildren().addAll(cBox,lessF, lessExtraF,betweenF,
 				betweenPercentF, morePercentF,kiloPriceF);
 		
 	

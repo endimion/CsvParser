@@ -1,6 +1,10 @@
 package model;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.MalformedInputException;
 import java.util.Vector;
 
 import org.w3c.dom.Node;
@@ -18,7 +22,7 @@ public class ProductHelper {
 	 * @param supplier, the name of the supplier providing the information
 	 * @return a Vector<Product> containing the parsed contents of the given file as Product objects
 	 */
-	public Vector<Product> getProdFromFile(File f, String supplier){
+	public static Vector<Product> getProdFromFile(File f, String supplier){
 		
 		Vector<Product> products = new Vector<Product>();
 		FileHelper fh = new FileHelper();
@@ -130,6 +134,58 @@ public class ProductHelper {
 
 	
 	
+	/**
+	 * 
+	 * @param f
+	 * @param supplier
+	 * @return
+	 */
+	public static Vector<Product> getOldProdFromFile(File f, String supplier){
+		
+		Vector<Product> res = new Vector<Product>();
+		
+		try {
+			FileInputStream fis = new FileInputStream(f);
+			InputStreamReader isr = new InputStreamReader(fis);
+			BufferedReader br = new BufferedReader(isr); 
+			String line = (br.readLine()).trim();
+			
+			line = br.readLine();
+			
+			while(line != null){
+				line = line.trim();
+				String[] lineArray = line.split(";");
+				if(lineArray.length != 16){
+					br.close();
+					throw new MalformedInputException(16);
+				}else{
+					Product lineProd = new Product();
+					lineProd.setModel(lineArray[0]);
+					lineProd.setEan(lineArray[2]);
+					lineProd.setMpn(lineArray[3]);
+					lineProd.setpName(lineArray[4]);
+					lineProd.setDescription(lineArray[5]);
+					lineProd.setCategory(lineArray[6]);
+					lineProd.setQuantity(Integer.parseInt(lineArray[7]));
+					lineProd.setStStatus(lineArray[8]);
+					lineProd.setStatus(lineArray[9]);
+					lineProd.setPic(lineArray[10]);
+					lineProd.setAddPic(lineArray[11]);
+					lineProd.setManufact(lineArray[12]);
+					lineProd.setDoublePrice(Double.parseDouble(lineArray[13]));
+					lineProd.setTax_class(lineArray[14]);
+					lineProd.setWeight(lineArray[15]);
+				
+					res.add(lineProd);
+				}//if the size of the array is equal to 16 
+				//res.add(parseLine(line, keys, separator));
+				line = br.readLine();
+			 }
+			 br.close();
+		}catch(Exception e){	e.printStackTrace();}
+		
+		return res;
+	}//end of getOldProdFromFile
 	
 	
 	

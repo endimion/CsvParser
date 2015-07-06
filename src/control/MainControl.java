@@ -25,7 +25,7 @@ public class MainControl extends Application{
 		Button editPriceForm = new Button("Edit Price Formula");
 		editPriceForm.setOnAction(event ->{
 			EditPriceFormulaController epfc = 
-					new EditPriceFormulaController(primaryStage,addSupplier, addCategory,editCategories, editSup,processFiles,editPriceForm);
+					new EditPriceFormulaController(primaryStage,addSupplier, addCategory,editCategories, editSup,processFiles,editPriceForm,"");
 			epfc.displayView();
 		});
 		
