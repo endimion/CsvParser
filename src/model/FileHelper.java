@@ -370,7 +370,7 @@ public class FileHelper {
 	 * @param prodVect
 	 * @return
 	 */
-	public HashMap<String, Product> turnProdVectToMap(Vector<Product> prodVect){
+	public static HashMap<String, Product> turnProdVectToMap(Vector<Product> prodVect){
 		HashMap<String, Product> map = new HashMap<String,Product>(); 
 		for(Product prod: prodVect){
 			map.put(prod.getModel(), prod);
@@ -450,7 +450,6 @@ public class FileHelper {
 	 * that are used to calculate a products price
 	 * and returns them as a vector
 	 */
-	//TODO
 	public static Vector<Double> getPriceConfig(String supName){
 		Vector<Double> prices = new Vector<Double>();
 		File priceConf = new File(getExecFolder()+"/config/price.config");

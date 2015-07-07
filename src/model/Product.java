@@ -284,5 +284,31 @@ public class Product {
 		return s.replace(",", "");
 	}
 	
+	/**
+	 * Compares the given product with a foreign one and returns true if they match in all attributes
+	 * except from the weight, doublePrice, Description, pic, addPic,  
+	 * @param foreign
+	 * @return
+	 */
+	public boolean compareProduct(Product foreign){
+		/*
+		boolean res = this.getModel().equals(foreign.getModel()) &&this.getRPrice().equals(foreign.getRPrice());
+		if(!res){
+			System.out.println("Product.compareProduct :: " + this.getModel() + " =/= " + foreign.getModel() 
+					+ " OR "+ this.getDoublePrice()  +"=/="+ foreign.getDoublePrice() 
+					+ this.getNumber() + " =/="+ (foreign.getNumber()));
+		}*/
+		
+		return this.getModel().equals(foreign.getModel()) &&
+						this.getCategory().equals(foreign.getCategory()) &&
+						this.getEan().equals(foreign.getEan())&&
+						this.getManufact().equals(foreign.getManufact())&&
+						this.getMpn().equals(foreign.getMpn())&&
+						//this.getNumber().equals(foreign.getNumber())&&
+						this.getpName().equals(foreign.getpName())&&
+						this.getQuantity() == foreign.getQuantity()&&
+						this.getDoublePrice() == foreign.getDoublePrice();
+	}//end compareProduct
+	
 	
 }//end of class

@@ -253,7 +253,7 @@ public class ProductHelper {
 						
 						if(picName != null){
 							if (i < 10){ //TODO remove this if 
-								ice.savePicturesToDrive( FileHelper.getExecFolder() +"/"+ picName, picName);
+								ice.savePicturesToDrive( FileHelper.getExecFolder() +"/"+ picName, picName,false);
 								String newPicName = prod.getModel() +".jpg";
 								ftp.uploadFile(new File(FileHelper.getExecFolder() +"/"+ picName), 
 															"/public_html/image/data/"+supplier,newPicName);

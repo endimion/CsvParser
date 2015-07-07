@@ -65,6 +65,7 @@ public class GetProdFromFileTask extends Task<Vector<Product>>{
 								if(sup.getAvailability()!= null && 
 										r.getElement(sup.getAvailability()) != null &&
 										r.getElement(sup.getAvailability()).equals(supAvail) ){
+									
 									prod.setQuantity(28);
 								}else{
 									prod.setQuantity(0);
@@ -73,7 +74,7 @@ public class GetProdFromFileTask extends Task<Vector<Product>>{
 								String rest = supAvail.split(">=")[1].trim();
 								//find the number part in the expression
 								try{
-										Integer threshold = Integer.parseInt(rest);
+									Double threshold = Double.parseDouble(rest);
 										Double rowQuantity = Double.parseDouble(r.getElement(sup.getAvailability()));
 										
 										if(rowQuantity >= threshold ){
