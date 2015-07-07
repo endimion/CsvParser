@@ -74,7 +74,7 @@ public class GetProdFromFileTask extends Task<Vector<Product>>{
 								//find the number part in the expression
 								try{
 										Integer threshold = Integer.parseInt(rest);
-										Integer rowQuantity = Integer.parseInt(r.getElement(sup.getAvailability()));
+										Double rowQuantity = Double.parseDouble(r.getElement(sup.getAvailability()));
 										
 										if(rowQuantity >= threshold ){
 											prod.setQuantity(28);

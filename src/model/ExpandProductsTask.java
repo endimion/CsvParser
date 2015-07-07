@@ -55,7 +55,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 			extraPic = prod.getAddPic(); //GET the extra pictures either from the product or iceCat
 			
 			prod.setStStatus("2-3 ημέρες");
-			prod.setStatus("1" ); //TODO fix this according to what we talked with angelos !!!!!!
+			prod.setStatus("1" ); 
 			prod.setTax_class("κλάση I 23%~26%");
 			
 			if(!fh.belongs(prod.getModel() , FileHelper.getExecFolder() +"/valid.prod")){
@@ -145,11 +145,11 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 									ftp.uploadFile(new File(extraPicPath), "/public_html/image/data/csvpic/high",
 																																			newPicName);
 								
-							
+									picName = "csvpic/" +  prod.getModel().trim() +".jpg";
+									prod.setPic(picName);
+									
 								}catch(Exception e){e.printStackTrace();}
 								
-								picName = "csvpic/" + picName;
-								prod.setPic(picName);
 							}//end if i <10
 						}//end if picName is not null
 		
@@ -172,6 +172,8 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 							picURL = prod.getPic();
 							saveAndUploadPic(picName, extraPic, picURL, 
 									extraPicURL, prod, ice, ftp);
+							//once it is uploaded then we store to the product object the correct path for the server
+							//prod.setPic("csvpic/" +prod.getModel().trim() +".jpg" );
 						}//end if the product has a picture in it
 						
 						
@@ -198,6 +200,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 			progress++;	
 		}//end of looping through the products
 		
+		//System.out.println("ExpandPRoductsTask.call :: output size before validation " + output.size());
 		output = fh.validateSupplierProductList(output, supplier);
 		return output;
 	
@@ -218,10 +221,8 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 	private void saveAndUploadPic(String picName, String extraPic,
 			String  picURL, 	String  extraPicURL, Product prod, 
 			IceCatHelper ice, FtpHelper ftp) {
-		int i = 0;
+
 		if(picName != null){
-			if (i < 10){ //TODO remove this if 
-				
 				File dir = new File(FileHelper.getExecFolder() +"/pictures");
 				File extraDir = new File(FileHelper.getExecFolder() +"/pictures/high");
 				
@@ -243,12 +244,10 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 					//ftp.uploadFile(new File(extraPicPath), "/public_html/image/data/"+ 
 					//																															supplier+"/high", newPicName);
 				
-			
+					picName = "csvpic/" + newPicName;
+					prod.setPic(picName);
+					
 				}catch(Exception e){e.printStackTrace();}
-				
-				picName = "csvpic/" + picName;
-				prod.setPic(picName);
-			}
 		}
 	}//end of saveAndUploadPic
 	

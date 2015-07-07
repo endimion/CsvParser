@@ -135,12 +135,11 @@ public class ProductHelper {
 	
 	
 	/**
-	 * 
-	 * @param f
+	 * Reads a Csv file containing Products previously stored by the application 
 	 * @param supplier
 	 * @return
 	 */
-	public static Vector<Product> getOldProdFromFile(File f, String supplier){
+	public static Vector<Product> getOldProdFromFile(File f){
 		
 		Vector<Product> res = new Vector<Product>();
 		

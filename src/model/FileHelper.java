@@ -347,9 +347,20 @@ public class FileHelper {
 	 */
 	public void saveParsedProduct(String supplier, Product prod){
 		File valid = new File(getExecFolder() +"/config/"+supplier+".prods"); 
-		try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
-		    out.println(prod.toCsv());
-		}catch (IOException e) { e.printStackTrace();}
+		if(valid != null && valid.exists() && valid.length() > 0){
+			 HashMap<String, Product> oldProdMap = turnProdVectToMap(ProductHelper.getOldProdFromFile(valid));
+			if(!oldProdMap.containsKey(prod.getModel())){
+				try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
+					out.println(prod.toCsv());
+				}catch (IOException e) { e.printStackTrace();}
+			}//if the product does not exist in the file we append it
+			 
+		}//end if we have a file which already contains the products parsed by the supplier
+		else{
+			try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
+				out.println(prod.toCsv());
+			}catch (IOException e) { e.printStackTrace();}
+		}//end if it is the first time we are parsing products from this supplier
 		
 	}//end of saveParsedProducts
 	
@@ -381,9 +392,14 @@ public class FileHelper {
 		
 		File old = new File(getExecFolder() +"/config/"+supplier+".prods");
 		HashMap<String, Product> newProds = turnProdVectToMap(prods);
-		Vector<Product> oldProds = ProductHelper.getOldProdFromFile(old, supplier);
+		Vector<Product> oldProds = ProductHelper.getOldProdFromFile(old);
 		
-		Vector<Product> validatedProd = prods;
+		Vector<Product> validatedProd =prods; 
+		
+		/* new Vector<Product>();
+		for(Product prod : prods){
+			validatedProd.add(prod);
+		}//and all the new products to the output*/
 		
 		for(Product oldProd: oldProds){
 			if(!newProds.containsKey(oldProd.getModel())){ 		
@@ -395,7 +411,7 @@ public class FileHelper {
 			}
 		}//end of looping through the products
 		
-		return prods;
+		return validatedProd;
 	}//end of validateSupplierProductList
 	
 	
