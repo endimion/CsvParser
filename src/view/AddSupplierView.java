@@ -40,7 +40,7 @@ public class AddSupplierView {
 											
 											TextField prodNameF, TextField stock_statF, TextField statusF, TextField addImgF,
 											TextField manufF, TextField tax_classF,
-											TextField mpnF, TextField imgF,
+											TextField mpnF, TextField imgF, TextField xmlUrlF, TextField xmlUserF, TextField xmlPassF,
 											
 											Button addSupplier, Button addCategory, Button editCategories, 
 											Button processFiles){
@@ -119,17 +119,25 @@ public class AddSupplierView {
 	    mpntxt.setId("simpleText");
 	    Text imgtxt = new Text("Image Column: ");
 	    imgtxt.setId("simpleText");
+	    Text xmlUrlTxt = new Text("Xml feed URL: ");
+	    xmlUrlTxt.setId("simpleText");
+	    
+	    Text xmlUserTxt = new Text("Xml feed UserName: ");
+	    xmlUserTxt.setId("simpleText");
+	    
+	    Text xmlPassTxt = new Text("Xml feed PassWord: ");
+	    xmlPassTxt.setId("simpleText");
 	    
 	    leftCol.getChildren().addAll( stxt,ctxt,intxt, dtxt, sintxt,
 	    	eantxt, rptxt, xmltxt ,avtxt, davtxt, septxt,modtxt, prodNameTxt, stockStatTxt, 
-	    	statusTxt, addImgTxt, manufTxt, taxClassTxt, mpntxt,imgtxt);
+	    	statusTxt, addImgTxt, manufTxt, taxClassTxt, mpntxt,imgtxt,xmlUrlTxt,xmlUserTxt,xmlPassTxt);
 	    
 	  leftCol.setSpacing(10);
 	    
 	    VBox centerCol = new VBox();
 	    centerCol.getChildren().addAll(nameF, catF, itemNumberF, descF, supINF, eanF, rPrice, xml, 
 	    		avF, avdF,sepF,modelF, prodNameF, stock_statF,statusF,addImgF,
-	    		manufF, tax_classF,mpnF, imgF);
+	    		manufF, tax_classF,mpnF, imgF,xmlUrlF,xmlUserF,xmlPassF);
 	    centerCol.setSpacing(8);
 		
 		

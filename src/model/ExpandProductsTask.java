@@ -1,6 +1,7 @@
 package model;
 
 import java.io.File;
+import java.nio.file.FileSystems;
 import java.util.HashMap;
 import java.util.Vector;
 
@@ -13,6 +14,8 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 	
 	Vector<Product> prods; 
 	String supplier;
+	private final static String fileSep = FileSystems.getDefault().getSeparator();
+	
 	
 	public ExpandProductsTask(Vector<Product> prods, String supName){
 		this.prods = prods;
@@ -47,7 +50,10 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 		
 		int progress = 0;
 		
-		File old = new File(FileHelper.getExecFolder() +"/config/"+supplier+".prods");
+		
+		File old = new File(FileHelper.getExecFolder() +fileSep+"config"
+																								+fileSep+supplier+".prods");
+		
 		Vector<Product> oldProds = ProductHelper.getOldProdFromFile(old);
 		HashMap<String, Product> oldProdsMap = FileHelper.turnProdVectToMap(oldProds);
 		
@@ -73,7 +79,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 			
 			if(!isPreviouslyParsed(prod,oldProdsMap)){
 				
-					if(!fh.belongs(prod.getModel() , FileHelper.getExecFolder() +"/valid.prod")){
+					if(!fh.belongs(prod.getModel() , FileHelper.getExecFolder() +fileSep+"valid.prod")){
 						try{
 							add = true;
 							xml = ice.saveXmlToFile("iceXml", ice.getProductXml(prod.getEan()));
@@ -128,10 +134,10 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 								}
 								
 								if(picName != null){
-									if (i < 10){ //TODO remove this if 
+									//if (i < 10){ //TODO remove this if 
 										
-										File dir = new File(FileHelper.getExecFolder() +"/pictures");
-										File extraDir = new File(FileHelper.getExecFolder() +"/pictures/high");
+										File dir = new File(FileHelper.getExecFolder() +fileSep+"pictures");
+										File extraDir = new File(FileHelper.getExecFolder() +fileSep+"pictures"+fileSep+"high");
 										
 										try{
 											if(!dir.exists() || !extraDir.exists()){
@@ -139,8 +145,8 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 												extraDir.mkdir();
 											}
 											 //System.out.println("DIR created");
-											 String picPath =  FileHelper.getExecFolder() +"/pictures/"+ picName;
-											String extraPicPath = FileHelper.getExecFolder() +"/pictures/high/"+ extraPic;
+											 String picPath =  FileHelper.getExecFolder() +fileSep+"pictures"+fileSep+ picName;
+											String extraPicPath = FileHelper.getExecFolder() +fileSep+"pictures"+fileSep+"high"+ extraPic;
 											 
 											ice.savePicturesToDrive(picPath,picURL,true);
 											ice.savePicturesToDrive(extraPicPath,extraPicURL,true);
@@ -156,7 +162,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 											
 										}catch(Exception e){e.printStackTrace();}
 										
-									}//end if i <10
+									//}//end if i <10
 								}//end if picName is not null
 				
 							
@@ -223,8 +229,8 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 			IceCatHelper ice, FtpHelper ftp) {
 
 		if(picName != null){
-				File dir = new File(FileHelper.getExecFolder() +"/pictures");
-				File extraDir = new File(FileHelper.getExecFolder() +"/pictures/high");
+				File dir = new File(FileHelper.getExecFolder() +fileSep+"pictures");
+				File extraDir = new File(FileHelper.getExecFolder() +fileSep+"pictures"+fileSep+"high");
 				
 				try{
 					if(!dir.exists() || !extraDir.exists()){
@@ -232,7 +238,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 						extraDir.mkdir();
 					}
 					 //System.out.println("DIR created");
-					 String picPath =  FileHelper.getExecFolder() +"/pictures/"+ picName;
+					 String picPath =  FileHelper.getExecFolder() +fileSep+"pictures"+fileSep+ picName;
 					//String extraPicPath = FileHelper.getExecFolder() +"/pictures/high/"+ extraPic;
 					 
 					ice.savePicturesToDrive(picPath,picURL,true);
@@ -260,7 +266,6 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 	 * @param supplier
 	 * @return
 	 */
-	//TODO
 	public boolean isPreviouslyParsed(Product prod, HashMap<String, Product> oldProdsMap){
 		
 		if(!oldProdsMap.containsKey(prod.getModel())){

@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.URISyntaxException;
+import java.nio.file.FileSystems;
 import java.util.HashMap;
 import java.util.Vector;
 
@@ -16,6 +17,7 @@ public class FileHelper {
 	
 	private final static String supF ="suppliersCol.config"; 
 	private final static String catF ="category.config";
+	private final static String fileSep = FileSystems.getDefault().getSeparator();
 	
 	//private final static String errProdF ="errProd.log";
 	
@@ -50,9 +52,11 @@ public class FileHelper {
 				+ "status::" + sup.getStatus() + "&&"
 				+ "addPic::"+ sup.getAddImg() + "&&"
 				+ "taxClass::" + sup.getTaxClass()+ "&&"
-				+ "mpn::" + sup.getMpn()+ "&&"+"img::"+sup.getImg() ;
+				+ "mpn::" + sup.getMpn()+ "&&"+"img::"+sup.getImg()  +"&&"
+				+ "xmlUrl::"+sup.getXmlURL() +"&&" +"xmlUser::"+sup.getXmlUser()
+				+"&&" + "xmlPass::"+sup.getXmlPass(); 
 		
-		File suppliers = new File(contFolder +"/"+supF);
+		File suppliers = new File(contFolder +fileSep+supF);
 		if(!suppliers.exists() || suppliers.length() <= 0){
 			//System.out.println("FileHelper.saveSupplier  file not found at " +contFolder + " and was created" );
 			try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(suppliers, true)))) {
@@ -100,7 +104,7 @@ public class FileHelper {
 	 * @return a Vector<Suppliers> that contains the setting of the suppliers 
 	 */
 	public Vector<SupplierCol> getSuppliersCol(){
-		File supFile = new File(getExecFolder() +"/"+supF);
+		File supFile = new File(getExecFolder() +fileSep+supF);
 		
 		if(!supFile.exists() || supFile.length() <=0){
 			System.out.println("FileHelper.getSuppliersCol:: filhelper.getSuppliers supFile does not exist");
@@ -169,6 +173,13 @@ public class FileHelper {
 																				break;
 									case "mpn":					sup.setMpn(attValue);											
 																				break;
+									case "xmlUrl": 				sup.setXmlURL(attValue);
+																				break;
+									case "xmlPass":			sup.setXmlPass(attValue);
+																				break;
+									case "xmlUser":			sup.setXmlUser(attValue);
+																				break;
+																				
 									default: break;
 							}//end of switch
 						}//end if attPair contains ";"
@@ -192,7 +203,7 @@ public class FileHelper {
 	 * @param cm a CategoryMap
 	 */
 	public void saveCategory(CategoryMap cm ){
-		File catFile = new File(getExecFolder() +"/"+catF);
+		File catFile = new File(getExecFolder() +fileSep+catF);
 		
 		if(!catFile.exists()||catFile.length() <= 0){
 			try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(catFile, true)))) {
@@ -232,7 +243,7 @@ public class FileHelper {
 	 */
 	public CategoriesSet getCategories(){
 		CategoriesSet  catSet = new CategoriesSet();
-		File catFile = new File(getExecFolder() +"/"+catF);
+		File catFile = new File(getExecFolder() +fileSep+catF);
 		
 		try{
 			FileInputStream fis = new FileInputStream(catFile);
@@ -267,7 +278,7 @@ public class FileHelper {
 	 * 
 	 */
 	public void addErrLog(String s, String fileN){
-		File err = new File(getExecFolder() +"/"+fileN);
+		File err = new File(getExecFolder() +fileSep+fileN);
 		
 		try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(err, true)))) {
 		    out.println(s);
@@ -281,7 +292,7 @@ public class FileHelper {
 	 * @param prodID
 	 */
 	public void saveValidProd(String prodID){
-		File valid = new File(getExecFolder() +"/valid.prod"); 
+		File valid = new File(getExecFolder() +fileSep+"valid.prod"); 
 		try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
 		    out.println(prodID);
 		}catch (IOException e) { e.printStackTrace();}
@@ -294,9 +305,9 @@ public class FileHelper {
 	 * @param prod
 	 */
 	public void saveNotFound(Product prod, String supplier){
-		File valid = new File(getExecFolder() +"/notFound.prod"); 
+		File valid = new File(getExecFolder() +fileSep+"notFound.prod"); 
 		try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
-		    out.println("Supplier " + supplier + ": " +prod.toString());
+		    out.println("Supplier " + supplier + ": " +prod.toString(supplier));
 		}catch (IOException e) { e.printStackTrace();}
 		
 	}//end of saveValidProd
@@ -309,7 +320,7 @@ public class FileHelper {
 	public static void savePriceFormula(Vector<Double> formula, String supplierName){
 		 
 		if(formula!= null && formula.size() == 6){
-			File priceFile = new File(getExecFolder() +"/config/price.config");
+			File priceFile = new File(getExecFolder() +fileSep+"config"+fileSep+"price.config");
 			String priceString = supplierName+";";
 			for(Double d : formula){
 				priceString += d+";";
@@ -330,10 +341,10 @@ public class FileHelper {
 	 * @param prod
 	 */
 	public void saveNotFoundCategory(Product prod, String supplier){
-		File valid = new File(getExecFolder() +"/notFoundCategory.prod"); 
+		File valid = new File(getExecFolder() +fileSep+"notFoundCategory.prod"); 
 		try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
 		    out.println("Suppliers " +supplier+ " Category : " + prod.getCategory() +" not found, in prod"
-		    																+prod.toString());
+		    																+prod.toString(supplier));
 		}catch (IOException e) { e.printStackTrace();}
 		
 	}//end of saveValidProd
@@ -346,7 +357,7 @@ public class FileHelper {
 	 * @param prod, the product we want to save
 	 */
 	public void saveParsedProduct(String supplier, Product prod){
-		File valid = new File(getExecFolder() +"/config/"+supplier+".prods"); 
+		File valid = new File(getExecFolder() +fileSep+"config"+fileSep+supplier+".prods"); 
 		if(valid != null && valid.exists() && valid.length() > 0){
 			 HashMap<String, Product> oldProdMap = turnProdVectToMap(ProductHelper.getOldProdFromFile(valid));
 			if(!oldProdMap.containsKey(prod.getModel())){
@@ -390,7 +401,7 @@ public class FileHelper {
 	 */
 	public Vector<Product> validateSupplierProductList(Vector<Product> prods, String supplier){
 		
-		File old = new File(getExecFolder() +"/config/"+supplier+".prods");
+		File old = new File(getExecFolder() +fileSep+"config"+fileSep+supplier+".prods");
 		HashMap<String, Product> newProds = turnProdVectToMap(prods);
 		Vector<Product> oldProds = ProductHelper.getOldProdFromFile(old);
 		
@@ -452,7 +463,7 @@ public class FileHelper {
 	 */
 	public static Vector<Double> getPriceConfig(String supName){
 		Vector<Double> prices = new Vector<Double>();
-		File priceConf = new File(getExecFolder()+"/config/price.config");
+		File priceConf = new File(getExecFolder()+fileSep+"config"+fileSep+"price.config");
 		
 		//System.out.println("Filehelper.getPriceConfig :: Fetching price!!");
 		try{

@@ -43,6 +43,9 @@ public class EditSupplierController {
 	TextField tax_classF;
 	TextField mpnF;
 	TextField imgF;
+	TextField xmlUrlF;
+	TextField xmlUserF;
+	TextField xmlPassF;
 	
 	AddSupplierView asv;
 	EditSupplierView esv;
@@ -99,6 +102,9 @@ public class EditSupplierController {
 		 tax_classF= new TextField();
 		mpnF = new TextField();
 		imgF = new TextField();
+		xmlUrlF = new TextField();
+		xmlUserF = new TextField();
+		xmlPassF = new TextField();
 		
 		 Button saveB = new Button("Save Changes");
 		 saveB.setOnAction(event ->{
@@ -124,6 +130,10 @@ public class EditSupplierController {
 			 supl.setSupItemNumber(getTextFieldText(supINF.getText()));
 			 supl.setTaxClass(getTextFieldText(tax_classF.getText()));
 			 supl.setImg(getTextFieldText(imgF.getText()));
+			 
+			 supl.setXmlURL(getTextFieldText(xmlUrlF.getText()));
+			 supl.setXmlUser(getTextFieldText(xmlUserF.getText()));
+			 supl.setXmlPass(getTextFieldText(xmlPassF.getText()));
 			// supl.setProductXmlTag(t);
 			 
 			 fh.saveSupplier(supl);
@@ -140,7 +150,7 @@ public class EditSupplierController {
 		esv = new EditSupplierView(st, cBox, sup, saveB, nameF, xml, catF, 
 				itemNumberF, descF, supINF, eanF, avF, avdF, sepF, rPrice, 
 				modF, prodNameF, stock_statF, statusF, addImgF, manufF, 
-				tax_classF, mpnF,imgF, 
+				tax_classF, mpnF,imgF, xmlUrlF, xmlUserF,xmlPassF,
 				addSupplier, addCategory, editCategories, processFiles);
 
 	}//end of constructor

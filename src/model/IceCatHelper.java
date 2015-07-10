@@ -158,7 +158,7 @@ public class IceCatHelper {
 	 * @param stringToEncode
 	 * @return an ecoded version of the given string based on a 64 bit algorithm
 	 */
-	private static String base64Encode(String stringToEncode)
+	public static String base64Encode(String stringToEncode)
 	 {
 	    return DatatypeConverter.printBase64Binary(stringToEncode.getBytes());
 	 }//end of base64Encode

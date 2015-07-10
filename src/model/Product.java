@@ -279,7 +279,7 @@ public class Product {
 	 * a Csv file
 	 */
 	private String cleanString(String s){
-		s  = s.replaceAll("(\\r|\\n|\\r\\n)+", "\\\\n");
+		s  = s.replaceAll("(\\r|\\n|\\r\\n)+", " ");
 		s = s.replace(";", "");
 		return s.replace(",", "");
 	}

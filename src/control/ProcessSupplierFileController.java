@@ -14,7 +14,9 @@ import model.FileHelper;
 import model.Product;
 import model.ProductProcessor;
 import model.SupplierCol;
+import model.SupplierXmlDownloader;
 import view.ProcessSupplierFileView;
+
 
 public class ProcessSupplierFileController {
 
@@ -56,14 +58,37 @@ public class ProcessSupplierFileController {
 			if(f != null) path.setText(f.getAbsolutePath());
 		});
 		
+		
 		process = new Button();
 		process.setOnAction(event ->{
+			 String sup = cBox.getSelectionModel().getSelectedItem();
 			if(f != null && cBox.getSelectionModel().getSelectedItem() != null ){
-				 String sup = cBox.getSelectionModel().getSelectedItem();
 				 
 				Vector<Product> prods =  new Vector<Product>();  //ph.getProdFromFile(f, cBox.getSelectionModel().getSelectedItem() );
 				ProductProcessor pp = new ProductProcessor(f, sup, prods);
 				pp.process();
+			}else{
+				//System.out.println("ProcessSupplierFileController:: Supplier file is null and supplier is " + sup);
+				SupplierCol supl = fh.getSupplierByName(sup);
+				if (supl.getXmlURL() != null && !supl.getXmlURL().equals("")){
+					System.out.println("ProcessSupplierFileController::  Supplier specifies a url:" + supl.getXmlURL() );
+					String url = supl.getXmlURL();
+					String pass = supl.getXmlPass();
+					String user = supl.getXmlUser();
+					
+					//System.out.println("ProcessSupplierFileController::  Supplier specifies a url:" + FileHelper.getExecFolder()+"/temp.xml");
+					SupplierXmlDownloader sxd = new SupplierXmlDownloader(user, pass, url);
+					f =sxd.getUrl();
+					
+					//f = sxd.getSupplierXmlToFile(FileHelper.getExecFolder()+"/temp.xml");
+					Vector<Product> prods =  new Vector<Product>();  
+					ProductProcessor pp = new ProductProcessor(f, sup, prods);
+					pp.process();
+					
+				}else{
+					System.out.println("ProcessSupplierFileController::  Supplier file is null and  and no URL found for " + sup);
+				}//end if the supplier does not denote a URL to download the products from
+				
 			}
 		});
 		

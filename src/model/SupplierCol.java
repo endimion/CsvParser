@@ -44,8 +44,9 @@ public class SupplierCol {
 	// this  string stores how a supplier denotes a product is available
 	private String isAvailable;
 	
-	//the strings here store how a supplier denotes that a product is unavailable
-	private Vector<String> unAvailable;
+	private String xmlURL;
+	private String xmlPass;
+	private String xmlUser;
 	
 	
 	public SupplierCol(){
@@ -61,6 +62,9 @@ public class SupplierCol {
 		this.separ ="";
 		this.productXmlTag ="";
 		img = "";
+		this.xmlURL ="";
+		this.xmlPass ="";
+		this.xmlUser="";
 	}//end of Supplier
 	
 	
@@ -104,10 +108,6 @@ public class SupplierCol {
 	public String getImg(){return this.img;}
 	
 	
-	//TODO
-	public void setUnAvailable(Vector<String> unAv){ this.unAvailable = unAv;}
-	public Vector<String> getUnAvailable(){return this.unAvailable;}
-	
 	//the separator of the files received by the suppliers in case 
 	// they are csv files
 	public void setSeparator(String sep){
@@ -124,8 +124,14 @@ public class SupplierCol {
 	public String getProductXmlTag(){return this.productXmlTag;}
 	
 	
+	public void setXmlURL(String url){this.xmlURL = url;}
+	public String getXmlURL(){return this.xmlURL;}
 	
+	public void setXmlPass(String pass){this.xmlPass = pass;}
+	public String getXmlPass(){return this.xmlPass;}
 	
+	public void setXmlUser(String user){this.xmlUser = user;}
+	public String getXmlUser(){return this.xmlUser;}
 	
 	
 	/**
@@ -164,6 +170,12 @@ public class SupplierCol {
 			res.add(this.getAddImg());
 		}
 		
+		if(this.getXmlPass() != null && !getXmlPass().equals("")){
+			res.add(getXmlPass());
+		}
+		
+		if(this.getXmlUser()!= null && ! getXmlUser().equals("")){res.add(getXmlUser());}
+		if(this.getXmlURL() != null && !this.getXmlURL().equals("")){res.add(getXmlURL());}
 		
 		return res;
 	}//end of getColVector

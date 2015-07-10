@@ -120,7 +120,6 @@ public class GetProdFromFileTask extends Task<Vector<Product>>{
 									prod.setpName(r.getElement(sup.getItemName()));
 								}
 
-								//TODO
 								prod.setDoublePrice(-1);
 								//System.out.println("got it");
 								
@@ -136,7 +135,7 @@ public class GetProdFromFileTask extends Task<Vector<Product>>{
 								prod.setRPrice(r.getElement(sup.getRetailPrice()));
 								prod.setSupNum(r.getElement(sup.getSupItemNumber()));
 								
-								//fh.saveNotFoundCategory(prod, supplier);
+								fh.saveNotFoundCategory(prod, supplier);
 							
 							}//end if the nativeCategory was null, i.e. the product does not fit into any category of our site
 						}//end of looping through the parsed rows of the csv file
