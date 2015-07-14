@@ -134,7 +134,7 @@ public class ProductHelper {
 		return products;
 	}//end of getProdFromFile
 
-	
+	//public 
 	
 	
 	
