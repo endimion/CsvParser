@@ -38,6 +38,7 @@ public class AddSupplierController {
 	TextField xmlUrlF;
 	TextField xmlUserF;
 	TextField xmlPassF;
+	TextField weightF;
 	
 	AddSupplierView asv;
 	
@@ -68,6 +69,7 @@ public class AddSupplierController {
 		 xmlUrlF = new TextField();
 		xmlUserF = new TextField();
 		xmlPassF = new TextField();
+		weightF = new TextField();
 			
 		 save = new Button();
 			save.setOnAction(event->{
@@ -108,14 +110,14 @@ public class AddSupplierController {
 				sup.setXmlURL(xmlUrlF.getText());
 				sup.setXmlUser(xmlUserF.getText());
 				sup.setXmlPass(xmlPassF.getText());
-				
+				sup.setWeight(weightF.getText());
 				fh.saveSupplier(sup);
 			});
 			
 			
 			asv = new AddSupplierView(st, save, nameF, xml, catF, 
 					itemNumberF, descF, supINF, eanF, avF, avdF, sepF, rPrice, modF,   prodNameF,  stock_statF,  statusF,  addImgF,
-					 manufF,  tax_classF, mpnF, imgF,xmlUrlF,xmlUserF,xmlPassF,addSupplier,addCategory,
+					 manufF,  tax_classF, mpnF, imgF,xmlUrlF,xmlUserF,xmlPassF,weightF,addSupplier,addCategory,
 					editCategories,processFiles);
 	}//end of constructor
 	

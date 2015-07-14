@@ -46,6 +46,7 @@ public class EditSupplierController {
 	TextField xmlUrlF;
 	TextField xmlUserF;
 	TextField xmlPassF;
+	TextField weightF;
 	
 	AddSupplierView asv;
 	EditSupplierView esv;
@@ -74,7 +75,7 @@ public class EditSupplierController {
 		    	  
 		    	  String selection =  boxItems.get(newV.intValue());
 		    	  SupplierCol nSup = fh.getSupplierByName(selection);
-		    	  System.out.println("selection changed " + newV.intValue());
+		    	  System.out.println("EditSupplierController:: selection changed " + newV.intValue());
 		    	  EditSupplierController esc = new EditSupplierController(st,addSupplier, 
 		    			  													addCategory, editCategories, processFiles, nSup);
 		    	  esc.displayView();
@@ -105,6 +106,7 @@ public class EditSupplierController {
 		xmlUrlF = new TextField();
 		xmlUserF = new TextField();
 		xmlPassF = new TextField();
+		weightF = new TextField();
 		
 		 Button saveB = new Button("Save Changes");
 		 saveB.setOnAction(event ->{
@@ -134,6 +136,7 @@ public class EditSupplierController {
 			 supl.setXmlURL(getTextFieldText(xmlUrlF.getText()));
 			 supl.setXmlUser(getTextFieldText(xmlUserF.getText()));
 			 supl.setXmlPass(getTextFieldText(xmlPassF.getText()));
+			 supl.setWeight(getTextFieldText(weightF.getText()));
 			// supl.setProductXmlTag(t);
 			 
 			 fh.saveSupplier(supl);
@@ -150,7 +153,7 @@ public class EditSupplierController {
 		esv = new EditSupplierView(st, cBox, sup, saveB, nameF, xml, catF, 
 				itemNumberF, descF, supINF, eanF, avF, avdF, sepF, rPrice, 
 				modF, prodNameF, stock_statF, statusF, addImgF, manufF, 
-				tax_classF, mpnF,imgF, xmlUrlF, xmlUserF,xmlPassF,
+				tax_classF, mpnF,imgF, xmlUrlF, xmlUserF,xmlPassF,weightF,
 				addSupplier, addCategory, editCategories, processFiles);
 
 	}//end of constructor

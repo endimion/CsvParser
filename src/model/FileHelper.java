@@ -4,11 +4,14 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.URISyntaxException;
+import java.nio.charset.MalformedInputException;
 import java.nio.file.FileSystems;
 import java.util.HashMap;
 import java.util.Vector;
@@ -54,20 +57,25 @@ public class FileHelper {
 				+ "taxClass::" + sup.getTaxClass()+ "&&"
 				+ "mpn::" + sup.getMpn()+ "&&"+"img::"+sup.getImg()  +"&&"
 				+ "xmlUrl::"+sup.getXmlURL() +"&&" +"xmlUser::"+sup.getXmlUser()
-				+"&&" + "xmlPass::"+sup.getXmlPass(); 
+				+"&&" + "xmlPass::"+sup.getXmlPass()
+				+"&&" +"weight::"+sup.getWeight(); 
 		
 		File suppliers = new File(contFolder +fileSep+supF);
 		if(!suppliers.exists() || suppliers.length() <= 0){
 			//System.out.println("FileHelper.saveSupplier  file not found at " +contFolder + " and was created" );
-			try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(suppliers, true)))) {
-			    out.println(supToString);
+			try{
+				FileOutputStream fos = new FileOutputStream(suppliers,true);
+				OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
+				out.write(supToString+"\n");
+				out.flush();
+				out.close();
 			}catch (IOException e) { e.printStackTrace();}//end of catching the exception
 		}//end if suppliers file does not exist or is empty
 		else{
 			try{
 						String fileRead ="";
 						FileInputStream fis = new FileInputStream(suppliers);
-						InputStreamReader isr = new InputStreamReader(fis);
+						InputStreamReader isr = new InputStreamReader(fis,"UTF-8");
 						BufferedReader br = new BufferedReader(isr); 
 						String line = br.readLine();
 						String[] attributes;
@@ -87,10 +95,14 @@ public class FileHelper {
 							line = br.readLine();
 						}//end of looping through the lines of the file
 						br.close();
-						
-						try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(suppliers, false)))) {
-						    out.print(fileRead);
-						    out.println(supToString);
+						try{
+							FileOutputStream fos = new FileOutputStream(suppliers,false);
+							OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
+						//try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(suppliers, false)))) {
+						    out.write(fileRead);
+						    out.append(supToString);
+						    out.flush();
+						    out.close();
 						}catch (IOException e) { e.printStackTrace();}//end of catching the exception
 			}catch(IOException e){e.printStackTrace();}
 			
@@ -114,7 +126,7 @@ public class FileHelper {
 			SupplierCol sup ;
 			try{
 				FileInputStream fis = new FileInputStream(supFile);
-				InputStreamReader isr = new InputStreamReader(fis);
+				InputStreamReader isr = new InputStreamReader(fis,"UTF-8");
 				BufferedReader br = new BufferedReader(isr); 
 				String line = br.readLine();
 				String[] attr ;
@@ -179,6 +191,9 @@ public class FileHelper {
 																				break;
 									case "xmlUser":			sup.setXmlUser(attValue);
 																				break;
+
+									case "weight":				sup.setWeight(attValue);
+																				break;
 																				
 									default: break;
 							}//end of switch
@@ -206,13 +221,18 @@ public class FileHelper {
 		File catFile = new File(getExecFolder() +fileSep+catF);
 		
 		if(!catFile.exists()||catFile.length() <= 0){
-			try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(catFile, true)))) {
-				out.println(cm.toString());
+			try{
+			//try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(catFile, true)))) {
+				FileOutputStream fos = new FileOutputStream(catFile);
+				OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
+				out.write(cm.toString()+"\n");
+				out.flush();
+				out.close();
 			}catch (IOException e) { e.printStackTrace();}//end of catching the exception
 		}else{
 			try{
 				FileInputStream fis = new FileInputStream(catFile);
-				InputStreamReader isr = new InputStreamReader(fis);
+				InputStreamReader isr = new InputStreamReader(fis,"UTF-8");
 				BufferedReader br = new BufferedReader(isr); 
 				String line = br.readLine();
 				String read = "";
@@ -227,9 +247,14 @@ public class FileHelper {
 					line = br.readLine();
 				}//end of looping through the lines
 				br.close();
-				try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(catFile, false)))) {
-				    out.print(read);
-				    out.println(cm.toString());
+				try{
+				//try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(catFile, false)))) {
+					FileOutputStream fos = new FileOutputStream(catFile,false);
+					OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
+					out.write(read);
+				    out.append(cm.toString()+"\n");
+				    out.flush();
+				    out.close();
 				}catch (IOException e) { e.printStackTrace();}//end of catching the exception
 			}catch(Exception e){e.printStackTrace();}
 		}//end if the catFile exists
@@ -247,7 +272,7 @@ public class FileHelper {
 		
 		try{
 			FileInputStream fis = new FileInputStream(catFile);
-			InputStreamReader isr = new InputStreamReader(fis);
+			InputStreamReader isr = new InputStreamReader(fis,"UTF-8");
 			BufferedReader br = new BufferedReader(isr); 
 			String line = br.readLine();
 			CategoryMap cm;
@@ -293,8 +318,13 @@ public class FileHelper {
 	 */
 	public void saveValidProd(String prodID){
 		File valid = new File(getExecFolder() +fileSep+"valid.prod"); 
-		try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
-		    out.println(prodID);
+		//try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
+		try{
+			FileOutputStream fos = new FileOutputStream(valid);
+			OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
+		    out.append(prodID);
+		    out.flush();
+		    out.close();
 		}catch (IOException e) { e.printStackTrace();}
 		
 	}//end of saveValidProd
@@ -306,8 +336,13 @@ public class FileHelper {
 	 */
 	public void saveNotFound(Product prod, String supplier){
 		File valid = new File(getExecFolder() +fileSep+"notFound.prod"); 
-		try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
-		    out.println("Supplier " + supplier + ": " +prod.toString(supplier));
+		//try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
+		try{
+			FileOutputStream fos = new FileOutputStream(valid);
+			OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
+		    out.append("Supplier " + supplier + ": " +prod.toString(supplier));
+		    out.flush();
+		    out.close();
 		}catch (IOException e) { e.printStackTrace();}
 		
 	}//end of saveValidProd
@@ -317,7 +352,8 @@ public class FileHelper {
 	 * @param formula a Vector of doubles containing the variables
 	 * for calculating the price of a product. The size of this vector should be six!!
 	 */
-	public static void savePriceFormula(Vector<Double> formula, String supplierName){
+	public static void savePriceFormula(Vector<Double> formula, String supplierName, 
+																						boolean removeVAT){
 		 
 		if(formula!= null && formula.size() == 6){
 			File priceFile = new File(getExecFolder() +fileSep+"config"+fileSep+"price.config");
@@ -325,11 +361,33 @@ public class FileHelper {
 			for(Double d : formula){
 				priceString += d+";";
 			}//end of looping through the variables of the formula
-			priceString = priceString.substring(0, priceString.length() -1);
+			priceString += removeVAT;
+			//priceString = priceString.substring(0, priceString.length() -1);
 			
 			//apend the string at the end of the file
-			try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(priceFile, true)))) {
-				out.println(priceString);
+			//	try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(priceFile, true)))) {
+			String fileContents="";
+			try{
+				FileInputStream fis = new FileInputStream(priceFile);
+				InputStreamReader isr = new InputStreamReader(fis,"UTF-8");
+				BufferedReader br = new BufferedReader(isr); 
+				String line = br.readLine();
+				
+				while(line != null){
+					String supName = line.trim().split(";")[0];
+					if(!supName.equals(supplierName)) fileContents += line +"\n";
+					line = br.readLine();
+				}//end of while loop
+				br.close();
+			}catch(Exception e){e.printStackTrace();}
+			
+			try{
+				FileOutputStream fos = new FileOutputStream(priceFile,false);
+				OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
+				if(!fileContents.equals(""))out.write(fileContents);
+				out.append(priceString+"\n");
+				out.flush();
+				out.close();
 			}catch (IOException e) { e.printStackTrace();}
 
 		}//end if th e formula is not null and it has a size of 6
@@ -342,9 +400,14 @@ public class FileHelper {
 	 */
 	public void saveNotFoundCategory(Product prod, String supplier){
 		File valid = new File(getExecFolder() +fileSep+"notFoundCategory.prod"); 
-		try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
-		    out.println("Suppliers " +supplier+ " Category : " + prod.getCategory() +" not found, in prod"
-		    																+prod.toString(supplier));
+		//try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
+		try{
+			FileOutputStream fos = new FileOutputStream(valid);
+			OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
+		    out.append("Suppliers " +supplier+ " Category : " + prod.getCategory() +" not found, in prod"
+		    																+prod.toString(supplier)+"\n");
+		    out.flush();
+		    out.close();
 		}catch (IOException e) { e.printStackTrace();}
 		
 	}//end of saveValidProd
@@ -361,15 +424,25 @@ public class FileHelper {
 		if(valid != null && valid.exists() && valid.length() > 0){
 			 HashMap<String, Product> oldProdMap = turnProdVectToMap(ProductHelper.getOldProdFromFile(valid));
 			if(!oldProdMap.containsKey(prod.getModel())){
-				try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
-					out.println(prod.toCsv());
+				//try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
+				try{
+					FileOutputStream fos = new FileOutputStream(valid,true);
+					OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
+					out.write(prod.toCsv()+"\n");
+					out.flush();
+					out.close();
 				}catch (IOException e) { e.printStackTrace();}
 			}//if the product does not exist in the file we append it
 			 
 		}//end if we have a file which already contains the products parsed by the supplier
 		else{
-			try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
-				out.println(prod.toCsv());
+			//try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
+			try{
+				FileOutputStream fos = new FileOutputStream(valid,true);
+				OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
+				out.append(prod.toCsv()+"\n");
+				out.flush();
+				out.close();
 			}catch (IOException e) { e.printStackTrace();}
 		}//end if it is the first time we are parsing products from this supplier
 		
@@ -441,7 +514,7 @@ public class FileHelper {
 		
 		try{
 			FileInputStream fis = new FileInputStream(file);
-			InputStreamReader isr = new InputStreamReader(fis);
+			InputStreamReader isr = new InputStreamReader(fis,"UTF-8");
 			BufferedReader br = new BufferedReader(isr); 
 			String line = br.readLine();
 			
@@ -468,18 +541,24 @@ public class FileHelper {
 		//System.out.println("Filehelper.getPriceConfig :: Fetching price!!");
 		try{
 			FileInputStream fis = new FileInputStream(priceConf);
-			InputStreamReader isr = new InputStreamReader(fis);
+			InputStreamReader isr = new InputStreamReader(fis,"UTF-8");
 			BufferedReader br = new BufferedReader(isr); 
 			String line = br.readLine();
 			
 			while(line!= null){
 				String[] parsedLine = line.split(";");
+				if(parsedLine.length != 8){
+					System.out.println("MalformedInput for line:: " + line);
+					br.close();
+					throw new MalformedInputException(0);
+				}//end inf the line has more or less than 8 elemets
+				
 				if(parsedLine[0].equals(supName)){
 					int i = 0;
 					for(String item: parsedLine){
-						try{
-							if(i != 0)prices.add(Double.parseDouble(item.trim()));
-						}catch(Exception e){e.printStackTrace();}
+						//try{
+							if(i != 0 && i < parsedLine.length-1) prices.add(Double.parseDouble(item.trim()));
+						//}catch(Exception e){br.close();e.printStackTrace();}
 						i++;
 					}//end of loo0ping through the elements of the parsedLine
 				}//end if the name of the line is the prefix of the supplier
@@ -490,6 +569,38 @@ public class FileHelper {
 		
 		return prices;
 	}//end of getPriceConfig
+	
+
+	
+	/**
+	 *	Checks if the price.config file indicates we should remove the VAT from the supplier 
+	 * @param supplier
+	 * @return whether we should remove the vat from the supplier or not
+	 */
+	public static boolean getRemoveVAT(String supplier){
+		File priceConf = new File(getExecFolder()+fileSep+"config"+fileSep+"price.config");
+		boolean removeVAT = false;
+		
+		try{
+			FileInputStream fis = new FileInputStream(priceConf);
+			InputStreamReader isr = new InputStreamReader(fis,"UTF-8");
+			BufferedReader br = new BufferedReader(isr); 
+			String line = br.readLine();
+			
+			while(line!= null){
+				String[] parsedLine = line.split(";");
+				if(parsedLine[0].equals(supplier)){
+					removeVAT = Boolean.parseBoolean(parsedLine[parsedLine.length-1]); 
+				}
+				
+				line = br.readLine();
+			}//end of while
+			br.close();
+		}catch(Exception e){e.printStackTrace();}
+		
+		return removeVAT;
+	}//end of getRemoveVAT
+	
 	
 	
 	/**

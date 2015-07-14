@@ -41,7 +41,7 @@ public class AddSupplierView {
 											TextField prodNameF, TextField stock_statF, TextField statusF, TextField addImgF,
 											TextField manufF, TextField tax_classF,
 											TextField mpnF, TextField imgF, TextField xmlUrlF, TextField xmlUserF, TextField xmlPassF,
-											
+											TextField weightF,
 											Button addSupplier, Button addCategory, Button editCategories, 
 											Button processFiles){
 		this.stage = st;
@@ -78,7 +78,7 @@ public class AddSupplierView {
 		
 	    //Left column containing only the names
 	    VBox leftCol = new VBox();
-	   Text stxt =  new Text("Supplier Name Column: ");
+	   Text stxt =  new Text("Supplier Name: ");
 	   stxt.setId("simpleText");
 	    Text ctxt = new 	 Text("Category Column: ");
 	    ctxt.setId("simpleText");
@@ -92,13 +92,13 @@ public class AddSupplierView {
 	    eantxt.setId("simpleText");
 	    Text rptxt = new Text("Retail Price Column:");
 	    rptxt.setId("simpleText");
-	    Text xmltxt = new Text("XML Column:");
+	    Text xmltxt = new Text("is Supplier file XML?");
 	    xmltxt.setId("simpleText");
 	    Text avtxt = new Text("Availability Column: ");
 	    avtxt.setId("simpleText");
-	    Text davtxt = new Text("Denotation of Availability Column: ");
+	    Text davtxt = new Text("Denotation of Availability: ");
 	    davtxt.setId("simpleText");
-	    Text septxt = new Text("CSV separator: ");
+	    Text septxt = new Text("Xml/CSV separator: ");
 	    septxt.setId("simpleText");
 	    Text modtxt = new Text("Model  Prefix: ");
 	    modtxt.setId("simpleText");
@@ -128,18 +128,43 @@ public class AddSupplierView {
 	    Text xmlPassTxt = new Text("Xml feed PassWord: ");
 	    xmlPassTxt.setId("simpleText");
 	    
-	    leftCol.getChildren().addAll( stxt,ctxt,intxt, dtxt, sintxt,
-	    	eantxt, rptxt, xmltxt ,avtxt, davtxt, septxt,modtxt, prodNameTxt, stockStatTxt, 
-	    	statusTxt, addImgTxt, manufTxt, taxClassTxt, mpntxt,imgtxt,xmlUrlTxt,xmlUserTxt,xmlPassTxt);
+	    Text weightTxt = new Text("Weight Column");
+	    weightTxt.setId("simpleText");
 	    
-	  leftCol.setSpacing(10);
+	    leftCol.getChildren().addAll( stxt, xmltxt , xmlUrlTxt, xmlUserTxt, xmlPassTxt, septxt,
+	    		modtxt, intxt,  prodNameTxt, manufTxt,dtxt, ctxt, rptxt, eantxt,  mpntxt,   avtxt, davtxt,
+	    		imgtxt,  addImgTxt,weightTxt,
+	    		
+	    		   stockStatTxt,	statusTxt,  taxClassTxt);
 	    
+	 
+	  
+	  
+	  /*stxt.applyCss();
+	  double height =   stxt.getLayoutBounds().getHeight();
+	  nameF.setMaxHeight(height);
+	  nameF.setPrefHeight(height);
+	  nameF.setMinHeight(height);
+	  */
+	  
+	  supINF.setEditable(false);
+	  supINF.setDisable(true);
+	  stock_statF.setEditable(false);
+	  stock_statF.setDisable(true);
+	  statusF.setEditable(false);
+	  statusF.setDisable(true);
+	  tax_classF.setEditable(false);
+	  tax_classF.setDisable(true);
+	  
 	    VBox centerCol = new VBox();
-	    centerCol.getChildren().addAll(nameF, catF, itemNumberF, descF, supINF, eanF, rPrice, xml, 
-	    		avF, avdF,sepF,modelF, prodNameF, stock_statF,statusF,addImgF,
-	    		manufF, tax_classF,mpnF, imgF,xmlUrlF,xmlUserF,xmlPassF);
-	    centerCol.setSpacing(8);
-		
+	    centerCol.getChildren().addAll(nameF,  xml,  xmlUrlF,xmlUserF,xmlPassF,sepF,
+	    		modelF, itemNumberF, prodNameF, manufF, descF, catF, rPrice,  eanF,  mpnF, avF, avdF,
+	    		imgF, addImgF,weightF,
+	    		
+	    		 	 stock_statF,statusF, tax_classF);
+	    
+	    centerCol.setSpacing(7.5);
+	    leftCol.setSpacing(12);
 		
 		
 		

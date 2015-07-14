@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.nio.channels.Channels;
@@ -78,8 +79,12 @@ public class IceCatHelper {
 			 String pageXml = page.asXml();
 			 File f = new File(filePath);
 			 
-			 PrintWriter out = new PrintWriter(f);
-			 out.println(pageXml);
+			 FileOutputStream fos = new FileOutputStream(f);
+			OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
+			 
+			 //PrintWriter out = new PrintWriter(f);
+			 out.write(pageXml);
+			 out.flush();
 			 out.close();
 			 return f;
 		}catch(Exception e){
@@ -114,7 +119,10 @@ public class IceCatHelper {
 				// Convert the bytes to Kilobytes (1 KB = 1024 Bytes)
 				long fileSizeInKB = fileSizeInBytes / 1024;
 			
-				if(fileSizeInKB > 400){
+				if(fileSizeInKB > 600){
+					System.out.println("IcecatHelper.savePicturetoDrive:: "
+							+ "Picture is more than 400KB!!!");
+					
 					BufferedImage bufferedImage = null;
 					try {
 						bufferedImage = ImageIO.read(picFile);

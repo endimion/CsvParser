@@ -61,6 +61,9 @@ public class EditCategoriesView {
 		MaineBorder.setLeft(buttonBox);
 		MaineBorder.setCenter(sp);
 		
+		
+		
+	    
 		Scene scene = new Scene(MaineBorder, stage.getWidth(),stage.getHeight());
 	   scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		

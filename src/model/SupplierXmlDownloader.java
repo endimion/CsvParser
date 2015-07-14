@@ -2,8 +2,9 @@ package model;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -47,7 +48,8 @@ public class SupplierXmlDownloader {
 		      connection.setRequestProperty("Accept-Language", "tr-TR,tr;q=0.8,en-US;q=0.5,en;q=0.3");
 		      connection.setDoInput(true);
 		      connection.setDoOutput(true);
-		      BufferedReader in=new BufferedReader(new InputStreamReader(connection.getInputStream(),"UTF-8"));
+		      BufferedReader in=
+		    		  new BufferedReader(new InputStreamReader(connection.getInputStream()));
 		      String line,response="";
 		      while((line=in.readLine())!=null)
 		         response+=(line+"\n");
@@ -55,10 +57,13 @@ public class SupplierXmlDownloader {
 		     // System.out.println(response);
 		     
 		     File f = new File(FileHelper.getExecFolder()+"/temp.xml");
-			 PrintWriter out = new PrintWriter(f);
-			 out.println(response);
-			 out.close();
-			 
+		     FileOutputStream fos = new FileOutputStream(f,false);
+			OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
+			//try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(suppliers, false)))) {
+				out.write(response);   
+			    out.flush();
+			    out.close();
+		     
 		      return f;
 		   }catch(Exception e){e.printStackTrace();}
 		   return  null;

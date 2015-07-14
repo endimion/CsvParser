@@ -78,16 +78,17 @@ public class GetProdFromFileTask extends Task<Vector<Product>>{
 										Double rowQuantity = Double.parseDouble(r.getElement(sup.getAvailability()));
 										
 										if(rowQuantity >= threshold ){
-											prod.setQuantity(28);
+											prod.setQuantity(rowQuantity);
 										}else{
 											prod.setQuantity(0);
 										}
 								}catch(Exception e){e.printStackTrace();}
 							}//end if the supplier expression for available products is a numerical representation
 							
-							//
+							// Getting the values for the pictures and weight
 							prod.setPic(r.getElement(sup.getImg().trim()));
 							prod.setAddPic(r.getElement(sup.getAddImg().trim()));
+							prod.setWeight(r.getElement(sup.getWeight().trim()));
 							
 							//Converting the foreign category read from the file to a native category
 							String foreignCat = r.getElement(sup.getCategory());
@@ -104,7 +105,7 @@ public class GetProdFromFileTask extends Task<Vector<Product>>{
 								prod.setEan(r.getElement(sup.getEan()));
 								prod.setNumber(r.getElement(sup.getItemNumber()));
 								prod.setRPrice(r.getElement(sup.getRetailPrice()));
-								prod.setSupNum(r.getElement(sup.getSupItemNumber()));
+								//prod.setSupNum(r.getElement(sup.getSupItemNumber()));
 								
 								//set the model number of the product
 								prod.setModel(sup.getModelPrefix().trim()
@@ -133,7 +134,7 @@ public class GetProdFromFileTask extends Task<Vector<Product>>{
 								prod.setEan(r.getElement(sup.getEan()));
 								prod.setNumber(r.getElement(sup.getItemNumber()));
 								prod.setRPrice(r.getElement(sup.getRetailPrice()));
-								prod.setSupNum(r.getElement(sup.getSupItemNumber()));
+								//prod.setSupNum(r.getElement(sup.getSupItemNumber()));
 								
 								fh.saveNotFoundCategory(prod, supplier);
 							

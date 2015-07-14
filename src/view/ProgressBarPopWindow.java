@@ -16,8 +16,8 @@ public class ProgressBarPopWindow {
 																										Stage st, Label messageTxt){
 		VBox hbox = new VBox(20);
 		hbox.setPadding(new Insets(30, 30, 30, 30));
-		bar.setPrefSize(200, 24);
-		hbox.getChildren().addAll(new Text(message), bar, messageTxt, new Text("asdds"));
+		bar.setPrefSize(250, 24);
+		hbox.getChildren().addAll(new Text(message), bar, messageTxt);
 		
 		this.st = st;
 		Scene scene = new Scene(hbox);
@@ -35,4 +35,4 @@ public class ProgressBarPopWindow {
 	public void pop(){
 		st.show();
 	}
-}
+}//end of class

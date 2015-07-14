@@ -1,6 +1,7 @@
 package model;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.util.Vector;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -212,7 +213,8 @@ public class XmlParser {
 	 */
 	private Document readyDocument(File f){
 		try{
-			Document doc =  db.parse(f);
+			FileInputStream in = new FileInputStream(f);
+			Document doc =  db.parse(in,"UTF-8");
 			doc.getDocumentElement().normalize();
 			return doc;
 		}catch(Exception e){e.printStackTrace(); return null;}

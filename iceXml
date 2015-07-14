@@ -1,4 +1,3 @@
 <ICECAT-interface xsi:noNamespaceSchemaLocation="http://data.icecat.biz/xsd/ICECAT-interface_response.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Product ID="??" ErrorMessage="The requested XML data-sheet is not present in the Icecat database." Code="-1"/>
+  <Product ID="?90036750?" ErrorMessage="The requested XML data-sheet is not present in the Icecat database." Code="-1"/>
 </ICECAT-interface>
-

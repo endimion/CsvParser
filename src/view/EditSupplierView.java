@@ -26,7 +26,7 @@ public class EditSupplierView {
 			
 			TextField prodNameF, TextField stock_statF, TextField statusF, TextField addImgF,
 			TextField manufF, TextField tax_classF, TextField mpnF,
-			TextField imgF, TextField xmlUrlF, TextField xmlUserF, TextField xmlPassF,
+			TextField imgF, TextField xmlUrlF, TextField xmlUserF, TextField xmlPassF, TextField weightF,
 			
 			Button addSupplier, Button addCategory, Button editCategories, 
 			Button processFiles){
@@ -123,7 +123,8 @@ public class EditSupplierView {
 	    Text xmlPassTxt = new Text("Xml feed PassWord: ");
 	    xmlPassTxt.setId("simpleText");
 	
-	    
+	    Text weightTxt = new Text("Weight Columns: ");
+	    weightTxt.setId("simpleText");
 	  
 	    if(sup!= null){
 	    	nameF.setText(sup.getName());
@@ -149,22 +150,35 @@ public class EditSupplierView {
 	    	xmlUrlF.setText(sup.getXmlURL());
 	    	xmlUserF.setText(sup.getXmlUser());
 	    	xmlPassF.setText(sup.getXmlPass());
+	    	weightF.setText(sup.getWeight());
 	    }//end if the supplier is not null
 	  
 	    VBox centerCol = new VBox();
-	    centerCol.getChildren().addAll(nameF, catF, itemNumberF, descF, supINF, eanF, rPrice, xml, 
-	    		avF, avdF,sepF,modelF, prodNameF, stock_statF,statusF,addImgF,manufF, tax_classF,mpnF,imgF,
-	    		xmlUrlF,xmlUserF,xmlPassF);
-	    centerCol.setSpacing(8);
+	    centerCol.getChildren().addAll(nameF,  xml,  xmlUrlF,xmlUserF,xmlPassF,sepF,
+	    		modelF, itemNumberF, prodNameF, manufF, descF, catF, rPrice,  eanF,  mpnF, avF, avdF,
+	    		imgF, addImgF,weightF,
+	    		
+	    		 	 stock_statF,statusF, tax_classF);
+	   
 	    
-	    leftCol.getChildren().addAll( stxt,ctxt,intxt, dtxt, sintxt,
-		    	eantxt, rptxt, xmltxt ,avtxt, davtxt, septxt,modtxt, prodNameTxt, stockStatTxt, 
-		    	statusTxt, addImgTxt, manufTxt, taxClassTxt,mpnTxt,imgtxt,xmlUrlTxt,xmlUserTxt,xmlPassTxt);
-	    leftCol.setSpacing(10);
-	
+	    leftCol.getChildren().addAll( stxt, xmltxt , xmlUrlTxt, xmlUserTxt, xmlPassTxt, septxt,
+	    		modtxt, intxt,  prodNameTxt, manufTxt,dtxt, ctxt, rptxt, eantxt,  mpnTxt,   avtxt, davtxt,
+	    		imgtxt,  addImgTxt,weightTxt,
+	    		
+	    		   stockStatTxt,	statusTxt,  taxClassTxt);
+	   
+	    centerCol.setSpacing(7.5);
+	    leftCol.setSpacing(12);
 		
 		
-		
+	    supINF.setEditable(false);
+		supINF.setDisable(true);
+		stock_statF.setEditable(false);
+		stock_statF.setDisable(true);
+		statusF.setEditable(false);
+		statusF.setDisable(true);
+		tax_classF.setEditable(false);
+		tax_classF.setDisable(true);
 		
 		border.setCenter(centerCol);
 		border.setLeft(leftCol);

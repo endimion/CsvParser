@@ -22,6 +22,8 @@ public class MainControl extends Application{
 		//AddCategoriesController acc = new AddCategoriesController(primaryStage);
 		//acc.displayView();
 		
+		
+		
 		Button editPriceForm = new Button("Edit Price Formula");
 		editPriceForm.setOnAction(event ->{
 			EditPriceFormulaController epfc = 

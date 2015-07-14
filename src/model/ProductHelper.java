@@ -5,13 +5,15 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.MalformedInputException;
+import java.nio.file.FileSystems;
 import java.util.Vector;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class ProductHelper {
-
+	private final static String fileSep = FileSystems.getDefault().getSeparator();
+	
 	public ProductHelper(){	}
 	
 	
@@ -98,7 +100,7 @@ public class ProductHelper {
 							prod.setEan(r.getElement(sup.getEan()));
 							prod.setNumber(r.getElement(sup.getItemNumber()));
 							prod.setRPrice(r.getElement(sup.getRetailPrice()));
-							prod.setSupNum(r.getElement(sup.getSupItemNumber()));
+							//prod.setSupNum(r.getElement(sup.getSupItemNumber()));
 							
 							//TODO fix this so that the price formula is correctly read for a file!!!!
 							Double var1 = FileHelper.getPriceConfig(supplier).get(0);
@@ -108,7 +110,7 @@ public class ProductHelper {
 							Double var5 = FileHelper.getPriceConfig(supplier).get(4);
 							Double kiloP = FileHelper.getPriceConfig(supplier).get(5);
 							
-							prod.setDoublePrice(prod.getPrice(var1,var2,var3,var4,var5,kiloP));
+							prod.setDoublePrice(prod.getPrice(var1,var2,var3,var4,var5,kiloP,FileHelper.getRemoveVAT(supplier)));
 							
 							products.add(prod);
 						}//end if the nativeCategory is not null
@@ -119,7 +121,7 @@ public class ProductHelper {
 							prod.setEan(r.getElement(sup.getEan()));
 							prod.setNumber(r.getElement(sup.getItemNumber()));
 							prod.setRPrice(r.getElement(sup.getRetailPrice()));
-							prod.setSupNum(r.getElement(sup.getSupItemNumber()));
+							//prod.setSupNum(r.getElement(sup.getSupItemNumber()));
 							
 							fh.saveNotFoundCategory(prod, supplier);
 						}//end if the nativeCategory was null, i.e. the product does not fit into any category of our site
@@ -134,6 +136,15 @@ public class ProductHelper {
 
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 * Reads a Csv file containing Products previously stored by the application 
 	 * @param supplier
@@ -142,10 +153,13 @@ public class ProductHelper {
 	public static Vector<Product> getOldProdFromFile(File f){
 		
 		Vector<Product> res = new Vector<Product>();
-		
+		if(!f.exists()){
+			return res;
+		} //end if the previously parsed supplier file does not exist
+			
 		try {
 			FileInputStream fis = new FileInputStream(f);
-			InputStreamReader isr = new InputStreamReader(fis);
+			InputStreamReader isr = new InputStreamReader(fis,"UTF-8");
 			BufferedReader br = new BufferedReader(isr); 
 			String line = (br.readLine()).trim();
 			
@@ -165,7 +179,7 @@ public class ProductHelper {
 					lineProd.setpName(lineArray[4]);
 					lineProd.setDescription(lineArray[5]);
 					lineProd.setCategory(lineArray[6]);
-					lineProd.setQuantity(Integer.parseInt(lineArray[7]));
+					lineProd.setQuantity(Double.parseDouble(lineArray[7]));
 					lineProd.setStStatus(lineArray[8]);
 					lineProd.setStatus(lineArray[9]);
 					lineProd.setPic(lineArray[10]);
@@ -207,7 +221,7 @@ public class ProductHelper {
 		ftp.connectAndInit();
 		
 		for(Product prod : prods){
-			if(!fh.belongs(prod.getNumber() , FileHelper.getExecFolder() +"/valid.prod")){
+			if(!fh.belongs(prod.getNumber() , FileHelper.getExecFolder() +fileSep+"valid.prod")){
 				try{
 					add = true;
 					xml = ice.saveXmlToFile("iceXml", ice.getProductXml(prod.getEan()));

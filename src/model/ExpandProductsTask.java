@@ -15,11 +15,12 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 	Vector<Product> prods; 
 	String supplier;
 	private final static String fileSep = FileSystems.getDefault().getSeparator();
-	
+	String progressMessage;
 	
 	public ExpandProductsTask(Vector<Product> prods, String supName){
 		this.prods = prods;
 		this.supplier = supName;
+		progressMessage="";
 	}//end of constructor
 	
 	
@@ -31,7 +32,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 		File xml ;
 		String weight;
 		String descr = null;
-		int i = 0;
+//		int i = 0;
 		FileHelper fh = new FileHelper();
 		NodeList descPL ;
 		NodeList picPL ;
@@ -57,17 +58,18 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 		Vector<Product> oldProds = ProductHelper.getOldProdFromFile(old);
 		HashMap<String, Product> oldProdsMap = FileHelper.turnProdVectToMap(oldProds);
 		
-		System.out.println("ExpandProducts.call::  will expand " + prods.size() + "products");
+		//System.out.println("ExpandProducts.call::  will expand " + prods.size() + "products");
 		
 		for(Product prod : prods){
 			updateProgress(progress*1, prods.size());
-			
+			progressMessage ="Processing product "+ progress +" from " +prods.size();
+			updateMessage(progressMessage);
 			
 			extraPic = prod.getAddPic(); //GET the extra pictures either from the product or iceCat
 			
-			prod.setStStatus("2-3 ημέρες");
+			prod.setStStatus("2 - 3 Ημέρες");
 			prod.setStatus("1" ); 
-			prod.setTax_class("κλάση I 23%~26%");
+			prod.setTax_class("Κλάση Ι (23% ~ 16%)");
 			
 			Double var1 = FileHelper.getPriceConfig(supplier).get(0);
 			Double var2 = FileHelper.getPriceConfig(supplier).get(1);
@@ -75,19 +77,28 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 			Double var4 = FileHelper.getPriceConfig(supplier).get(3);
 			Double var5 = FileHelper.getPriceConfig(supplier).get(4);
 			Double kiloP = FileHelper.getPriceConfig(supplier).get(5);
-			prod.setDoublePrice(prod.getPrice(var1,var2,var3,var4,var5,kiloP));
+			prod.setDoublePrice(prod.getPrice(var1,var2,var3,var4,var5,kiloP,
+															FileHelper.getRemoveVAT(supplier)));
 			
 			if(!isPreviouslyParsed(prod,oldProdsMap)){
 				
 					if(!fh.belongs(prod.getModel() , FileHelper.getExecFolder() +fileSep+"valid.prod")){
 						try{
 							add = true;
-							xml = ice.saveXmlToFile("iceXml", ice.getProductXml(prod.getEan()));
+							xml = ice.saveXmlToFile(FileHelper.getExecFolder()+fileSep+"iceXml", ice.getProductXml(prod.getEan()));
+							if(xml == null){System.out.println("ExpandProduuctsTask:: AAAAA!!!");}
 							Node prodN =  xPar.getNode(xml, "Product").item(0);
 							
 							//check if the xml file we get contains any info.
 							//else store the product to the not found file
 							if( !xPar.getValue("Code",prodN).equals("-1")){
+								if(xPar.getValue("ErrorMessage",prodN).contains("IP address is not included")){
+									progressMessage += "\n IP is not on ICECAT";
+									updateMessage(progressMessage);
+								}else{
+									progressMessage += "\n Product found in IceCat!";
+									updateMessage(progressMessage);
+								}//end if the errorMessage does not inform us that the IP is not on icecat
 								
 								weight = xPar.getParAtt(xml, "ProductFeature",   "Presentation_Value", "Name", "Value", "Βάρος");
 								//System.out.println("finished "+ i + " found weight " + weight);
@@ -98,9 +109,15 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 								
 								if(descPL != null) descr = xPar.getValue("LongSummaryDescription" , descPL.item(0));
 								if(picPL != null) {
-									picURL = xPar.getValue("LowPic",picPL.item(0));
-									extraPicURL =  xPar.getValue("HighPic",picPL.item(0));
 									
+									 picURL =  xPar.getValue("HighPic",picPL.item(0));
+									try{
+										Node extraPicN = xPar.getNode(xml, "ProductPicture").item(0);
+										extraPicURL= xPar.getValue("Pic",extraPicN);
+									}catch(Exception e){e.printStackTrace(); 
+										System.out.println("ExpandProducts.call:: additional picture not found");
+									}
+									 
 									picName  = picURL;
 									extraPic = extraPicURL;
 									//System.out.println("extra pic found "+extraPic);
@@ -145,20 +162,23 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 												extraDir.mkdir();
 											}
 											 //System.out.println("DIR created");
-											 String picPath =  FileHelper.getExecFolder() +fileSep+"pictures"+fileSep+ picName;
-											String extraPicPath = FileHelper.getExecFolder() +fileSep+"pictures"+fileSep+"high"+ extraPic;
+											//TODO 
+											String picPath =  FileHelper.getExecFolder() +fileSep+"pictures"+fileSep+ picName;
+											String extraPicPath=""; 
+											 if(extraPic != null && !extraPic.equals(""))extraPicPath= FileHelper.getExecFolder() +fileSep+"pictures"+fileSep+"high"+fileSep+ extraPic;
 											 
 											ice.savePicturesToDrive(picPath,picURL,true);
-											ice.savePicturesToDrive(extraPicPath,extraPicURL,true);
+											 if(extraPic != null && !extraPic.equals("")) ice.savePicturesToDrive(extraPicPath,extraPicURL,true);
 											
 											String newPicName = prod.getModel().trim() +".jpg";
 											
 											ftp.uploadFile(new File(picPath), "/public_html/image/data/csvpic", newPicName);
-											ftp.uploadFile(new File(extraPicPath), "/public_html/image/data/csvpic/high",
+											if(extraPic != null && !extraPic.equals(""))ftp.uploadFile(new File(extraPicPath), "/public_html/image/data/csvpic/high",
 																																					newPicName);
 										
-											picName = "csvpic/" +  prod.getModel().trim() +".jpg";
+											picName = "data/csvpic/" +  prod.getModel().trim() +".jpg";
 											prod.setPic(picName);
+											if(extraPic != null && !extraPic.equals("")) prod.setAddPic("data/csvpic/high/" + prod.getModel().trim() +".jpg");
 											
 										}catch(Exception e){e.printStackTrace();}
 										
@@ -168,6 +188,8 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 							
 								fh.saveValidProd(prod.getModel());
 							}else{
+								progressMessage += "\n Product  NOT found in IceCat!";
+								updateMessage(progressMessage);
 								
 								String[] nameArr = prod.getPic().split("/");
 								if(prod.getPic() != null && !prod.getPic().equals("") && nameArr.length >= 1){
@@ -186,8 +208,8 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 														 //should not be added
 							}//end if the product was not found inside ICeCAT
 							
-							i++;
-						}catch(Exception e){ i++; 	e.printStackTrace();  	}//end of catching the exception
+							//i++;
+						}catch(Exception e){ 	e.printStackTrace();  	}//end of catching the exception
 						
 						
 						if(add){ 
@@ -202,7 +224,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 				output.add(oldProdsMap.get(prod.getModel()));
 			}//end if the product already exists in the validate file
 		
-			updateMessage("Processing product "+ prod.getpName());
+			//updateMessage("Processing product "+ prod.getpName());
 			progress++;	
 		}//end of looping through the products
 		
@@ -228,7 +250,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 			String  picURL, 	String  extraPicURL, Product prod, 
 			IceCatHelper ice, FtpHelper ftp) {
 
-		if(picName != null){
+		if(picName != null && !picName.equals("")){
 				File dir = new File(FileHelper.getExecFolder() +fileSep+"pictures");
 				File extraDir = new File(FileHelper.getExecFolder() +fileSep+"pictures"+fileSep+"high");
 				
@@ -239,19 +261,28 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 					}
 					 //System.out.println("DIR created");
 					 String picPath =  FileHelper.getExecFolder() +fileSep+"pictures"+fileSep+ picName;
-					//String extraPicPath = FileHelper.getExecFolder() +"/pictures/high/"+ extraPic;
+					//TODO clean up
+					 String extraPicPath="";
+					 if(!extraPic.equals("")){ 
+						 extraPicPath = FileHelper.getExecFolder() +fileSep+"pictures/high"+fileSep+ extraPic;
+						 ice.savePicturesToDrive(extraPicPath,extraPicURL,true);
+					 }//end if extraPic is not null
 					 
 					ice.savePicturesToDrive(picPath,picURL,true);
-					//ice.savePicturesToDrive(extraPicPath,extraPicURL);
+					
 					
 					String newPicName = prod.getModel().trim() +".jpg";
 					
 					ftp.uploadFile(new File(picPath), "/public_html/image/data/csvpic", newPicName);
-					//ftp.uploadFile(new File(extraPicPath), "/public_html/image/data/"+ 
-					//																															supplier+"/high", newPicName);
-				
-					picName = "csvpic/" + newPicName;
+					 if(!extraPic.equals("")){ 
+						 ftp.uploadFile(new File(extraPicPath), 
+								 "/public_html/image/data/csvpic/high", newPicName);
+					 }//end if extraPic is not null
+					picName = "data/csvpic/" + newPicName;
+					
+					String addPicName = "data/csvpic/high/"+newPicName;
 					prod.setPic(picName);
+					if(!extraPic.equals("")) prod.setAddPic(addPicName);
 					
 				}catch(Exception e){e.printStackTrace();}
 		}

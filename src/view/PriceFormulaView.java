@@ -4,6 +4,7 @@ import java.util.Vector;
 
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
@@ -27,7 +28,8 @@ public class PriceFormulaView {
 	
 	public PriceFormulaView(Stage st, Vector<Double> priceVars, TextField lessF,
 	TextField betweenF, TextField kiloPriceF, 	TextField lessExtraF, 	
-	TextField betweenPercentF,	TextField morePercentF, Button save, ChoiceBox<String> cBox){
+	TextField betweenPercentF,	TextField morePercentF, Button save, ChoiceBox<String> cBox, 
+	CheckBox removeVAT){
 		this.stage = st;
 		
 		this.lessF = lessF;
@@ -51,23 +53,45 @@ public class PriceFormulaView {
 		BorderPane MaineBorder = new BorderPane();
 		MaineBorder.setId("mainPane");
 		
-		VBox leftBox = new VBox(8);
-		VBox rightBox = new VBox();
+		VBox leftBox = new VBox(15);
+		VBox rightBox = new VBox(5);
 		
 		Text lesstxt = new Text("Item price less than: ");
-		Text lessExtratxt = new Text("then additional chanrge: ");
+		Text lessExtratxt = new Text("then additional charge: ");
 		Text betweentxt = new Text("Else, if it is less than: ");
 		Text betweenPercenttxt = new Text("then additional charge: ");
 		Text morePercentTxt = new Text("else, additional charge: ");
 		Text kiloTxt = new Text("finally charge each kilo: ");
 		
+		
+		HBox lessBox = new HBox(5);
+		lessBox.getChildren().addAll(lessF, new Text("Euro"));
+		
+		HBox lessExtraBox = new HBox(5);
+		lessExtraBox.getChildren().addAll(lessExtraF, new Text("Euro"));
+		
+		HBox betweenBox = new HBox(5);
+		betweenBox.getChildren().addAll(betweenF, new Text("Euro"));
+		
+		HBox betweenPercentBox = new HBox(5);
+		betweenPercentBox.getChildren().addAll(betweenPercentF, new Text("%"));
+		
+		HBox morePercentBox = new HBox(5);
+		morePercentBox.getChildren().addAll(morePercentF, new Text("%"));
+		
+		HBox kiloPriceBox = new HBox(5);
+		kiloPriceBox.getChildren().addAll(kiloPriceF, new Text("Euro"));
+		
 		leftBox.getChildren().addAll(new Text("Supplier: "),lesstxt,lessExtratxt,
-				betweentxt, betweenPercenttxt, morePercentTxt, kiloTxt);
-		rightBox.getChildren().addAll(cBox,lessF, lessExtraF,betweenF,
-				betweenPercentF, morePercentF,kiloPriceF);
+				betweentxt, betweenPercenttxt, morePercentTxt, kiloTxt, new Text("Remove VAT from supplier's price: "));
+		
+		rightBox.getChildren().addAll(cBox,lessBox, lessExtraBox,betweenBox,
+				betweenPercentBox, morePercentBox,kiloPriceBox, removeVAT);
 		
 	
-		HBox in = new HBox(5);
+		
+		
+		HBox in = new HBox();
 		in.getChildren().addAll(leftBox,rightBox);
 		ScrollPane msp = new ScrollPane(in);
 		

@@ -10,10 +10,10 @@ public class Product {
 	private String category;
 	private String number;
 	private String description; 
-	private String supNumber;
+	//private String supNumber;
 	private String ean;
 	private String rPrice;
-	private int quantity;
+	private double quantity;
 	private String model;
 	
 	//private double weight;
@@ -34,7 +34,7 @@ public class Product {
 		category= "";
 		number = "";
 		description = "";
-		supNumber = "";
+		//supNumber = "";
 		ean = "";
 		rPrice = "";
 		quantity = 0;
@@ -52,11 +52,11 @@ public class Product {
 		tax_class = "";
 	}//end of constructor
 	
-	public Product(String c, String n, String d, String sup, String e, String rp, int q, String m){
+	public Product(String c, String n, String d,  String e, String rp, int q, String m){
 		this.category = c;
 		this.number = n;
 		this.description = d;
-		this.supNumber = sup;
+		//this.supNumber = sup;
 		this.ean = e;
 		this.rPrice = rp;
 		this.quantity = q;
@@ -78,8 +78,8 @@ public class Product {
 		this.description = cleanString(desc);
 	}//end of setDescription
 	
-	public String getSupNum(){return this.supNumber;}
-	public void setSupNum(String sn){this.supNumber = sn;}
+	//public String getSupNum(){return this.supNumber;}
+	//public void setSupNum(String sn){this.supNumber = sn;}
 	
 	public String getEan(){return this.ean;}
 	public void setEan(String e){
@@ -95,8 +95,8 @@ public class Product {
 	public String getRPrice(){return this.rPrice;}
 	public void  setRPrice(String p){this.rPrice = p;}
 	
-	public int getQuantity(){return this.quantity;}
-	public void setQuantity(int q){this.quantity = q;}
+	public double getQuantity(){return this.quantity;}
+	public void setQuantity(double q){this.quantity = q;}
 	
 	public String getWeight(){return this.weight;}
 	public void setWeight(String w){this.weight = w;}
@@ -110,20 +110,21 @@ public class Product {
 	 */
 	public double getWeightDouble(){
 		String w = this.weight;
-		double res = 10.0;
+		double res = ( (w == null || w.equals("")) || (w.contains("kg") || w.contains("g")))? 10.0: Double.parseDouble(weight);
 		
-		if(w != null && (w.contains("kg") || w.contains("g"))){
+		if(w != null && !w.equals("") &&  (w.contains("kg") || w.contains("g"))){
 			if(w.contains("kg")){ 
 				w = w.trim().split("kg")[0].replace(",", ".");
 				res = Double.parseDouble(w);
 			}
 			if(w.contains("g")){
+				//System.out.println("PRoduct.getWeightDouble:: this.weight  " +w);
 				w = w.trim().split("g")[0].replace(",", ".");
 				res = Double.parseDouble(w) / 1000;
 			}
-		}
+		}//end if w is not null or empty and does not contain kg or g
 		
-		return res;
+		return round(res,3);
 	}//end of getWeightDouble
 	
 	public String getPic(){return this.pic;}
@@ -136,10 +137,11 @@ public class Product {
 	 * @param var3 between 
 	 * @param var4 additional price if less than var3
 	 * @param var5 additional price if more than var3
+	 * @param removeVAT, denotes whether or not to remove the 23% vat from the product
 	 * @return the price of the product
 	 */
 	public double getPrice(double var1, double var2, double var3,  double var4, 
-			double var5, double kiloPrice){
+			double var5, double kiloPrice, boolean removeVAT){
 
 		String retailS = (getRPrice().trim());
 		double res = 0;
@@ -171,6 +173,7 @@ public class Product {
 				return -1;
 			}
 
+		if(removeVAT) res = res * 0.813009;
 		res = round(res,2);
 		return res;
 	}//end of getPrice
@@ -182,11 +185,12 @@ public class Product {
 	
 	public String toString(String supplier){
 		return "product category "+ getCategory() +", description " + getDescription() + ", ean " + getEan()
-				+ ", number" + getNumber() + ", retail price "+ getRPrice() + ", supplier number " + getSupNum() +
+				+ ", number" + getNumber() + ", retail price "+ getRPrice() + //", supplier number " + getSupNum() +
 				", quantity " + getQuantity() 
 				+", price"+ getPrice(FileHelper.getPriceConfig(supplier).get(0), FileHelper.getPriceConfig(supplier).get(1), 
 						FileHelper.getPriceConfig(supplier).get(2),FileHelper.getPriceConfig(supplier).get(3),
-						FileHelper.getPriceConfig(supplier).get(4),FileHelper.getPriceConfig(supplier).get(5))
+						FileHelper.getPriceConfig(supplier).get(4),FileHelper.getPriceConfig(supplier).get(5),
+						FileHelper.getRemoveVAT(supplier))
 						+  ", status " + getStatus() 
 				+ ", stock_status " + getStStatus() + " tax class " + getTax_class() + ", name " + getpName()
 				+" mpn " + getMpn() + ", manufacturer  " + getManufact(); 
@@ -230,8 +234,8 @@ public class Product {
 
 	//ADDitional Information
 	
-	public String getSupNumber() {	return supNumber;}
-	public void setSupNumber(String supNumber) {this.supNumber = supNumber;}
+	//public String getSupNumber() {	return supNumber;}
+	//public void setSupNumber(String supNumber) {this.supNumber = supNumber;}
 
 	public String getMpn() {	return mpn;}
 	public void setMpn(String mpn) {this.mpn = mpn;}

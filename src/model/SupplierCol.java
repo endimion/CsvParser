@@ -49,6 +49,8 @@ public class SupplierCol {
 	private String xmlUser;
 	
 	
+	private String weight;
+	
 	public SupplierCol(){
 		category="";
 		itemNumber = "";
@@ -65,6 +67,8 @@ public class SupplierCol {
 		this.xmlURL ="";
 		this.xmlPass ="";
 		this.xmlUser="";
+		
+		this.weight = "";
 	}//end of Supplier
 	
 	
@@ -133,6 +137,37 @@ public class SupplierCol {
 	public void setXmlUser(String user){this.xmlUser = user;}
 	public String getXmlUser(){return this.xmlUser;}
 	
+	public void setWeight(String w){this.weight = w;}
+	public String getWeight(){return this.weight;}
+	
+	
+
+	//Additional Information
+	public String getMpn() {	return mpn;}
+	public void setMpn(String mpn) {	this.mpn = mpn;}
+	
+	public String getItemName() {	return itemName;}
+	public void setItemName(String itemName) {	this.itemName = itemName;	}
+
+	public String getManuf() {	return manuf;}
+	public void setManuf(String manuf) {this.manuf = manuf;}
+	//end of additional info
+
+
+
+
+	public String getStockStat() {return stockStat;}
+	public void setStockStat(String stockStat) {	this.stockStat = stockStat;}
+
+	public String getStatus() {return status;}
+	public void setStatus(String status) {	this.status = status;}
+
+	public String getAddImg() {	return addImg;}
+	public void setAddImg(String addImg) {	this.addImg = addImg;	}
+
+	public String getTaxClass() {	return taxClass;}
+	public void setTaxClass(String taxClass) {	this.taxClass = taxClass;	}
+	
 	
 	/**
 	 * 
@@ -166,6 +201,11 @@ public class SupplierCol {
 		if(this.getImg()!= null && !this.getImg().equals("")){
 			res.add(this.getImg());
 		}
+		
+		if(this.getItemName()!= null && !this.getItemName().equals("")){
+			res.add(this.getItemName());
+		}
+		
 		if(this.getAddImg()!= null && !this.getAddImg().equals("")){
 			res.add(this.getAddImg());
 		}
@@ -177,36 +217,12 @@ public class SupplierCol {
 		if(this.getXmlUser()!= null && ! getXmlUser().equals("")){res.add(getXmlUser());}
 		if(this.getXmlURL() != null && !this.getXmlURL().equals("")){res.add(getXmlURL());}
 		
+		if(this.getWeight()!= null && !getWeight().equals("")){res.add(getWeight()) ;}
 		return res;
 	}//end of getColVector
 
 
 
-	//Additional Information
-	public String getMpn() {	return mpn;}
-	public void setMpn(String mpn) {	this.mpn = mpn;}
-	
-	public String getItemName() {	return itemName;}
-	public void setItemName(String itemName) {	this.itemName = itemName;	}
-
-	public String getManuf() {	return manuf;}
-	public void setManuf(String manuf) {this.manuf = manuf;}
-	//end of additional info
-
-
-
-
-	public String getStockStat() {return stockStat;}
-	public void setStockStat(String stockStat) {	this.stockStat = stockStat;}
-
-	public String getStatus() {return status;}
-	public void setStatus(String status) {	this.status = status;}
-
-	public String getAddImg() {	return addImg;}
-	public void setAddImg(String addImg) {	this.addImg = addImg;	}
-
-	public String getTaxClass() {	return taxClass;}
-	public void setTaxClass(String taxClass) {	this.taxClass = taxClass;	}
 	
 	
 }//end of Supplier

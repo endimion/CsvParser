@@ -7,6 +7,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -23,9 +24,12 @@ public class EditPriceFormulaController {
 	
 	public EditPriceFormulaController(Stage st, Button addSupplier, Button addCategory, 
 			Button editCategories, Button editSup, 	Button processFiles, Button editPrice, String supplier){
-		//TODO
+		
+		
 		Vector<Double> prices = FileHelper.getPriceConfig(supplier); 
 		ChoiceBox<String> cBox = new ChoiceBox<String>();
+		CheckBox remVatBox = new CheckBox();
+		
 		
 		TextField lessF = new TextField();
 		TextField betweenF = new TextField();
@@ -33,6 +37,11 @@ public class EditPriceFormulaController {
 		TextField lessExtraF = new TextField();
 		TextField betweenPercentF = new TextField();
 		TextField morePercentF = new TextField();
+		
+		if(supplier!= null && !supplier.equals("")){
+			//System.out.println("EditPriceFormulaControlelr:: setSelected" + FileHelper.getRemoveVAT(supplier));
+			remVatBox.setSelected(FileHelper.getRemoveVAT(supplier));
+		}//end if supplier is not null and not the empty String
 		
 		Button save = new Button();
 		save.setOnAction(event ->{
@@ -47,9 +56,10 @@ public class EditPriceFormulaController {
 					nPrices.add(getDoubleFromText(betweenPercentF));
 					nPrices.add(getDoubleFromText(morePercentF));
 					nPrices.add(getDoubleFromText(kiloPriceF));
-					
 				}catch(Exception e){e.printStackTrace();}
-				FileHelper.savePriceFormula(nPrices,supplier);
+
+				boolean remVat = remVatBox.selectedProperty().get();
+				FileHelper.savePriceFormula(nPrices,supplier,remVat);
 				
 				ProcessSupplierFileController psc = new 
 						ProcessSupplierFileController(st, addSupplier, addCategory, editCategories, editSup, processFiles, editPrice);
@@ -91,7 +101,7 @@ public class EditPriceFormulaController {
 		
 		pfv = 
 				new PriceFormulaView(st, prices, lessF, betweenF, 
-						kiloPriceF, lessExtraF, betweenPercentF, morePercentF, save,cBox);
+						kiloPriceF, lessExtraF, betweenPercentF, morePercentF, save,cBox,remVatBox);
 	
 	
 		
