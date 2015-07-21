@@ -40,7 +40,7 @@ public class CommonProductsMapTester {
 	
 	@Test
 	public void testBuildSuppierPairs(){
-		Vector<PairOfString> pairs = map.buildSuppierPairs();
+		Vector<PairOfString> pairs = map.getSuppierPairs();
 		System.out.println("testBuildSuppierPairs : " + pairs.size());
 
 		for(int i = 0; i < pairs.size(); i++){

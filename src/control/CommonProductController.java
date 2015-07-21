@@ -1,70 +1,120 @@
 package control;
 
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Vector;
 
-import view.CommonProductsView;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import model.CommonProductsHelper;
+import model.CommonProductsHelper.PairOfString;
 import model.Product;
+import view.CommonProductsView;
 
 public class CommonProductController {
 
-	HashMap<String,Vector<Product>> hashMap ;
-	Vector<Vector<CheckBox> > eanCheckBoxes;
+	Vector<LabelCheckBox> checkBoxes;
+	
+	Button save;
 	Stage stage;
 	CommonProductsView cpv;
 	
+	
+	
+	
+	
 	public CommonProductController(Stage st){
-		hashMap = new HashMap<String,Vector<Product>>();
-		eanCheckBoxes = new Vector<Vector<CheckBox>>();
 		stage = st;
+		save = new Button("Save");
 		
-		CommonProductsHelper  map = new CommonProductsHelper();
-		hashMap = map.getMap();
-		buildCommonMap();
+		checkBoxes = new Vector<LabelCheckBox>();
 		
-		cpv = new CommonProductsView(st, hashMap, eanCheckBoxes);
+		CommonProductsHelper  cph = new CommonProductsHelper();
+		Vector<PairOfString> suppliers = cph.getSuppierPairs();
+		
+		Vector<HBox> hBoxes = new Vector<HBox>();
+		
+		for(PairOfString pair : suppliers){
+			LabelCheckBox box1 = new LabelCheckBox(pair.getFirst(), new CheckBox());
+			LabelCheckBox box2 = new LabelCheckBox(pair.getSecond(), new CheckBox());
+			HBox hbox = new HBox(10);
+			hbox.getChildren().addAll(new Label(box1.getLabel()), box1.getBox(), 
+																	new Label(box2.getLabel()), box2.getBox()); 
+			hBoxes.add(hbox);
+			
+		}//end of looping through the suppliers with common products
+		
+		save.setOnAction(event -> {
+			for(HBox box : hBoxes){
+				CheckBox box1  = (CheckBox)box.getChildren().get(1);
+				CheckBox box2  = (CheckBox)box.getChildren().get(3);
+				String supl=null;
+				
+				String badSupl = null; 
+				
+				
+				if(box1.isSelected()){
+					supl = ((Label) box.getChildren().get(0)).getText();
+					badSupl = ((Label) box.getChildren().get(2)).getText();
+					
+				}else{
+					if(box2.isSelected()){
+						supl = ((Label) box.getChildren().get(2)).getText();
+						badSupl = ((Label) box.getChildren().get(0)).getText();
+					}//end if box2 is selected
+				}//end of if box1 is not selected
+				
+				if(supl != null){
+					System.out.println("CommonProductController:: supplier was selected" 
+							+ supl + " and supplier " + badSupl  + " must have common products set to 0");
+					//TODO 
+					// now we must make the products of the bad supplier 0
+					cph.setSuplProdsUnavailable(badSupl, supl);
+					
+				}//end if supl was not null
+				
+				
+				
+			}//loop through the lines
+			
+			
+		});//end of setOnAction
+		
+		
+		
+		
+		cpv = new CommonProductsView(st, hBoxes,save);
 		cpv.display();
 		
 	}//end of constructor
 	
+
+	
+
+	
+	
+	
+	
 	
 	/**
-	 * Builds the HashMap of the Products 
+	 *  innerClass
+	 * @author nikos
+	 *
 	 */
-	public void buildCommonMap(){
+	public class LabelCheckBox{
+		Label label ;
+		CheckBox cBox;
 		
+		public LabelCheckBox(String label, CheckBox box){
+			this.label = new Label(label);
+			this.cBox = new CheckBox();
+		}//end of constructor
 		
-		// loop through the keys of the hashMap
-		Iterator<Entry<String, Vector<Product>>> it = hashMap.entrySet().iterator();
-		while(it.hasNext()){
-			Map.Entry<String, Vector<Product>> pair = (Map.Entry<String, Vector<Product>>)it.next();
-			//System.out.println("CommonProductController.buildCommonMap " + pair.getKey());
-			Vector<CheckBox> boxes = new Vector<CheckBox>();
-			for(int i = 0; i < pair.getValue().size();i++){
-				CheckBox box = new CheckBox();
-				boxes.add(box);
-			}//end of looping through the Vector<Product> for the specific EAN of the pair
-			
-			eanCheckBoxes.addElement(boxes); //we add to all the checkboxes the vector of checkboxes for this ean number
-			
-			it.remove(); // avoids a ConcurrentModificationException
-		}//end of looping through the iterator of the hashMap
-		
-		System.out.println("CommonProductCONTROLLER.buildCommonMap::  " + eanCheckBoxes.size());
-		
-	}//end of buildCommonMap
-	
-	
-	
-	
-	
-	
+		public CheckBox getBox() {return this.cBox;}
+		public String 		getLabel(){return this.label.getText();}
+	}//end of inner class
 	
 	
 	

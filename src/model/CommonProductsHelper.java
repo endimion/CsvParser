@@ -7,8 +7,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Vector;
 import java.util.Map.Entry;
+import java.util.Vector;
 
 public class CommonProductsHelper{
 
@@ -17,6 +17,7 @@ public class CommonProductsHelper{
 	private int noEanProds;
 	HashMap<String,Vector<Product>> map ;
 	Vector<PairOfString> suplPairs ;
+	Vector<Vector<Product>>  commonProds;
 	
 	/**
 	 * defines a HashMap of products by different suppliers
@@ -26,6 +27,7 @@ public class CommonProductsHelper{
 		this.map =null;
 		noEanProds = 0;
 		suplPairs = new Vector<PairOfString>();
+		commonProds = new Vector<Vector<Product>>();
 	}//end of constructor
 	
 	
@@ -59,10 +61,14 @@ public class CommonProductsHelper{
 			//System.out.println("CoomonProducts.addProductToMap:: EAN " + ean);
 			Vector<Product> existingProds = 
 				getProdsForEan(ean);
-			System.out.println("CoomonProducts.addProductToMap:: EAN " + ean + " has " 
-				+ existingProds.size() + " other matches");
 			existingProds.add(prod);
+			
+			System.out.println("CoomonProducts.addProductToMap:: EAN " + ean + " has " 
+					+ existingProds.size() + " other matches");
 		}//end if product has a VALID  EAN
+		
+		
+		
 	}//end of addProductToMap
 	
 	/**
@@ -76,15 +82,15 @@ public class CommonProductsHelper{
 		Vector<Product> retrievedProds = this.map.get(ean); 
 		
 		if(retrievedProds!=null ){
-			System.out.println("CommonProducts.getProdsForEan::"
-					+ " FOUND PRODUCTS FOR for " + ean);
+			//System.out.println("CommonProducts.getProdsForEan::"
+			//		+ " FOUND PRODUCTS FOR for " + ean);
 			return retrievedProds;
 		}else{
 			Vector<Product> newProd = new Vector<Product>();
 			
 			//The products with empty ean are not added to the map
-			if(!ean.trim().equals("")) this.map.put(ean, newProd);
-			return new Vector<Product>();
+			if(!ean.trim().equals("")) this.map.put(ean.trim(), newProd);
+			return newProd;
 		}//end of else
 		
 	}//end of getProdsFroEan
@@ -102,7 +108,7 @@ public class CommonProductsHelper{
 		
 		File confDir = new File(FileHelper.getExecFolder() + fileSep+"config");
 		if(!confDir.exists()){
-			System.out.println("CommonProductsMap.build:: created config dir" );
+			//System.out.println("CommonProductsMap.build:: created config dir" );
 			confDir.mkdir();
 			this.map = new HashMap<String, Vector<Product>>();
 		}else{
@@ -114,15 +120,15 @@ public class CommonProductsHelper{
 			for(File f: files){
 				//in the next skip the . char has to be escaped because it denotes any character in a regular expression
 				if(f.getName().split("\\.")[1].equals("prods")){
-					System.out.println("CommonProductsMap.build:: "
-							+ "found a supplier product file " + f.getName() );
+					//System.out.println("CommonProductsMap.build:: "
+					//		+ "found a supplier product file " + f.getName() );
 					
 					String supplierName = f.getName().split("\\.")[0].trim();
 					
 					Vector<Product> oldProds = 
 							ProductHelper.getOldProdFromFile(f);
-					System.out.println("CommonProductsMap.build:: "
-							+ "file contains " + oldProds.size() +" items");
+					//System.out.println("CommonProductsMap.build:: "
+					//		+ "file contains " + oldProds.size() +" items");
 					//after retrieving all the old products from the file
 					for(Product prod : oldProds){
 						prod.setSupplierName(supplierName);
@@ -131,9 +137,21 @@ public class CommonProductsHelper{
 				}//end if the extension of the file is prods, i.e. a supplier parsed product file
 			}//end of looping through the files of the config directory
 			
-			System.out.println("CommonProductsMap.build:: "
-					+ "after reading all supplier files if found map size of " + map.size()
-		+" and no EAN in " + noEanProds);
+			//System.out.println("CommonProductsMap.build:: "
+			//		+ "after reading all supplier files if found map size of " + map.size()
+		//+" and no EAN in " + noEanProds);
+			
+			
+			Iterator<Entry<String, Vector<Product>>> it =map.entrySet().iterator();
+			while(it.hasNext()){
+				Map.Entry<String, Vector<Product>> pair = (Map.Entry<String, Vector<Product>>)it.next();
+				//String ean = pair.getKey();
+				Vector<Product> eanProds = pair.getValue();
+				if(eanProds.size() > 1){
+					
+					commonProds.addElement(eanProds);
+				}
+			}//end of iteriting through the prods of the map
 		
 		}//end if the configDir exists in the filesystem
 		
@@ -144,47 +162,34 @@ public class CommonProductsHelper{
 	 *  builds the Vector<PairOfString> that contain the name 
 	 *  of the suppliers that have products in common. 
 	 */
-	public Vector<PairOfString> buildSuppierPairs(){
+	public Vector<PairOfString> getSuppierPairs(){
 		
-		//HashMap<String,Vector<Product>> mp = ;
+		buildMap(); //first we build the vector<Product> that are incommon for a single ean code
+		for(Vector<Product> eanProds : commonProds){
 		
-		Iterator<Entry<String, Vector<Product>>> it = getMap().entrySet().iterator();
-		while(it.hasNext()){
-			Map.Entry<String, Vector<Product>> pair = (Map.Entry<String, Vector<Product>>)it.next();
-			//String ean = pair.getKey();
-			Vector<Product> eanProds = pair.getValue();
-			if(eanProds.size() > 0){
-				System.out.println("CommonProductsHelper.buildSuppierPairs::  eanProds " +pair.getKey() +" s ize "  + eanProds.size());
-				System.out.println("----------------");
-				for(Product prod : eanProds){
-					System.out.println("CommonProductsHelper.buildSuppierPairs::  eanProds "  + prod.getSupplierName());
-				}
-				System.out.println("----------------");
-			}//end 
-			
-			if(eanProds.size() > 0){
+			if(eanProds.size() > 1){
+				System.out.println("CommonProductsHelper.buildSuppierPairs::  Ean " + eanProds.get(0).getEan() );
 				
-				for(int i = 0; i< eanProds.size() -1; i++){
-					Product firstProd = eanProds.get(i);
-					Product secondProd = eanProds.get(i+1);
-					
-					String firstSupl = firstProd.getSupplierName();
-					String secondSupl = secondProd.getSupplierName();
-					System.out.println("CommonProductsHelper.buildSuppierPairs:: " 
-																+ " testing pair " + firstSupl +" " + secondSupl);
-					
-					PairOfString suplPair = new PairOfString(firstSupl, secondSupl);
-					if(!hasSupplierPair(suplPair) && !(firstSupl.equals(secondSupl))){
-						suplPairs.addElement(suplPair);
-					}//end if the pair of suppliers is not already in the Vector
-					
+				for(int i = 0; i< eanProds.size()-1; i++){
+					//if(i < eanProds.size()-1){
+						Product firstProd = eanProds.get(i);
+						Product secondProd = eanProds.get(i+1);
+						
+						String firstSupl = firstProd.getSupplierName();
+						String secondSupl = secondProd.getSupplierName();
+						System.out.println("CommonProductsHelper.buildSuppierPairs:: " 
+																	+ " testing pair " + firstSupl +" " + secondSupl);
+						
+						PairOfString suplPair = new PairOfString(firstSupl, secondSupl);
+						if(!hasSupplierPair(suplPair) && !(firstSupl.equals(secondSupl))){
+							suplPairs.addElement(suplPair);
+					//	}//end if the pair of suppliers is not already in the Vector
+					}//end if i < eanProd.size()-1
 				}//end of looping through the products of this ean
 
-				
 			}//end if there are more than 0 products for this particullar ean
 
-			it.remove();
-		}//end of looping through the elements  of the mapm
+		}//end of looping through the commonProds Vector<Vector<Product>>
 		
 		return  suplPairs;
 		
@@ -214,6 +219,74 @@ public class CommonProductsHelper{
 		}//end of looping through the suplPairs
 		return false;
 	}//end of hasSupplierPair
+	
+	
+	
+	/**
+	 * 
+	 * @param badSupl
+	 * @param goodSupl
+	 */
+	public void setSuplProdsUnavailable(String badSupl, String goodSupl){
+		
+		Vector<Product> replaceProds = new Vector<Product>();
+		
+		for(Vector<Product> prods: commonProds){
+			
+			if(hasBothSuppliers(prods, goodSupl, badSupl)){
+				for(Product prod : prods){
+					
+					if(prod.getSupplierName().equals(badSupl)){ 
+					
+						prod.setStatus("0");
+						//TODO
+						//save the product to file!!!
+						
+						//System.out.println("CommonProductsHelper.setSuplPRodsUnavailable:: "+ badSupl +" -->"+
+							//										prod.toCsv());
+						replaceProds.add(prod);
+					}//end if the name of the product supplier is the badSupl
+				}//end of looping through the products for one EAN number 
+				
+				//After finding all the products that are presented by both suppliers
+				// supl and badSupl, (and store the updated versions o replaceProds)
+				//then we can overwrite the file of the badSupplier
+				// to update the appearnce of these produces
+				if(replaceProds.size() > 0){
+					File savedProds = new File(FileHelper.getExecFolder() +fileSep +"config"+fileSep
+																					+ badSupl.trim() +".prods");
+					
+					CsvWriter.updateProdCsvLine(2,  savedProds, prods, ";");
+					System.out.println("CommonProductsHelper.setSuplPRodsUnavailable:: UPDATED FILE "  
+															+ savedProds.getName()); 
+				}//end of if replacePRods.size >0
+				
+			}//end of if the Vector<Products> has both suppliers
+		}//end of looping through the Vector<Vector> products
+
+		
+		
+	}//end of setSuplProdsUnavailable
+	
+	
+	/**
+	 * loops the vector of products and returns whether or not they
+	 * contain products of both given suppliers
+	 * @return
+	 */
+	private boolean hasBothSuppliers(Vector<Product> products, String supplier1, String supplier2){
+		
+		boolean hasFirst = false;
+		boolean hasSecond = false;
+		
+		for(Product prod: products){
+			if(prod.getSupplierName().equals(supplier1)) hasFirst = true;
+			if(prod.getSupplierName().equals(supplier2)) hasSecond = true;
+		}//end of looping through the products
+		
+		return (hasFirst && hasSecond);
+	}//end of hasBothSuppliers
+	
 	
 	
 		/**

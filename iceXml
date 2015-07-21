@@ -1,294 +1,138 @@
 <ICECAT-interface xsi:noNamespaceSchemaLocation="http://data.icecat.biz/xsd/ICECAT-interface_response.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Product HighPic="http://inishop.com/img/norm/high/24219928-9306.jpg" Prod_id="LGV700.ADEURD" ThumbPicSize="4870" HighPicSize="75646" LowPicSize="17539" Title="LG G Pad 10.1 V700 16GB Κόκκινο" HighPicWidth="750" ThumbPic="http://inishop.com/thumbs/24219928.jpg" ReleaseDate="2014-07-28" Code="1" Pic500x500Height="320" Name="V700" Pic500x500="http://inishop.com/img/norm/medium/24219928-9306.jpg" LowPicHeight="128" LowPicWidth="200" LowPic="http://inishop.com/img/norm/low/24219928-9306.jpg" Quality="ICECAT" Pic500x500Size="62196" HighPicHeight="480" ID="24219928" Pic500x500Width="500">
-    <Category ID="897">
-      <Name Value="ταμπλέτες" ID="1241869" langid="18"/>
+  <Product HighPic="http://inishop.com/img/norm/high/24555801-7280.jpg" Prod_id="MG492ZD/A" ThumbPicSize="6420" HighPicSize="156117" LowPicSize="30008" Title="Apple iPhone 6 16GB 4G Χρυσός (Χρυσό)" HighPicWidth="470" ThumbPic="http://inishop.com/thumbs/24555801.jpg" ReleaseDate="2014-09-10" Code="1" Pic500x500Height="500" Name="6" Pic500x500="http://inishop.com/img/norm/medium/24555801-7280.jpg" LowPicHeight="200" LowPicWidth="169" LowPic="http://inishop.com/img/norm/low/24555801-7280.jpg" Quality="ICECAT" Pic500x500Size="131752" HighPicHeight="556" ID="24555801" Pic500x500Width="423">
+    <Category ID="1893">
+      <Name Value="smartphones" ID="730444" langid="18"/>
     </Category>
-    <CategoryFeatureGroup No="-100" ID="11001">
+    <CategoryFeatureGroup No="-100" ID="11007">
       <FeatureGroup ID="0">
         <Name Value="Τεχνικές λεπτομέρειες" ID="269530" langid="18"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="100" ID="830">
+    <CategoryFeatureGroup No="96" ID="6884">
       <FeatureGroup ID="1">
         <Name Value="Επεξεργαστής" ID="269503" langid="18"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="96" ID="832">
-      <FeatureGroup ID="3">
-        <Name Value="Μνήμη" ID="269505" langid="18"/>
-      </FeatureGroup>
-    </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="88" ID="833">
+    <CategoryFeatureGroup No="100" ID="6883">
       <FeatureGroup ID="5">
         <Name Value="Οθόνη" ID="269507" langid="18"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="80" ID="846">
-      <FeatureGroup ID="9">
-        <Name Value="Ηχος/ audio" ID="269511" langid="18"/>
-      </FeatureGroup>
-    </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="72" ID="847">
+    <CategoryFeatureGroup No="80" ID="6889">
       <FeatureGroup ID="12">
         <Name Value="Συνδεσιμότητα" ID="269513" langid="18"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="-1" ID="848">
+    <CategoryFeatureGroup No="-1" ID="6881">
       <FeatureGroup ID="14">
         <Name Value="Βάρος και διαστάσεις" ID="269515" langid="18"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="0" ID="11980">
-      <FeatureGroup ID="16">
-        <Name Value="Ποιότητα εκτύπωσης" ID="269517" langid="18"/>
-      </FeatureGroup>
-    </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="13" ID="849">
-      <FeatureGroup ID="27">
-        <Name Value="Διαχείρηση ενέργειας" ID="269527" langid="18"/>
-      </FeatureGroup>
-    </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="-10" ID="850">
+    <CategoryFeatureGroup No="-10" ID="6921">
       <FeatureGroup ID="28">
         <Name Value="Περιβαλλοντικές συνθήκες" ID="269528" langid="18"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="74" ID="2678">
+    <CategoryFeatureGroup No="30" ID="7476">
+      <FeatureGroup ID="31">
+        <Name Value="Πληκτρολόγιο" ID="269531" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="84" ID="6890">
       <FeatureGroup ID="35">
         <Name Value="Δικτύωση" ID="269535" langid="18"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="52" ID="8332">
-      <FeatureGroup ID="42">
-        <Name Value="Χαρακτηριστικά τηλεφώνου" ID="269542" langid="18"/>
+    <CategoryFeatureGroup No="0" ID="13001">
+      <FeatureGroup ID="45">
+        <Name Value="Βίντεο/ Video" ID="269545" langid="18"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="92" ID="4142">
+    <CategoryFeatureGroup No="92" ID="6887">
       <FeatureGroup ID="47">
         <Name Value="Μέσα Αποθήκευσης" ID="269547" langid="18"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="50" ID="7716">
+    <CategoryFeatureGroup No="40" ID="6919">
       <FeatureGroup ID="50">
         <Name Value="Δυνατότητα αποστολής μηνυμάτων" ID="269550" langid="18"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="0" ID="12019">
-      <FeatureGroup ID="90">
-        <Name Value="Software" ID="30562" langid="1"/>
+    <CategoryFeatureGroup No="60" ID="11005">
+      <FeatureGroup ID="54">
+        <Name Value="Πλοήγηση" ID="269552" langid="18"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="82" ID="4346">
+    <CategoryFeatureGroup No="-5" ID="6936">
+      <FeatureGroup ID="76">
+        <Name Value="Πιστοποιητικά" ID="269573" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="88" ID="6888">
       <FeatureGroup ID="95">
         <Name Value="Φωτογραφική μηχανή" ID="269590" langid="18"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="-20" ID="6516">
+    <CategoryFeatureGroup No="-20" ID="6933">
       <FeatureGroup ID="116">
         <Name Value="Περιεχόμενο πακέτου" ID="269610" langid="18"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="14" ID="7821">
+    <CategoryFeatureGroup No="35" ID="6901">
+      <FeatureGroup ID="118">
+        <Name Value="Διαχείρηση κλήσεων" ID="269612" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="0" ID="11681">
+      <FeatureGroup ID="121">
+        <Name Value="Tablet" ID="269614" langid="18"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <CategoryFeatureGroup No="5" ID="6892">
       <FeatureGroup ID="143">
         <Name Value="Battery" ID="618829" langid="18"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="-100" ID="7816">
+    <CategoryFeatureGroup No="-100" ID="8176">
       <FeatureGroup ID="146">
         <Name Value="Other features" ID="624346" langid="1"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="30" ID="10998">
+    <CategoryFeatureGroup No="70" ID="11003">
       <FeatureGroup ID="148">
         <Name Value="Design" ID="630474" langid="18"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="86" ID="8329">
-      <FeatureGroup ID="163">
-        <Name Value="Γραφικά" ID="764430" langid="18"/>
-      </FeatureGroup>
-    </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="20" ID="10387">
+    <CategoryFeatureGroup No="10" ID="12476">
       <FeatureGroup ID="183">
         <Name Value="Επεξεργαστής ειδικά χαρακτηριστικά" ID="1210988" langid="18"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <CategoryFeatureGroup No="40" ID="11000">
+    <CategoryFeatureGroup No="65" ID="11002">
       <FeatureGroup ID="184">
         <Name Value="Performance" ID="1218765" langid="1"/>
       </FeatureGroup>
     </CategoryFeatureGroup>
-    <EANCode EAN="8806084962539"/>
-    <EANCode EAN="8806084961440"/>
+    <CategoryFeatureGroup No="55" ID="11006">
+      <FeatureGroup ID="186">
+        <Name Value="Multimedia" ID="1222838" langid="1"/>
+      </FeatureGroup>
+    </CategoryFeatureGroup>
+    <EANCode EAN="0888462062947"/>
     <FeatureLogo Feature_ID="2183" Size="27992" Value="Y" Height="200" ID="1" LogoPic="http://images.icecat.biz/img/feature_logo/1-3750.png" Width="200">
     </FeatureLogo>
     <ReasonsToBuy/>
     <ProductBundled/>
     <ProductDescription/>
     <Disclaimers/>
-    <ProductFamily LowPic="" ID="64259" ThumbPic="">
-      <Name Value="G Pad" ID="1220145" langid="1"/>
-      <Series ID="3704">
-        <Name Value="10.1" ID="1496111" langid="1"/>
+    <ProductFamily LowPic="" ID="63800" ThumbPic="">
+      <Name Value="iPhone" ID="990726" langid="1"/>
+      <Series ID="3524">
+        <Name Value="6" ID="1375114" langid="1"/>
       </Series>
     </ProductFamily>
-    <ProductFeature No="10100044" Presentation_Value="1,2 GHz" CategoryFeatureGroup_ID="830" Value="1.2" CategoryFeature_ID="73721" Local_ID="0" Translated="0" ID="162975149" Searchable="1" Localized="0" Mandatory="1">
-      <LocalValue Value="1.2">
-        <Measure ID="37">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="11379">
-        <Measure Sign="" ID="37">
-          <Signs>
-            <Sign ID="21" langid="1">
-<![CDATA[GHz]]>            </Sign>
-          </Signs>
-        </Measure>
-        <Name Value="Processor frequency" ID="1036524" langid="1"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100039" Presentation_Value="Qualcomm Snapdragon" CategoryFeatureGroup_ID="830" Value="Qualcomm Snapdragon" CategoryFeature_ID="11580" Local_ID="0" Translated="0" ID="162975150" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="Qualcomm Snapdragon">
-        <Measure ID="29">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="2196">
-        <Measure Sign="" ID="29">
-          <Signs/>
-        </Measure>
-        <Name Value="Τύπος επεξεργαστή" ID="267757" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100038" Presentation_Value="400" CategoryFeatureGroup_ID="830" Value="400" CategoryFeature_ID="6931" Local_ID="0" Translated="0" ID="162975151" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="400">
-        <Measure ID="29">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="47">
-        <Measure Sign="" ID="29">
-          <Signs/>
-        </Measure>
-        <Name Value="Προδιαγραφές επεξεργαστή" ID="266663" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100034" Presentation_Value="4" CategoryFeatureGroup_ID="830" Value="4" CategoryFeature_ID="57773" Local_ID="0" Translated="0" ID="162975152" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="4">
-        <Measure ID="29">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="6089">
-        <Measure Sign="" ID="29">
-          <Signs/>
-        </Measure>
-        <Name Value="Επεξεργαστής αριθμό των πυρήνων" ID="138130" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="10100040" Presentation_Value="1 GB" CategoryFeatureGroup_ID="832" Value="1" CategoryFeature_ID="73764" Local_ID="0" Translated="0" ID="162975153" Searchable="1" Localized="0" Mandatory="1">
-      <LocalValue Value="1">
-        <Measure ID="20">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="11381">
-        <Measure Sign="" ID="20">
-          <Signs>
-            <Sign ID="7" langid="1">
-<![CDATA[GB]]>            </Sign>
-          </Signs>
-        </Measure>
-        <Name Value="Εσωτερική μνήμη" ID="1036633" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100038" Presentation_Value="DDR2-SDRAM" CategoryFeatureGroup_ID="832" Value="DDR2-SDRAM" CategoryFeature_ID="34327" Local_ID="0" Translated="0" ID="162975154" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="DDR2-SDRAM">
-        <Measure ID="29">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="427">
-        <Measure Sign="" ID="29">
-          <Signs/>
-        </Measure>
-        <Name Value="Τύπος μνήμης" ID="266743" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="10100430" Presentation_Value="16 GB" CategoryFeatureGroup_ID="4142" Value="16" CategoryFeature_ID="71618" Local_ID="0" Translated="0" ID="162975155" Searchable="1" Localized="0" Mandatory="1">
-      <LocalValue Value="16">
-        <Measure ID="20">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="8730">
-        <Measure Sign="" ID="20">
-          <Signs>
-            <Sign ID="7" langid="1">
-<![CDATA[GB]]>            </Sign>
-          </Signs>
-        </Measure>
-        <Name Value="Internal storage capacity" ID="734209" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="10100020" Presentation_Value="Y" CategoryFeatureGroup_ID="4142" Value="Y" CategoryFeature_ID="21005" Local_ID="0" Translated="0" ID="162975156" Searchable="1" Localized="0" Mandatory="1">
-      <LocalValue Value="Y">
-        <Measure ID="26">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="3374">
-        <Measure Sign="" ID="26">
-          <Signs/>
-        </Measure>
-        <Name Value="Card reader ενσωματωμένο" ID="791509" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100018" Presentation_Value="MicroSD (TransFlash)" CategoryFeatureGroup_ID="4142" Value="MicroSD (TransFlash)" CategoryFeature_ID="21006" Local_ID="0" Translated="0" ID="162975158" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="MicroSD (TransFlash)">
-        <Measure ID="29">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="730">
-        <Measure Sign="" ID="29">
-          <Signs/>
-        </Measure>
-        <Name Value="Συσκευή κάρτας μνήμης" ID="267129" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100016" Presentation_Value="32 GB" CategoryFeatureGroup_ID="4142" Value="32" CategoryFeature_ID="57787" Local_ID="0" Translated="0" ID="162975159" Searchable="0" Localized="0" Mandatory="0">
-      <LocalValue Value="32">
-        <Measure ID="20">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="7021">
-        <Measure Sign="" ID="20">
-          <Signs>
-            <Sign ID="7" langid="1">
-<![CDATA[GB]]>            </Sign>
-          </Signs>
-        </Measure>
-        <Name Value="Maximum memory card size" ID="334663" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100000" Presentation_Value="Flash" CategoryFeatureGroup_ID="4142" Value="Flash" CategoryFeature_ID="105669" Local_ID="0" Translated="0" ID="162975157" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="Flash">
-        <Measure ID="29">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="11441">
-        <Measure Sign="" ID="29">
-          <Signs/>
-        </Measure>
-        <Name Value="Μέσα αποθήκευσης" ID="1274593" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="10100040" Presentation_Value="25,65 cm (10.1&quot;)" CategoryFeatureGroup_ID="833" Value="10.1" CategoryFeature_ID="11611" Local_ID="0" Translated="0" ID="162975160" Searchable="1" Localized="0" Mandatory="1">
-      <LocalValue Value="256.5">
+    <ProductFeature No="10100028" Presentation_Value="11,94 cm (4.7&quot;)" CategoryFeatureGroup_ID="6883" Value="4.7" CategoryFeature_ID="51494" Local_ID="0" Translated="0" ID="164185805" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="119.4">
         <Measure ID="24">
           <Signs>
             <Sign ID="2603" langid="18">
@@ -306,8 +150,8 @@
         <Name Value="Μέγεθος οθόνης" ID="267330" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="10100038" Presentation_Value="1280 x 800 pixels" CategoryFeatureGroup_ID="833" Value="1280 x 800" CategoryFeature_ID="30350" Local_ID="0" Translated="0" ID="162975161" Searchable="1" Localized="0" Mandatory="1">
-      <LocalValue Value="1280 x 800">
+    <ProductFeature No="10100026" Presentation_Value="1334 x 750 pixels" CategoryFeatureGroup_ID="6883" Value="1334 x 750" CategoryFeature_ID="51495" Local_ID="0" Translated="0" ID="164185806" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="1334 x 750">
         <Measure ID="39">
           <Signs/>
         </Measure>
@@ -322,20 +166,7 @@
         <Name Value="Βήμα εικονοστοιχείων" ID="267875" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="10100034" Presentation_Value="Y" CategoryFeatureGroup_ID="833" Value="Y" CategoryFeature_ID="45723" Local_ID="0" Translated="0" ID="162975162" Searchable="1" Localized="0" Mandatory="1">
-      <LocalValue Value="Y">
-        <Measure ID="26">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="6784">
-        <Measure Sign="" ID="26">
-          <Signs/>
-        </Measure>
-        <Name Value="LED backlight" ID="294061" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="10100028" Presentation_Value="Y" CategoryFeatureGroup_ID="833" Value="Y" CategoryFeature_ID="31236" Local_ID="0" Translated="0" ID="162975163" Searchable="1" Localized="0" Mandatory="1">
+    <ProductFeature No="10100022" Presentation_Value="Y" CategoryFeatureGroup_ID="6883" Value="Y" CategoryFeature_ID="51496" Local_ID="0" Translated="0" ID="164185807" Searchable="1" Localized="0" Mandatory="1">
       <LocalValue Value="Y">
         <Measure ID="26">
           <Signs/>
@@ -348,20 +179,75 @@
         <Name Value="Οθόνη αφής" ID="268839" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100036" Presentation_Value="IPS" CategoryFeatureGroup_ID="833" Value="IPS" CategoryFeature_ID="57789" Local_ID="0" Translated="0" ID="162975164" Searchable="0" Localized="0" Mandatory="0">
+    <ProductFeature No="10100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6883" Value="Y" CategoryFeature_ID="51531" Local_ID="0" Translated="0" ID="164185808" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7350">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Orientation sensor" ID="495120" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100030" Presentation_Value="IPS" CategoryFeatureGroup_ID="6883" Value="IPS" CategoryFeature_ID="92510" Local_ID="0" Translated="0" ID="164185809" Searchable="0" Localized="0" Mandatory="0">
       <LocalValue Value="IPS">
         <Measure ID="29">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="9713">
+      <Feature ID="9104">
         <Measure Sign="" ID="29">
           <Signs/>
         </Measure>
-        <Name Value="Display technology" ID="804850" langid="18"/>
+        <Name Value="Display type" ID="761230" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100000" Presentation_Value="Χωρητικό" CategoryFeatureGroup_ID="833" Value="Capacitive" CategoryFeature_ID="59314" Local_ID="0" Translated="1" ID="162975166" Searchable="0" Localized="0" Mandatory="0">
+    <ProductFeature No="100023" Presentation_Value="1400:1" CategoryFeatureGroup_ID="6883" Value="1400:1" CategoryFeature_ID="51675" Local_ID="0" Translated="0" ID="164185810" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="1400:1">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="34">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Λόγος αντίθεσης" ID="266653" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100020" Presentation_Value="Multi-touch" CategoryFeatureGroup_ID="6883" Value="Multi-touch" CategoryFeature_ID="51557" Local_ID="0" Translated="0" ID="164185811" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Multi-touch">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7698">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Touch technology" ID="596206" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100020" Presentation_Value="500 cd/m²" CategoryFeatureGroup_ID="6883" Value="500" CategoryFeature_ID="51677" Local_ID="0" Translated="0" ID="164185812" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="500">
+        <Measure ID="43">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1389">
+        <Measure Sign="" ID="43">
+          <Signs>
+            <Sign ID="27" langid="1">
+<![CDATA[cd/m²]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Φωτεινότητα οθόνης" ID="267716" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Χωρητικό" CategoryFeatureGroup_ID="6883" Value="Capacitive" CategoryFeature_ID="59555" Local_ID="0" Translated="1" ID="164185813" Searchable="0" Localized="0" Mandatory="0">
       <LocalValue Value="Χωρητικό">
         <Measure ID="29">
           <Signs/>
@@ -374,81 +260,133 @@
         <Name Value="Touch screen type" ID="625072" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="99999" Presentation_Value="16:10" CategoryFeatureGroup_ID="833" Value="16:10" CategoryFeature_ID="45725" Local_ID="0" Translated="0" ID="162975167" Searchable="0" Localized="0" Mandatory="0">
-      <LocalValue Value="16:10">
+    <ProductFeature No="100000" Presentation_Value="326 ppi" CategoryFeatureGroup_ID="6883" Value="326" CategoryFeature_ID="103274" Local_ID="0" Translated="0" ID="164185814" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="326">
+        <Measure ID="243">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="13246">
+        <Measure Sign="" ID="243">
+          <Signs>
+            <Sign ID="14247" langid="1">
+<![CDATA[ppi]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Πυκνότητα εικονοστοιχείων" ID="1279876" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100040" Presentation_Value="Apple" CategoryFeatureGroup_ID="6884" Value="Apple" CategoryFeature_ID="101566" Local_ID="0" Translated="0" ID="164185816" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Apple">
         <Measure ID="29">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="39">
+      <Feature ID="2196">
         <Measure Sign="" ID="29">
           <Signs/>
         </Measure>
-        <Name Value="Λόγος διαστάσεων" ID="266657" langid="18"/>
+        <Name Value="Τύπος επεξεργαστή" ID="267757" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="10100040" Presentation_Value="Y" CategoryFeatureGroup_ID="4346" Value="Y" CategoryFeature_ID="80812" Local_ID="0" Translated="0" ID="162975168" Searchable="1" Localized="0" Mandatory="1">
+    <ProductFeature No="100035" Presentation_Value="A8" CategoryFeatureGroup_ID="6884" Value="A8" CategoryFeature_ID="51651" Local_ID="0" Translated="0" ID="164185817" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="A8">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="47">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Προδιαγραφές επεξεργαστή" ID="266663" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6884" Value="Y" CategoryFeature_ID="94724" Local_ID="0" Translated="0" ID="164185818" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="6088">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Υπολογισμοί 64-bit" ID="1266813" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="99989" Presentation_Value="Y" CategoryFeatureGroup_ID="6884" Value="Y" CategoryFeature_ID="105116" Local_ID="0" Translated="0" ID="164185819" Searchable="0" Localized="0" Mandatory="0">
       <LocalValue Value="Y">
         <Measure ID="26">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="12433">
+      <Feature ID="17981">
         <Measure Sign="" ID="26">
           <Signs/>
         </Measure>
-        <Name Value="Οπίσθια κάμερα" ID="1279760" langid="18"/>
+        <Name Value="Coprocessor" ID="1326151" langid="1"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100036" Presentation_Value="5 MP" CategoryFeatureGroup_ID="4346" Value="5" CategoryFeature_ID="80813" Local_ID="0" Translated="0" ID="162975169" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="5">
+    <ProductFeature No="99989" Presentation_Value="M8" CategoryFeatureGroup_ID="6884" Value="M8" CategoryFeature_ID="106229" Local_ID="0" Translated="0" ID="164185820" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="M8">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="18116">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Coprocessor model" ID="1375116" langid="1"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100038" Presentation_Value="16 GB" CategoryFeatureGroup_ID="6887" Value="16" CategoryFeature_ID="51697" Local_ID="0" Translated="0" ID="164185821" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="16">
+        <Measure ID="20">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="8730">
+        <Measure Sign="" ID="20">
+          <Signs>
+            <Sign ID="7" langid="1">
+<![CDATA[GB]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Internal storage capacity" ID="734209" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100020" Presentation_Value="Όχι" CategoryFeatureGroup_ID="6887" Value="N" CategoryFeature_ID="51501" Local_ID="0" Translated="1" ID="164185822" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Όχι">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="730">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Συσκευή κάρτας μνήμης" ID="267129" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="10100050" Presentation_Value="8 MP" CategoryFeatureGroup_ID="6888" Value="8" CategoryFeature_ID="51504" Local_ID="0" Translated="0" ID="164185823" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="8">
         <Measure ID="165">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="12435">
+      <Feature ID="8737">
         <Measure Sign="" ID="165">
           <Signs>
             <Sign ID="3126" langid="1">
 <![CDATA[MP]]>            </Sign>
           </Signs>
         </Measure>
-        <Name Value="Ανάλυση οπίσθιας κάμερας (αριθμητικά)" ID="1279762" langid="18"/>
+        <Name Value="Main camera resolution (numeric)" ID="734496" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100035" Presentation_Value="2560 x 1920 pixels" CategoryFeatureGroup_ID="4346" Value="2560 x 1920" CategoryFeature_ID="80814" Local_ID="0" Translated="0" ID="162975170" Searchable="0" Localized="0" Mandatory="0">
-      <LocalValue Value="2560 x 1920">
-        <Measure ID="39">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="12434">
-        <Measure Sign="" ID="39">
-          <Signs>
-            <Sign ID="23" langid="1">
-<![CDATA[pixels]]>            </Sign>
-          </Signs>
-        </Measure>
-        <Name Value="Ανάλυση οπίσθιας κάμερας" ID="1279761" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100034" Presentation_Value="4x" CategoryFeatureGroup_ID="4346" Value="4" CategoryFeature_ID="57793" Local_ID="0" Translated="0" ID="162975171" Searchable="0" Localized="0" Mandatory="0">
-      <LocalValue Value="4">
-        <Measure ID="33">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="48">
-        <Measure Sign="" ID="33">
-          <Signs>
-            <Sign ID="17" langid="1">
-<![CDATA[x]]>            </Sign>
-          </Signs>
-        </Measure>
-        <Name Value="Ψηφιακή εστίαση (Ψηφιακό zoom)" ID="266696" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100033" Presentation_Value="Y" CategoryFeatureGroup_ID="4346" Value="Y" CategoryFeature_ID="50079" Local_ID="0" Translated="0" ID="162975172" Searchable="0" Localized="0" Mandatory="0">
+    <ProductFeature No="10100044" Presentation_Value="Y" CategoryFeatureGroup_ID="6888" Value="Y" CategoryFeature_ID="51507" Local_ID="0" Translated="0" ID="164185824" Searchable="1" Localized="0" Mandatory="1">
       <LocalValue Value="Y">
         <Measure ID="29">
           <Signs/>
@@ -461,7 +399,46 @@
         <Name Value="Αυτόματη εστίαση" ID="267819" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100030" Presentation_Value="Y" CategoryFeatureGroup_ID="4346" Value="Y" CategoryFeature_ID="57776" Local_ID="0" Translated="0" ID="162975173" Searchable="0" Localized="0" Mandatory="1">
+    <ProductFeature No="10100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6888" Value="Y" CategoryFeature_ID="53995" Local_ID="0" Translated="0" ID="164185825" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1289">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Ενσωματωμένο φλας" ID="267640" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="10099995" Presentation_Value="Y" CategoryFeatureGroup_ID="6888" Value="Y" CategoryFeature_ID="51728" Local_ID="0" Translated="0" ID="164185826" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="3311">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Δεύτερη κάμερα" ID="1261229" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100042" Presentation_Value="Y" CategoryFeatureGroup_ID="6888" Value="Y" CategoryFeature_ID="51560" Local_ID="0" Translated="0" ID="164185827" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7114">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Face detection" ID="345817" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100030" Presentation_Value="Y" CategoryFeatureGroup_ID="6888" Value="Y" CategoryFeature_ID="51505" Local_ID="0" Translated="0" ID="164185828" Searchable="0" Localized="0" Mandatory="0">
       <LocalValue Value="Y">
         <Measure ID="26">
           <Signs/>
@@ -474,91 +451,221 @@
         <Name Value="Video recording" ID="727944" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100029" Presentation_Value="1920 x 1080 pixels" CategoryFeatureGroup_ID="4346" Value="1920 x 1080" CategoryFeature_ID="57784" Local_ID="0" Translated="0" ID="162975174" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="1920 x 1080">
-        <Measure ID="39">
+    <ProductFeature No="100028" Presentation_Value="1080p, 720p" CategoryFeatureGroup_ID="6888" Value="1080p, 720p" CategoryFeature_ID="51508" Local_ID="0" Translated="0" ID="164185829" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="1080p, 720p">
+        <Measure ID="29">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="7514">
-        <Measure Sign="" ID="39">
-          <Signs>
-            <Sign ID="23" langid="1">
-<![CDATA[pixels]]>            </Sign>
-          </Signs>
+      <Feature ID="8745">
+        <Measure Sign="" ID="29">
+          <Signs/>
         </Measure>
-        <Name Value="Μέγιστη ανάλυση βίντεο" ID="566456" langid="18"/>
+        <Name Value="Video recording modes" ID="734880" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100022" Presentation_Value="Y" CategoryFeatureGroup_ID="4346" Value="Y" CategoryFeature_ID="80815" Local_ID="0" Translated="0" ID="162975175" Searchable="0" Localized="0" Mandatory="1">
+    <ProductFeature No="100027" Presentation_Value="240 fps" CategoryFeatureGroup_ID="6888" Value="240" CategoryFeature_ID="51713" Local_ID="0" Translated="0" ID="164185830" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="240">
+        <Measure ID="85">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7515">
+        <Measure Sign="" ID="85">
+          <Signs>
+            <Sign ID="67" langid="1">
+<![CDATA[fps]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Maximum frame rate" ID="566495" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100027" Presentation_Value="1920x1080@30fps, 1920x1080@60fps" CategoryFeatureGroup_ID="6888" Value="1920x1080@30fps, 1920x1080@60fps" CategoryFeature_ID="106230" Local_ID="0" Translated="0" ID="164185831" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="1920x1080@30fps, 1920x1080@60fps">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="2963">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Ανάλυση στην ταχύτητα λήψης" ID="1261012" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100026" Presentation_Value="Y" CategoryFeatureGroup_ID="6888" Value="Y" CategoryFeature_ID="51783" Local_ID="0" Translated="0" ID="164185832" Searchable="0" Localized="0" Mandatory="0">
       <LocalValue Value="Y">
         <Measure ID="26">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="12436">
+      <Feature ID="8746">
         <Measure Sign="" ID="26">
           <Signs/>
         </Measure>
-        <Name Value="Εμπρόσθια κάμερα" ID="1279763" langid="18"/>
+        <Name Value="Video stabilizer" ID="734921" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100021" Presentation_Value="1,3 MP" CategoryFeatureGroup_ID="4346" Value="1.3" CategoryFeature_ID="80816" Local_ID="0" Translated="0" ID="162975176" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="1.3">
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6888" Value="Y" CategoryFeature_ID="51555" Local_ID="0" Translated="0" ID="164185833" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="8697">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Geotagging" ID="730567" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6888" Value="Y" CategoryFeature_ID="53999" Local_ID="0" Translated="0" ID="164185834" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="9043">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Self-timer" ID="758560" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="99994" Presentation_Value="1,2 MP" CategoryFeatureGroup_ID="6888" Value="1.2" CategoryFeature_ID="51729" Local_ID="0" Translated="0" ID="164185835" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="1.2">
         <Measure ID="165">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="12437">
+      <Feature ID="8442">
         <Measure Sign="" ID="165">
           <Signs>
             <Sign ID="3126" langid="1">
 <![CDATA[MP]]>            </Sign>
           </Signs>
         </Measure>
-        <Name Value="Ανάλυση εμπρόσθιας κάμερας (αριθμητικά)" ID="1279764" langid="18"/>
+        <Name Value="Second camera resolution" ID="708684" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100020" Presentation_Value="Y" CategoryFeatureGroup_ID="846" Value="Y" CategoryFeature_ID="54325" Local_ID="0" Translated="0" ID="162975177" Searchable="0" Localized="0" Mandatory="1">
+    <ProductFeature No="10100100" Presentation_Value="Y" CategoryFeatureGroup_ID="6890" Value="Y" CategoryFeature_ID="95628" Local_ID="0" Translated="0" ID="164185836" Searchable="1" Localized="0" Mandatory="1">
       <LocalValue Value="Y">
         <Measure ID="26">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="2433">
+      <Feature ID="6644">
         <Measure Sign="" ID="26">
           <Signs/>
         </Measure>
-        <Name Value="Ενσωματωμένα ηχεία" ID="268536" langid="18"/>
+        <Name Value="3G" ID="244835" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100019" Presentation_Value="Y" CategoryFeatureGroup_ID="846" Value="Y" CategoryFeature_ID="16351" Local_ID="0" Translated="0" ID="162975178" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="Y">
-        <Measure ID="26">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="1025">
-        <Measure Sign="" ID="26">
-          <Signs/>
-        </Measure>
-        <Name Value="Ενσωματωμένο μικρόφωνο" ID="267405" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100019" Presentation_Value="2" CategoryFeatureGroup_ID="846" Value="2" CategoryFeature_ID="20063" Local_ID="0" Translated="0" ID="162975179" Searchable="0" Localized="0" Mandatory="0">
-      <LocalValue Value="2">
+    <ProductFeature No="10100100" Presentation_Value="Single SIM" CategoryFeatureGroup_ID="6890" Value="Single SIM" CategoryFeature_ID="115466" Local_ID="0" Translated="0" ID="164185855" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="Single SIM">
         <Measure ID="29">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="1851">
+      <Feature ID="19653">
         <Measure Sign="" ID="29">
           <Signs/>
         </Measure>
-        <Name Value="Αριθμός ενσωματωμένων ηχείων" ID="267021" langid="18"/>
+        <Name Value="SIM card capability" ID="1492752" langid="1"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="10100300" Presentation_Value="Y" CategoryFeatureGroup_ID="2678" Value="Y" CategoryFeature_ID="21000" Local_ID="0" Translated="0" ID="162975182" Searchable="1" Localized="0" Mandatory="1">
+    <ProductFeature No="10100036" Presentation_Value="Y" CategoryFeatureGroup_ID="6890" Value="Y" CategoryFeature_ID="51513" Local_ID="0" Translated="0" ID="164185838" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="3239">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Wi-Fi" ID="356773" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="10100036" Presentation_Value="Y" CategoryFeatureGroup_ID="6890" Value="Y" CategoryFeature_ID="95629" Local_ID="0" Translated="0" ID="164185837" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="16921">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="4G" ID="1280735" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100099" Presentation_Value="NanoSIM" CategoryFeatureGroup_ID="6890" Value="NanoSIM" CategoryFeature_ID="56682" Local_ID="0" Translated="0" ID="164185857" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="NanoSIM">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="9166">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="SIM card type" ID="763853" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100070" Presentation_Value="EDGE, GSM" CategoryFeatureGroup_ID="6890" Value="EDGE, GSM" CategoryFeature_ID="95630" Local_ID="0" Translated="0" ID="164185839" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="EDGE, GSM">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="16924">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Πρότυπα 2G" ID="1280738" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100069" Presentation_Value="HSDPA, HSPA+, UMTS" CategoryFeatureGroup_ID="6890" Value="HSDPA, HSPA+, UMTS" CategoryFeature_ID="95631" Local_ID="0" Translated="0" ID="164185840" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="HSDPA, HSPA+, UMTS">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="16923">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Πρότυπα 3G" ID="1280737" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100068" Presentation_Value="LTE" CategoryFeatureGroup_ID="6890" Value="LTE" CategoryFeature_ID="95632" Local_ID="0" Translated="0" ID="164185841" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="LTE">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="16922">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Πρότυπα 4G" ID="1280736" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100035" Presentation_Value="802.11a, 802.11ac, 802.11b, 802.11g, 802.11n" CategoryFeatureGroup_ID="6890" Value="802.11a, 802.11ac, 802.11b, 802.11g, 802.11n" CategoryFeature_ID="51514" Local_ID="0" Translated="0" ID="164185842" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="802.11a, 802.11ac, 802.11b, 802.11g, 802.11n">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="432">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Wi-Fi πρότυπα" ID="266748" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100033" Presentation_Value="Y" CategoryFeatureGroup_ID="6890" Value="Y" CategoryFeature_ID="51515" Local_ID="0" Translated="0" ID="164185843" Searchable="0" Localized="0" Mandatory="1">
       <LocalValue Value="Y">
         <Measure ID="26">
           <Signs/>
@@ -571,20 +678,7 @@
         <Name Value="Bluetooth" ID="267371" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100049" Presentation_Value="802.11a, 802.11b, 802.11g, 802.11n" CategoryFeatureGroup_ID="2678" Value="802.11a, 802.11b, 802.11g, 802.11n" CategoryFeature_ID="50074" Local_ID="0" Translated="0" ID="162975184" Searchable="0" Localized="0" Mandatory="0">
-      <LocalValue Value="802.11a, 802.11b, 802.11g, 802.11n">
-        <Measure ID="29">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="432">
-        <Measure Sign="" ID="29">
-          <Signs/>
-        </Measure>
-        <Name Value="Wi-Fi πρότυπα" ID="266748" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100044" Presentation_Value="4.0" CategoryFeatureGroup_ID="2678" Value="4.0" CategoryFeature_ID="21001" Local_ID="0" Translated="0" ID="162975185" Searchable="0" Localized="0" Mandatory="0">
+    <ProductFeature No="100032" Presentation_Value="4.0" CategoryFeatureGroup_ID="6890" Value="4.0" CategoryFeature_ID="51516" Local_ID="0" Translated="0" ID="164185844" Searchable="0" Localized="0" Mandatory="0">
       <LocalValue Value="4.0">
         <Measure ID="29">
           <Signs/>
@@ -597,47 +691,73 @@
         <Name Value="Έκδοση bluetooth" ID="267565" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100000" Presentation_Value="Όχι" CategoryFeatureGroup_ID="847" Value="N" CategoryFeature_ID="16340" Local_ID="0" Translated="1" ID="162975189" Searchable="0" Localized="0" Mandatory="1">
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6890" Value="Y" CategoryFeature_ID="94592" Local_ID="0" Translated="0" ID="164185845" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="9763">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="AirPlay" ID="813719" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="99995" Presentation_Value="Y" CategoryFeatureGroup_ID="6890" Value="Y" CategoryFeature_ID="63985" Local_ID="0" Translated="0" ID="164185846" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="10157">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Near Field Communication (NFC)" ID="878171" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100070" Presentation_Value="Όχι" CategoryFeatureGroup_ID="6889" Value="N" CategoryFeature_ID="53992" Local_ID="0" Translated="1" ID="164185847" Searchable="0" Localized="0" Mandatory="1">
       <LocalValue Value="Όχι">
         <Measure ID="29">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="2314">
+      <Feature ID="1339">
         <Measure Sign="" ID="29">
           <Signs/>
         </Measure>
-        <Name Value="Μικρόφωνο/line-in jack" ID="268433" langid="18"/>
+        <Name Value="Θύρα USB" ID="267676" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="847" Value="Y" CategoryFeature_ID="80121" Local_ID="0" Translated="0" ID="162975190" Searchable="0" Localized="0" Mandatory="1">
+    <ProductFeature No="100016" Presentation_Value="3.5 mm" CategoryFeatureGroup_ID="6889" Value="3.5 mm" CategoryFeature_ID="51511" Local_ID="0" Translated="0" ID="164185849" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="3.5 mm">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="4163">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Συνδεσιμότητα Ακουστικών" ID="1262406" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6889" Value="Y" CategoryFeature_ID="71817" Local_ID="0" Translated="0" ID="164185850" Searchable="0" Localized="0" Mandatory="0">
       <LocalValue Value="Y">
         <Measure ID="26">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="12195">
+      <Feature ID="11184">
         <Measure Sign="" ID="26">
           <Signs/>
         </Measure>
-        <Name Value="Έξοδος ακουστικών" ID="1277314" langid="18"/>
+        <Name Value="Σύνδεσμος Lightning" ID="1274370" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="10100040" Presentation_Value="Y" CategoryFeatureGroup_ID="11000" Value="Y" CategoryFeature_ID="31225" Local_ID="0" Translated="0" ID="162975191" Searchable="1" Localized="0" Mandatory="1">
-      <LocalValue Value="Y">
-        <Measure ID="26">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="3329">
-        <Measure Sign="" ID="26">
-          <Signs/>
-        </Measure>
-        <Name Value="GPS" ID="349613" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="10100100" Presentation_Value="Slate" CategoryFeatureGroup_ID="10998" Value="Slate" CategoryFeature_ID="7141" Local_ID="0" Translated="0" ID="162975192" Searchable="1" Localized="0" Mandatory="1">
-      <LocalValue Value="Slate">
+    <ProductFeature No="10100055" Presentation_Value="Ράβδος (Μπαρ)" CategoryFeatureGroup_ID="11003" Value="Bar" CategoryFeature_ID="51570" Local_ID="0" Translated="1" ID="164185851" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="Ράβδος (Μπαρ)">
         <Measure ID="29">
           <Signs/>
         </Measure>
@@ -649,8 +769,8 @@
         <Name Value="Τύπος μορφής" ID="267169" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="10100096" Presentation_Value="Κόκκινο" CategoryFeatureGroup_ID="10998" Value="Red" CategoryFeature_ID="35294" Local_ID="0" Translated="1" ID="162975193" Searchable="1" Localized="0" Mandatory="1">
-      <LocalValue Value="Κόκκινο">
+    <ProductFeature No="100035" Presentation_Value="Χρυσός (Χρυσό)" CategoryFeatureGroup_ID="11003" Value="Gold" CategoryFeature_ID="51492" Local_ID="0" Translated="1" ID="164185852" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Χρυσός (Χρυσό)">
         <Measure ID="29">
           <Signs/>
         </Measure>
@@ -662,79 +782,21 @@
         <Name Value="Χρώμα προϊόντος" ID="268034" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100500" Presentation_Value="Full-size tablet" CategoryFeatureGroup_ID="10998" Value="Full-size tablet" CategoryFeature_ID="95720" Local_ID="0" Translated="0" ID="162975194" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="Full-size tablet">
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="11003" Value="Y" CategoryFeature_ID="94723" Local_ID="0" Translated="0" ID="164185853" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
         <Measure ID="29">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="2328">
+      <Feature ID="3577">
         <Measure Sign="" ID="29">
           <Signs/>
         </Measure>
-        <Name Value="Τύπος μονάδας" ID="268446" langid="18"/>
+        <Name Value="Ανάγνωση δαχτυλικού αποτυπώματος" ID="1262138" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100000" Presentation_Value="Όχι" CategoryFeatureGroup_ID="10998" Value="N" CategoryFeature_ID="95836" Local_ID="0" Translated="1" ID="162975195" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="Όχι">
-        <Measure ID="26">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="16956">
-        <Measure Sign="" ID="26">
-          <Signs/>
-        </Measure>
-        <Name Value="Παιδικά tablet" ID="1280769" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100050" Presentation_Value="Πολυμερές λιθίου (LiPo)" CategoryFeatureGroup_ID="7821" Value="Lithium Polymer (LiPo)" CategoryFeature_ID="7140" Local_ID="0" Translated="1" ID="162975209" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="Πολυμερές λιθίου (LiPo)">
-        <Measure ID="29">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="434">
-        <Measure Sign="" ID="29">
-          <Signs/>
-        </Measure>
-        <Name Value="Τεχνολογία μπαταρίας" ID="266750" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100048" Presentation_Value="8000 mAh" CategoryFeatureGroup_ID="7821" Value="8000" CategoryFeature_ID="34247" Local_ID="0" Translated="0" ID="162975210" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="8000">
-        <Measure ID="51">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="909">
-        <Measure Sign="" ID="51">
-          <Signs>
-            <Sign ID="35" langid="1">
-<![CDATA[mAh]]>            </Sign>
-          </Signs>
-        </Measure>
-        <Name Value="Επιδόσεις μπαταρίας" ID="267297" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100040" Presentation_Value="8h" CategoryFeatureGroup_ID="7821" Value="8" CategoryFeature_ID="14440" Local_ID="0" Translated="0" ID="162975211" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="8">
-        <Measure ID="46">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="1721">
-        <Measure Sign="" ID="46">
-          <Signs>
-            <Sign ID="30" langid="1">
-<![CDATA[h]]>            </Sign>
-          </Signs>
-        </Measure>
-        <Name Value="Διάρκεια μπαταρίας" ID="267999" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="10100100" Presentation_Value="Android" CategoryFeatureGroup_ID="12019" Value="Android" CategoryFeature_ID="20706" Local_ID="0" Translated="0" ID="162975213" Searchable="1" Localized="0" Mandatory="1">
-      <LocalValue Value="Android">
+    <ProductFeature No="10101000" Presentation_Value="iOS" CategoryFeatureGroup_ID="11002" Value="iOS" CategoryFeature_ID="83499" Local_ID="0" Translated="0" ID="164185854" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="iOS">
         <Measure ID="29">
           <Signs/>
         </Measure>
@@ -746,8 +808,8 @@
         <Name Value="Εγκατεστημένο λειτουργικό σύστημα" ID="268614" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100099" Presentation_Value="4.4.2" CategoryFeatureGroup_ID="12019" Value="4.4.2" CategoryFeature_ID="94561" Local_ID="0" Translated="0" ID="162975214" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="4.4.2">
+    <ProductFeature No="100059" Presentation_Value="8" CategoryFeatureGroup_ID="11002" Value="8" CategoryFeature_ID="54618" Local_ID="0" Translated="0" ID="164185856" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="8">
         <Measure ID="29">
           <Signs/>
         </Measure>
@@ -759,56 +821,523 @@
         <Name Value="Operating system version" ID="596026" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100010" Presentation_Value="26,09 cm" CategoryFeatureGroup_ID="848" Value="260.9" CategoryFeature_ID="21002" Local_ID="0" Translated="0" ID="162975216" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="260.9">
-        <Measure ID="24">
+    <ProductFeature No="100046" Presentation_Value="Sim-lock free" CategoryFeatureGroup_ID="11002" Value="Sim-lock free" CategoryFeature_ID="55137" Local_ID="0" Translated="0" ID="164185858" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Sim-lock free">
+        <Measure ID="29">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="1649">
-        <Measure Sign="" ID="24">
-          <Signs>
-            <Sign ID="3" langid="1">
-<![CDATA[mm]]>            </Sign>
-          </Signs>
+      <Feature ID="8578">
+        <Measure Sign="" ID="29">
+          <Signs/>
         </Measure>
-        <Name Value="Πλάτος" ID="267931" langid="18"/>
+        <Name Value="Subscription type" ID="722485" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100009" Presentation_Value="16,59 cm" CategoryFeatureGroup_ID="848" Value="165.9" CategoryFeature_ID="21003" Local_ID="0" Translated="0" ID="162975217" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="165.9">
-        <Measure ID="24">
+    <ProductFeature No="100011" Presentation_Value="Y" CategoryFeatureGroup_ID="11002" Value="Y" CategoryFeature_ID="51566" Local_ID="0" Translated="0" ID="164185859" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="1650">
-        <Measure Sign="" ID="24">
-          <Signs>
-            <Sign ID="3" langid="1">
-<![CDATA[mm]]>            </Sign>
-          </Signs>
+      <Feature ID="8698">
+        <Measure Sign="" ID="26">
+          <Signs/>
         </Measure>
-        <Name Value="Βάθος" ID="267932" langid="18"/>
+        <Name Value="Proximity sensor" ID="730620" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100007" Presentation_Value="8,95 mm" CategoryFeatureGroup_ID="848" Value="8.95" CategoryFeature_ID="21004" Local_ID="0" Translated="0" ID="162975218" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="8.95">
-        <Measure ID="24">
+    <ProductFeature No="100011" Presentation_Value="Y" CategoryFeatureGroup_ID="11002" Value="Y" CategoryFeature_ID="57380" Local_ID="0" Translated="0" ID="164185860" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="1464">
-        <Measure Sign="" ID="24">
-          <Signs>
-            <Sign ID="3" langid="1">
-<![CDATA[mm]]>            </Sign>
-          </Signs>
+      <Feature ID="9731">
+        <Measure Sign="" ID="26">
+          <Signs/>
         </Measure>
-        <Name Value="Ύψος" ID="267775" langid="18"/>
+        <Name Value="Accelerometer" ID="811327" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100004" Presentation_Value="523g" CategoryFeatureGroup_ID="848" Value="523" CategoryFeature_ID="12812" Local_ID="0" Translated="0" ID="162975219" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="523">
+    <ProductFeature No="100011" Presentation_Value="Y" CategoryFeatureGroup_ID="11002" Value="Y" CategoryFeature_ID="59559" Local_ID="0" Translated="0" ID="164185861" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="8720">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Ambient light sensor" ID="733799" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100010" Presentation_Value="Y" CategoryFeatureGroup_ID="11002" Value="Y" CategoryFeature_ID="106231" Local_ID="0" Translated="0" ID="164185862" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="9732">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Gyroscope" ID="811368" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100010" Presentation_Value="Y" CategoryFeatureGroup_ID="11002" Value="Y" CategoryFeature_ID="106232" Local_ID="0" Translated="0" ID="164185863" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7609">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Barometer" ID="590484" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="99989" Presentation_Value="Y" CategoryFeatureGroup_ID="11002" Value="Y" CategoryFeature_ID="51659" Local_ID="0" Translated="0" ID="164185864" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7986">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Windows operating systems supported" ID="617709" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="99988" Presentation_Value="Y" CategoryFeatureGroup_ID="11002" Value="Y" CategoryFeature_ID="51660" Local_ID="0" Translated="0" ID="164185865" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7987">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Mac operating systems supported" ID="617750" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100010" Presentation_Value="Y" CategoryFeatureGroup_ID="11005" Value="Y" CategoryFeature_ID="51652" Local_ID="0" Translated="0" ID="164185867" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="6623">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Assisted GPS (A-GPS)" ID="241419" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100008" Presentation_Value="Y" CategoryFeatureGroup_ID="11005" Value="Y" CategoryFeature_ID="94591" Local_ID="0" Translated="0" ID="164185868" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="15618">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="GLONASS" ID="1280391" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="11005" Value="Y" CategoryFeature_ID="51517" Local_ID="0" Translated="0" ID="164185869" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1733">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Ηλεκτρονική πυξίδα" ID="268010" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="99989" Presentation_Value="AAC, AAX, AAX+, AIFF, HE-AAC, M4A, MP3, WAV" CategoryFeatureGroup_ID="11006" Value="AAC, AAX, AAX+, AIFF, HE-AAC, M4A, MP3, WAV" CategoryFeature_ID="51528" Local_ID="0" Translated="0" ID="164185871" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="AAC, AAX, AAX+, AIFF, HE-AAC, M4A, MP3, WAV">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="2224">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Audio formats supported" ID="268359" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="99988" Presentation_Value="AVI, M4V, MOV, MP4" CategoryFeatureGroup_ID="11006" Value="AVI, M4V, MOV, MP4" CategoryFeature_ID="51529" Local_ID="0" Translated="0" ID="164185872" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="AVI, M4V, MOV, MP4">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="6893">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Φορμά συμπίεσης" ID="581786" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="99987" Presentation_Value="GIF, JPG, TIF" CategoryFeatureGroup_ID="11006" Value="GIF, JPG, TIF" CategoryFeature_ID="51530" Local_ID="0" Translated="0" ID="164185873" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="GIF, JPG, TIF">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="2417">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Τύποι φωτογραφικών μορφών" ID="268520" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="99986" Presentation_Value="DOC, DOCX, HTM, HTML, ICS, Κλειδί, PDF, PPT, PPTX, RTF, TXT, VCF, XLS, XLSX" CategoryFeatureGroup_ID="11006" Value="DOC, DOCX, HTM, HTML, ICS, KEY, PDF, PPT, PPTX, RTF, TXT, VCF, XLS, XLSX" CategoryFeature_ID="55140" Local_ID="0" Translated="1" ID="164185874" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="DOC, DOCX, HTM, HTML, ICS, Κλειδί, PDF, PPT, PPTX, RTF, TXT, VCF, XLS, XLSX">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7972">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Document formats supported" ID="616531" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="99985" Presentation_Value="ZIP" CategoryFeatureGroup_ID="11006" Value="ZIP" CategoryFeature_ID="106234" Local_ID="0" Translated="0" ID="164185875" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="ZIP">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="8962">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Archive formats supported" ID="754459" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="99980" Presentation_Value="H.264, M-JPEG, MPEG4" CategoryFeatureGroup_ID="11006" Value="H.264, M-JPEG, MPEG4" CategoryFeature_ID="62263" Local_ID="0" Translated="0" ID="164185876" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="H.264, M-JPEG, MPEG4">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="2225">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Μορφές βίντεο" ID="268360" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6919" Value="Y" CategoryFeature_ID="51654" Local_ID="0" Translated="0" ID="164185877" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="2180">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="MMS (Multimedia Messaging Service)" ID="268167" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6919" Value="Y" CategoryFeature_ID="51655" Local_ID="0" Translated="0" ID="164185878" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="6621">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Instant messaging (IM)" ID="241365" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6919" Value="Y" CategoryFeature_ID="51656" Local_ID="0" Translated="0" ID="164185879" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1901">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Υπηρεσία σύντομου μηνύματος (SMS)" ID="268074" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6919" Value="Y" CategoryFeature_ID="51718" Local_ID="0" Translated="0" ID="164185880" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="2181">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Ηλεκτρονική αλληλογραφία (email)" ID="268134" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6919" Value="Y" CategoryFeature_ID="54008" Local_ID="0" Translated="0" ID="164185881" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="2182">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Chat (διαδυκτιακή συνομιλία)" ID="267943" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100020" Presentation_Value="Y" CategoryFeatureGroup_ID="6901" Value="Y" CategoryFeature_ID="51782" Local_ID="0" Translated="0" ID="164185882" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1578">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Σταθεροποιητής εικόνας" ID="267868" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6901" Value="Y" CategoryFeature_ID="51561" Local_ID="0" Translated="0" ID="164185883" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="2748">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="αναμονή κλήσεων" ID="1260823" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6901" Value="Y" CategoryFeature_ID="51562" Local_ID="0" Translated="0" ID="164185884" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7349">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Call divert" ID="495045" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6901" Value="Y" CategoryFeature_ID="51563" Local_ID="0" Translated="0" ID="164185885" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="6698">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Call hold" ID="247892" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6901" Value="Y" CategoryFeature_ID="51720" Local_ID="0" Translated="0" ID="164185887" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="2672">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Αναγνωριστικό καλούντος" ID="1279058" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6901" Value="Y" CategoryFeature_ID="51721" Local_ID="0" Translated="0" ID="164185888" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1805">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Τηλέφωνο ανοιχτής ακρόασης (Speakerphone)" ID="266978" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6901" Value="Y" CategoryFeature_ID="51747" Local_ID="0" Translated="0" ID="164185889" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1808">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Δυνατότητα τηλεφωνικού συνεδρίου (conference call)" ID="266981" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100040" Presentation_Value="Ιόντων- λιθίου ( Li - Ion )" CategoryFeatureGroup_ID="6892" Value="Lithium-Ion (Li-Ion)" CategoryFeature_ID="51518" Local_ID="0" Translated="1" ID="164185890" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="Ιόντων- λιθίου ( Li - Ion )">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="434">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Τεχνολογία μπαταρίας" ID="266750" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100026" Presentation_Value="14h" CategoryFeatureGroup_ID="6892" Value="14" CategoryFeature_ID="51521" Local_ID="0" Translated="0" ID="164185892" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="14">
+        <Measure ID="46">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7283">
+        <Measure Sign="" ID="46">
+          <Signs>
+            <Sign ID="30" langid="1">
+<![CDATA[h]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Talk time (3G)" ID="354878" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100025" Presentation_Value="250h" CategoryFeatureGroup_ID="6892" Value="250" CategoryFeature_ID="51522" Local_ID="0" Translated="0" ID="164185893" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="250">
+        <Measure ID="46">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7285">
+        <Measure Sign="" ID="46">
+          <Signs>
+            <Sign ID="30" langid="1">
+<![CDATA[h]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Standby time (3G)" ID="354942" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100020" Presentation_Value="11h" CategoryFeatureGroup_ID="6892" Value="11" CategoryFeature_ID="90957" Local_ID="0" Translated="0" ID="164185894" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="11">
+        <Measure ID="46">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="15264">
+        <Measure Sign="" ID="46">
+          <Signs>
+            <Sign ID="30" langid="1">
+<![CDATA[h]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Χρόνος περιήγησης (Wi-Fi)" ID="1280212" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100018" Presentation_Value="10h" CategoryFeatureGroup_ID="6892" Value="10" CategoryFeature_ID="90958" Local_ID="0" Translated="0" ID="164185895" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="10">
+        <Measure ID="46">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="15265">
+        <Measure Sign="" ID="46">
+          <Signs>
+            <Sign ID="30" langid="1">
+<![CDATA[h]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Χρόνος περιήγησης (3G)" ID="1280213" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100017" Presentation_Value="10h" CategoryFeatureGroup_ID="6892" Value="10" CategoryFeature_ID="90959" Local_ID="0" Translated="0" ID="164185896" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="10">
+        <Measure ID="46">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="15266">
+        <Measure Sign="" ID="46">
+          <Signs>
+            <Sign ID="30" langid="1">
+<![CDATA[h]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Χρόνος περιήγησης (4G)" ID="1280214" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100002" Presentation_Value="50h" CategoryFeatureGroup_ID="6892" Value="50" CategoryFeature_ID="51657" Local_ID="0" Translated="0" ID="164185897" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="50">
+        <Measure ID="46">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="2169">
+        <Measure Sign="" ID="46">
+          <Signs>
+            <Sign ID="30" langid="1">
+<![CDATA[h]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Χρόνος συνεχούς αναπαραγωγής ήχου" ID="268270" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100001" Presentation_Value="11h" CategoryFeatureGroup_ID="6892" Value="11" CategoryFeature_ID="51658" Local_ID="0" Translated="0" ID="164185898" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="11">
+        <Measure ID="46">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="2173">
+        <Measure Sign="" ID="46">
+          <Signs>
+            <Sign ID="30" langid="1">
+<![CDATA[h]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Χρόνος συνεχούς αναπαραγωγής βίντεο" ID="268326" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100031" Presentation_Value="Y" CategoryFeatureGroup_ID="13001" Value="Y" CategoryFeature_ID="51712" Local_ID="0" Translated="0" ID="164185886" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="26">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="7018">
+        <Measure Sign="" ID="26">
+          <Signs/>
+        </Measure>
+        <Name Value="Video call" ID="334566" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="10100007" Presentation_Value="129g" CategoryFeatureGroup_ID="6881" Value="129" CategoryFeature_ID="51491" Local_ID="0" Translated="0" ID="164185899" Searchable="1" Localized="0" Mandatory="1">
+      <LocalValue Value="129">
         <Measure ID="38">
           <Signs/>
         </Measure>
@@ -823,91 +1352,342 @@
         <Name Value="Βάρος" ID="266733" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6516" Value="Y" CategoryFeature_ID="49670" Local_ID="0" Translated="0" ID="162975220" Searchable="0" Localized="0" Mandatory="0">
+    <ProductFeature No="100010" Presentation_Value="6,7 cm" CategoryFeatureGroup_ID="6881" Value="67" CategoryFeature_ID="51488" Local_ID="0" Translated="0" ID="164185900" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="67">
+        <Measure ID="24">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1649">
+        <Measure Sign="" ID="24">
+          <Signs>
+            <Sign ID="3" langid="1">
+<![CDATA[mm]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Πλάτος" ID="267931" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100009" Presentation_Value="6,9 mm" CategoryFeatureGroup_ID="6881" Value="6.9" CategoryFeature_ID="51489" Local_ID="0" Translated="0" ID="164185901" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="6.9">
+        <Measure ID="24">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1650">
+        <Measure Sign="" ID="24">
+          <Signs>
+            <Sign ID="3" langid="1">
+<![CDATA[mm]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Βάθος" ID="267932" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100008" Presentation_Value="13,81 cm" CategoryFeatureGroup_ID="6881" Value="138.1" CategoryFeature_ID="51490" Local_ID="0" Translated="0" ID="164185902" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="138.1">
+        <Measure ID="24">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1464">
+        <Measure Sign="" ID="24">
+          <Signs>
+            <Sign ID="3" langid="1">
+<![CDATA[mm]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Ύψος" ID="267775" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="99979" Presentation_Value="0,97 W/kg" CategoryFeatureGroup_ID="6936" Value="0.97" CategoryFeature_ID="101013" Local_ID="0" Translated="0" ID="170970450" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="0.97">
+        <Measure ID="203">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="17669">
+        <Measure Sign="" ID="203">
+          <Signs>
+            <Sign ID="9684" langid="1">
+<![CDATA[W/kg]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="SAR κεφαλής" ID="1281000" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="99977" Presentation_Value="0,98 W/kg" CategoryFeatureGroup_ID="6936" Value="0.98" CategoryFeature_ID="101015" Local_ID="0" Translated="0" ID="170970449" Searchable="0" Localized="0" Mandatory="1">
+      <LocalValue Value="0.98">
+        <Measure ID="203">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="17670">
+        <Measure Sign="" ID="203">
+          <Signs>
+            <Sign ID="9684" langid="1">
+<![CDATA[W/kg]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="SAR σώματος" ID="1281001" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100020" Presentation_Value="0 - 35 °C" CategoryFeatureGroup_ID="6921" Value="0 - 35" CategoryFeature_ID="51661" Local_ID="0" Translated="0" ID="164185903" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="0 - 35">
+        <Measure ID="65">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1112">
+        <Measure Sign="" ID="65">
+          <Signs>
+            <Sign ID="48" langid="1">
+<![CDATA[°C]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Εύρος θερμοκρασίας λειτουργίας" ID="267480" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100018" Presentation_Value="-20 - 45 °C" CategoryFeatureGroup_ID="6921" Value="-20 - 45" CategoryFeature_ID="51662" Local_ID="0" Translated="0" ID="164185904" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="-20 - 45">
+        <Measure ID="65">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="757">
+        <Measure Sign="" ID="65">
+          <Signs>
+            <Sign ID="48" langid="1">
+<![CDATA[°C]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Όρια θερμοκρασίας αποθήκευσης" ID="267155" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100014" Presentation_Value="5 - 95%" CategoryFeatureGroup_ID="6921" Value="5 - 95" CategoryFeature_ID="51663" Local_ID="0" Translated="0" ID="164185905" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="5 - 95">
+        <Measure ID="64">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="703">
+        <Measure Sign="" ID="64">
+          <Signs>
+            <Sign ID="47" langid="1">
+<![CDATA[%]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Εύρος υγρασίας λειτουργίας" ID="267100" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="0 - 3000m" CategoryFeatureGroup_ID="6921" Value="0 - 3000" CategoryFeature_ID="94593" Local_ID="0" Translated="0" ID="164185906" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="0 - 3000">
+        <Measure ID="54">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="667">
+        <Measure Sign="" ID="54">
+          <Signs>
+            <Sign ID="37" langid="1">
+<![CDATA[m]]>            </Sign>
+          </Signs>
+        </Measure>
+        <Name Value="Ύψος λειτουργίας" ID="267064" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Health\nFaceTime\nMail\nSafari\nSiri\niTunes Store \nApp Store \niBooks\nGame Center" CategoryFeatureGroup_ID="6933" Value="Health\nFaceTime\nMail\nSafari\nSiri\niTunes Store \nApp Store \niBooks\nGame Center" CategoryFeature_ID="51746" Local_ID="0" Translated="0" ID="164185907" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Health\nFaceTime\nMail\nSafari\nSiri\niTunes Store \nApp Store \niBooks\nGame Center">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="251">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Προεγκατεστημένο λογισμικό" ID="266739" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Lightning" CategoryFeatureGroup_ID="6933" Value="Lightning" CategoryFeature_ID="55071" Local_ID="0" Translated="0" ID="164185908" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Lightning">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="1830">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Συμπεριλαμβάνονται καλώδια" ID="267002" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6933" Value="Y" CategoryFeature_ID="79958" Local_ID="0" Translated="0" ID="164185909" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="Y">
+        <Measure ID="29">
+          <Signs/>
+        </Measure>
+      </LocalValue>
+      <Feature ID="9220">
+        <Measure Sign="" ID="29">
+          <Signs/>
+        </Measure>
+        <Name Value="Headset included" ID="766991" langid="18"/>
+      </Feature>
+    </ProductFeature>
+    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6933" Value="Y" CategoryFeature_ID="106235" Local_ID="0" Translated="0" ID="164185910" Searchable="0" Localized="0" Mandatory="0">
       <LocalValue Value="Y">
         <Measure ID="26">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="3965">
+      <Feature ID="1230">
         <Measure Sign="" ID="26">
           <Signs/>
         </Measure>
-        <Name Value="Εγχειρίδιο" ID="1262326" langid="18"/>
+        <Name Value="Δεσμίδα προσαρμογέων AC" ID="267585" langid="18"/>
       </Feature>
     </ProductFeature>
-    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6516" Value="Y" CategoryFeature_ID="57795" Local_ID="0" Translated="0" ID="162975221" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="Y">
+    <ProductFeature No="0" Presentation_Value="M3, T4" CategoryFeatureGroup_ID="8176" Value="M3, T4" CategoryFeature_ID="106233" Local_ID="0" Translated="0" ID="164185911" Searchable="0" Localized="0" Mandatory="0">
+      <LocalValue Value="M3, T4">
         <Measure ID="26">
           <Signs/>
         </Measure>
       </LocalValue>
-      <Feature ID="3981">
+      <Feature ID="12096">
         <Measure Sign="" ID="26">
           <Signs/>
         </Measure>
-        <Name Value="Οδηγός γρήγορης εκκίνησης" ID="1262331" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100000" Presentation_Value="Όχι" CategoryFeatureGroup_ID="6516" Value="N" CategoryFeature_ID="63480" Local_ID="0" Translated="1" ID="162975222" Searchable="0" Localized="0" Mandatory="1">
-      <LocalValue Value="Όχι">
-        <Measure ID="26">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="7332">
-        <Measure Sign="" ID="26">
-          <Signs/>
-        </Measure>
-        <Name Value="Keyboard supplied" ID="410945" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="6516" Value="Y" CategoryFeature_ID="80105" Local_ID="0" Translated="0" ID="162975223" Searchable="0" Localized="0" Mandatory="0">
-      <LocalValue Value="Y">
-        <Measure ID="26">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="4023">
-        <Measure Sign="" ID="26">
-          <Signs/>
-        </Measure>
-        <Name Value="Κάρτα εγγύησης" ID="1262352" langid="18"/>
-      </Feature>
-    </ProductFeature>
-    <ProductFeature No="100000" Presentation_Value="Y" CategoryFeatureGroup_ID="7816" Value="Y" CategoryFeature_ID="50073" Local_ID="0" Translated="0" ID="162975180" Searchable="0" Localized="0" Mandatory="0">
-      <LocalValue Value="Y">
-        <Measure ID="26">
-          <Signs/>
-        </Measure>
-      </LocalValue>
-      <Feature ID="3239">
-        <Measure Sign="" ID="26">
-          <Signs/>
-        </Measure>
-        <Name Value="Wi-Fi" ID="356773" langid="18"/>
+        <Name Value="Hearing aid compatibility" ID="1086138" langid="1"/>
       </Feature>
     </ProductFeature>
     <ProductGallery>
-      <ProductPicture No="0" LowSize="13919" ThumbSize="3771" ProductPicture_ID="8008509" Size="62513" OriginalSize="41882" Pic="http://inishop.com/img/gallery/24219928_364.jpg" PicWidth="750" ThumbPic="http://inishop.com/img/gallery_thumbs/24219928_364.jpg" Pic500x500Height="320" Pic500x500="http://inishop.com/img/gallery_mediums/24219928_364.jpg" LowPicHeight="128" LowPicWidth="200" LowPic="http://inishop.com/img/gallery_lows/24219928_364.jpg" PicHeight="480" Pic500x500Size="49547" Original="" Pic500x500Width="500"/>
-      <ProductPicture No="0" LowSize="9470" ThumbSize="2697" ProductPicture_ID="8008510" Size="40731" OriginalSize="28482" Pic="http://inishop.com/img/gallery/24219928_5660.jpg" PicWidth="750" ThumbPic="http://inishop.com/img/gallery_thumbs/24219928_5660.jpg" Pic500x500Height="320" Pic500x500="http://inishop.com/img/gallery_mediums/24219928_5660.jpg" LowPicHeight="128" LowPicWidth="200" LowPic="http://inishop.com/img/gallery_lows/24219928_5660.jpg" PicHeight="480" Pic500x500Size="33498" Original="" Pic500x500Width="500"/>
-      <ProductPicture No="0" LowSize="13667" ThumbSize="3919" ProductPicture_ID="8008511" Size="61445" OriginalSize="40762" Pic="http://inishop.com/img/gallery/24219928_3051.jpg" PicWidth="750" ThumbPic="http://inishop.com/img/gallery_thumbs/24219928_3051.jpg" Pic500x500Height="320" Pic500x500="http://inishop.com/img/gallery_mediums/24219928_3051.jpg" LowPicHeight="128" LowPicWidth="200" LowPic="http://inishop.com/img/gallery_lows/24219928_3051.jpg" PicHeight="480" Pic500x500Size="48896" Original="" Pic500x500Width="500"/>
-      <ProductPicture No="0" LowSize="10641" ThumbSize="3277" ProductPicture_ID="8008512" Size="51575" OriginalSize="29680" Pic="http://inishop.com/img/gallery/24219928_6621.jpg" PicWidth="750" ThumbPic="http://inishop.com/img/gallery_thumbs/24219928_6621.jpg" Pic500x500Height="320" Pic500x500="http://inishop.com/img/gallery_mediums/24219928_6621.jpg" LowPicHeight="128" LowPicWidth="200" LowPic="http://inishop.com/img/gallery_lows/24219928_6621.jpg" PicHeight="480" Pic500x500Size="40407" Original="" Pic500x500Width="500"/>
-      <ProductPicture No="0" LowSize="2088" ThumbSize="1031" ProductPicture_ID="8008513" Size="11670" OriginalSize="9428" Pic="http://inishop.com/img/gallery/24219928_2218.jpg" PicWidth="750" ThumbPic="http://inishop.com/img/gallery_thumbs/24219928_2218.jpg" Pic500x500Height="320" Pic500x500="http://inishop.com/img/gallery_mediums/24219928_2218.jpg" LowPicHeight="128" LowPicWidth="200" LowPic="http://inishop.com/img/gallery_lows/24219928_2218.jpg" PicHeight="480" Pic500x500Size="7629" Original="" Pic500x500Width="500"/>
-      <ProductPicture No="0" LowSize="6371" ThumbSize="2177" ProductPicture_ID="8008514" Size="30700" OriginalSize="19627" Pic="http://inishop.com/img/gallery/24219928_8671.jpg" PicWidth="750" ThumbPic="http://inishop.com/img/gallery_thumbs/24219928_8671.jpg" Pic500x500Height="320" Pic500x500="http://inishop.com/img/gallery_mediums/24219928_8671.jpg" LowPicHeight="128" LowPicWidth="200" LowPic="http://inishop.com/img/gallery_lows/24219928_8671.jpg" PicHeight="480" Pic500x500Size="23132" Original="" Pic500x500Width="500"/>
+      <ProductPicture No="0" LowSize="19797" ThumbSize="4843" ProductPicture_ID="8449484" Size="547324" OriginalSize="3793145" Pic="http://inishop.com/img/gallery/24555801_9876.jpg" PicWidth="670" ThumbPic="http://inishop.com/img/gallery_thumbs/24555801_9876.jpg" Pic500x500Height="500" Pic500x500="http://inishop.com/img/gallery_mediums/24555801_9876.jpg" LowPicHeight="200" LowPicWidth="73" LowPic="http://inishop.com/img/gallery_lows/24555801_9876.jpg" PicHeight="1824" Pic500x500Size="85922" Original="" Pic500x500Width="184"/>
+      <ProductPicture No="0" LowSize="13859" ThumbSize="3792" ProductPicture_ID="8449613" Size="247467" OriginalSize="103713" Pic="http://inishop.com/img/gallery/24555801_7103.jpg" PicWidth="2000" ThumbPic="http://inishop.com/img/gallery_thumbs/24555801_7103.jpg" Pic500x500Height="384" Pic500x500="http://inishop.com/img/gallery_mediums/24555801_7103.jpg" LowPicHeight="154" LowPicWidth="200" LowPic="http://inishop.com/img/gallery_lows/24555801_7103.jpg" PicHeight="1536" Pic500x500Size="53987" Original="" Pic500x500Width="500"/>
+      <ProductPicture No="0" LowSize="29115" ThumbSize="6169" ProductPicture_ID="8449614" Size="385373" OriginalSize="588956" Pic="http://inishop.com/img/gallery/24555801_6070.jpg" PicWidth="984" ThumbPic="http://inishop.com/img/gallery_thumbs/24555801_6070.jpg" Pic500x500Height="443" Source="https://www.apple.com/iphone-6/ios-8/images/intersitial_medium.png" Pic500x500="http://inishop.com/img/gallery_mediums/24555801_6070.jpg" LowPicHeight="177" LowPicWidth="200" LowPic="http://inishop.com/img/gallery_lows/24555801_6070.jpg" PicHeight="872" Pic500x500Size="127164" Original="" Pic500x500Width="500"/>
+      <ProductPicture No="0" LowSize="7044" ThumbSize="2267" ProductPicture_ID="8449615" Size="178218" OriginalSize="76464" Pic="http://inishop.com/img/gallery/24555801_8405.jpg" PicWidth="2000" ThumbPic="http://inishop.com/img/gallery_thumbs/24555801_8405.jpg" Pic500x500Height="384" Pic500x500="http://inishop.com/img/gallery_mediums/24555801_8405.jpg" LowPicHeight="154" LowPicWidth="200" LowPic="http://inishop.com/img/gallery_lows/24555801_8405.jpg" PicHeight="1536" Pic500x500Size="27905" Original="" Pic500x500Width="500"/>
       <ProductPicture No="0" LowSize="0" ThumbSize="0" ProductPicture_ID="1" Size="27992" OriginalSize="0" Pic="http://inishop.com/img/feature_logo/1-3750.png" PicWidth="200" ThumbPic="http://inishop.com/img/feature_logo_thumbs/1-3750.png" Pic500x500Height="0" Pic500x500="" LowPicHeight="0" LowPicWidth="0" LowPic="" PicHeight="200" Pic500x500Size="0" logo="1" langid="1" Original="" Pic500x500Width="0"/>
     </ProductGallery>
     <ProductMultimediaObject/>
-    <ProductRelated/>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629538" Category_ID="1893">
+      <Product Prod_id="MG472ZD/A" ID="24555804" ThumbPic="http://inishop.com/thumbs/24555804.jpg" Name="6">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629540" Category_ID="1893">
+      <Product Prod_id="MG4A2ZD/A" ID="24555806" ThumbPic="http://inishop.com/thumbs/24555806.jpg" Name="6">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629524" Category_ID="1893">
+      <Product Prod_id="MG4H2ZD/A" ID="24555799" ThumbPic="http://inishop.com/thumbs/24555799.jpg" Name="6">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629539" Category_ID="1893">
+      <Product Prod_id="MG4F2ZD/A" ID="24555805" ThumbPic="http://inishop.com/thumbs/24555805.jpg" Name="6">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629517" Category_ID="1893">
+      <Product Prod_id="MG482ZD/A" ID="24555798" ThumbPic="http://inishop.com/thumbs/24555798.jpg" Name="6">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629530" Category_ID="1893">
+      <Product Prod_id="MG4C2ZD/A" ID="24555800" ThumbPic="http://inishop.com/thumbs/24555800.jpg" Name="6">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629536" Category_ID="1893">
+      <Product Prod_id="MG4J2ZD/A" ID="24555802" ThumbPic="http://inishop.com/thumbs/24555802.jpg" Name="6">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629537" Category_ID="1893">
+      <Product Prod_id="MG4E2ZD/A" ID="24555803" ThumbPic="http://inishop.com/thumbs/24555803.jpg" Name="6">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148641768" Category_ID="1893">
+      <Product Prod_id="MG482QN/A" ID="24572727" ThumbPic="http://inishop.com/thumbs/24572727.jpg" Name="6">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148641775" Category_ID="1893">
+      <Product Prod_id="MG4H2QN/A" ID="24572728" ThumbPic="http://inishop.com/thumbs/24572728.jpg" Name="6">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="149330241" Category_ID="1893">
+      <Product Prod_id="MG4C2QN/A" ID="24673462" ThumbPic="http://inishop.com/thumbs/24673462.jpg" Name="6">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629588" Category_ID="2779">
+      <Product Prod_id="MGR62ZM/A" ID="24556029" ThumbPic="http://inishop.com/thumbs/24556029.jpg" Name="MGR62ZM/A">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629615" Category_ID="2779">
+      <Product Prod_id="MGQG2ZM/A" ID="24556032" ThumbPic="http://inishop.com/thumbs/24556032.jpg" Name="MGQG2ZM/A">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629570" Category_ID="2779">
+      <Product Prod_id="MGR32ZM/A" ID="24556025" ThumbPic="http://inishop.com/thumbs/24556025.jpg" Name="MGR32ZM/A">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629579" Category_ID="2779">
+      <Product Prod_id="MGR52ZM/A" ID="24556028" ThumbPic="http://inishop.com/thumbs/24556028.jpg" Name="MGR52ZM/A">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629597" Category_ID="2779">
+      <Product Prod_id="MGR82ZM/A" ID="24556030" ThumbPic="http://inishop.com/thumbs/24556030.jpg" Name="MGR82ZM/A">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629561" Category_ID="2779">
+      <Product Prod_id="MGR22ZM/A" ID="24556024" ThumbPic="http://inishop.com/thumbs/24556024.jpg" Name="MGR22ZM/A">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629651" Category_ID="2779">
+      <Product Prod_id="MGXU2ZM/A" ID="24556037" ThumbPic="http://inishop.com/thumbs/24556037.jpg" Name="MGXU2ZM/A">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629624" Category_ID="2779">
+      <Product Prod_id="MGQH2ZM/A" ID="24556033" ThumbPic="http://inishop.com/thumbs/24556033.jpg" Name="MGQH2ZM/A">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629633" Category_ID="2779">
+      <Product Prod_id="MGQJ2ZM/A" ID="24556035" ThumbPic="http://inishop.com/thumbs/24556035.jpg" Name="MGQJ2ZM/A">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629606" Category_ID="2779">
+      <Product Prod_id="MGQF2ZM/A" ID="24556031" ThumbPic="http://inishop.com/thumbs/24556031.jpg" Name="MGQF2ZM/A">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
+    <ProductRelated Preferred="0" Reversed="0" ID="148629642" Category_ID="2779">
+      <Product Prod_id="MGXT2ZM/A" ID="24556036" ThumbPic="http://inishop.com/thumbs/24556036.jpg" Name="MGXT2ZM/A">
+        <Supplier ID="9" Name="Apple"/>
+      </Product>
+    </ProductRelated>
     <SEOs/>
     <SummaryDescription>
       <ShortSummaryDescription langid="18">
-        LG V700 G Pad, 1,2, Qualcomm Snapdragon, DDR2-SDRAM, MicroSD (TransFlash), Flash, 25,65 cm (10.1")
+        Apple 6 iPhone, 11,94 cm (4.7"), 1334 x 750, IPS, Apple, A8, M8
       </ShortSummaryDescription>
       <LongSummaryDescription langid="18">
-        LG V700, G Pad. Processor frequency: 1,2, Τύπος επεξεργαστή: Qualcomm Snapdragon. Τύπος μνήμης: DDR2-SDRAM. Συσκευή κάρτας μνήμης: MicroSD (TransFlash), Μέσα αποθήκευσης: Flash. Μέγεθος οθόνης: 25,65 cm (10.1"), Βήμα εικονοστοιχείων: 1280 x 800, Display technology: IPS. Ανάλυση οπίσθιας κάμερας: 2560 x 1920, Μέγιστη ανάλυση βίντεο: 1920 x 1080, Ανάλυση εμπρόσθιας κάμερας (αριθμητικά): 1,3
+        Apple 6, iPhone. Μέγεθος οθόνης: 11,94 cm (4.7"), Βήμα εικονοστοιχείων: 1334 x 750, Display type: IPS. Τύπος επεξεργαστή: Apple, Προδιαγραφές επεξεργαστή: A8, Coprocessor model: M8. Video recording modes: 1080p, 720p, Ανάλυση στην ταχύτητα λήψης: 1920x1080@30fps, 1920x1080@60fps, Second camera resolution: 1,2. SIM card capability: Single SIM, SIM card type: NanoSIM, Πρότυπα 2G: EDGE, GSM. Συνδεσιμότητα Ακουστικών: 3.5 mm
       </LongSummaryDescription>
     </SummaryDescription>
-    <Supplier ID="293" Name="LG"/>
+    <Supplier ID="9" Name="Apple"/>
   </Product>
 </ICECAT-interface>
