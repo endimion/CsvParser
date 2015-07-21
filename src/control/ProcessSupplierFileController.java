@@ -26,6 +26,7 @@ public class ProcessSupplierFileController {
 		private Button findFile;
 		
 		private Button editSup;
+		private Button commonProd;
 		
 		private FileChooser fc;
 		private Text path;
@@ -93,10 +94,14 @@ public class ProcessSupplierFileController {
 		});
 		
 		
-		
+		commonProd = new Button("Common");
+		commonProd.setOnAction(event ->{
+			CommonProductController cpc = new CommonProductController(st);
+			
+		});
 		
 		psfv = new ProcessSupplierFileView(st, cBox, findFile,process, addSupplier,addCategory,
-																						editCategories,editSup,processFiles, editPrice,path);
+																						editCategories,editSup,processFiles, editPrice, commonProd,path);
 		
 	}//end of constructor
 	

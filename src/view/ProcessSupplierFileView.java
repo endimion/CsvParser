@@ -20,7 +20,7 @@ public class ProcessSupplierFileView {
 																			Button addSupplier, Button addCategory, Button editCategories, 
 																			Button editSupplier,
 																			Button processFiles,
-																			Button editPrice,
+																			Button editPrice, Button commonProd,
 														Text filePath){
 		this.stage = st;
 		this.process = pr;
@@ -37,7 +37,7 @@ public class ProcessSupplierFileView {
 		
 		VBox buttonBox = new VBox(8);
 		buttonBox.getChildren().addAll(menuTitle, addSupplier, addCategory, editCategories, 
-																				processFiles,editSupplier,editPrice);
+																				processFiles,editSupplier,editPrice,commonProd);
 		addSupplier.setId("leftButtons");
 		addCategory.setId("leftButtons");
 		editCategories.setId("leftButtons");

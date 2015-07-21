@@ -29,6 +29,7 @@ public class Product {
 	private String manufact;
 	private String tax_class;
 	
+	private String supplierName;
 	
 	public Product(){
 		category= "";
@@ -50,6 +51,7 @@ public class Product {
 		addPic = "";
 		 manufact = "";
 		tax_class = "";
+		this.supplierName = "";
 	}//end of constructor
 	
 	public Product(String c, String n, String d,  String e, String rp, int q, String m){
@@ -68,10 +70,10 @@ public class Product {
 	
 	
 	public String getCategory(){return this.category;}
-	public void setCategory(String cat){this.category = cat;}
+	public void setCategory(String cat){this.category = cleanString(cat);}
 	
 	public String getNumber(){return this.number;}
-	public void setNumber(String n){this.number =n;}
+	public void setNumber(String n){this.number =cleanString(n);}
 	
 	public String getDescription(){return this.description;}
 	public void setDescription(String desc){
@@ -85,24 +87,24 @@ public class Product {
 	public void setEan(String e){
 		e = e.trim();
 		if(e.contains(",")|| e.contains(";") ){
-			if(e.contains(",")) this.ean  = e.split(",")[0].trim();
-			else  this.ean  = e.split(";")[0].trim();
+			if(e.contains(",")) this.ean  = cleanString(e.split(",")[0].trim());
+			else  this.ean  = cleanString(e.split(";")[0].trim());
 		}else{
-			this.ean = e;
+			this.ean = cleanString(e);
 		}
 	}//end of setEan
 	
 	public String getRPrice(){return this.rPrice;}
-	public void  setRPrice(String p){this.rPrice = p;}
+	public void  setRPrice(String p){this.rPrice = cleanString(p);}
 	
 	public double getQuantity(){return this.quantity;}
 	public void setQuantity(double q){this.quantity = q;}
 	
 	public String getWeight(){return this.weight;}
-	public void setWeight(String w){this.weight = w;}
+	public void setWeight(String w){this.weight = cleanString(w);}
 	
 	public String getModel(){return this.model;}
-	public void setModel(String model){this.model = model;}
+	public void setModel(String model){this.model = cleanString(model);}
 	
 	/**
 	 * 
@@ -183,7 +185,7 @@ public class Product {
 	public double getDoublePrice(){return this.price;}
 	
 	
-	public String toString(String supplier){
+	public String toString(String supplier) throws SupplierPriceNotFound{
 		return "product category "+ getCategory() +", description " + getDescription() + ", ean " + getEan()
 				+ ", number" + getNumber() + ", retail price "+ getRPrice() + //", supplier number " + getSupNum() +
 				", quantity " + getQuantity() 
@@ -238,26 +240,29 @@ public class Product {
 	//public void setSupNumber(String supNumber) {this.supNumber = supNumber;}
 
 	public String getMpn() {	return mpn;}
-	public void setMpn(String mpn) {this.mpn = mpn;}
+	public void setMpn(String mpn) {this.mpn = cleanString(mpn);}
 
 	public String getpName() {return pName;}
-	public void setpName(String pName) {	this.pName = pName;}
+	public void setpName(String pName) {	this.pName = cleanString(pName);}
 
 	public String getStatus() {return status;	}
-	public void setStatus(String status) {this.status = status;}
+	public void setStatus(String status) {this.status = cleanString(status);}
 
 	public String getStStatus() {return stStatus;	}
-	public void setStStatus(String stStatus) {this.stStatus = stStatus;}
+	public void setStStatus(String stStatus) {this.stStatus = cleanString(stStatus);}
 	
 	public String getAddPic() {return addPic;	}
 	public void setAddPic(String addPic) {this.addPic = addPic;}
 
 	public String getManufact() {return manufact;}
-	public void setManufact(String manufact) {	this.manufact = manufact;	}
+	public void setManufact(String manufact) {	this.manufact = cleanString(manufact);	}
 
 	public String getTax_class() {return tax_class;}
-	public void setTax_class(String tax_class) {this.tax_class = tax_class;}
+	public void setTax_class(String tax_class) {this.tax_class = cleanString(tax_class);}
 	
+	
+	public String getSupplierName(){return this.supplierName;}
+	public void setSupplierName(String name){this.supplierName = cleanString(name);}
 	
 	
 	/**
@@ -313,6 +318,7 @@ public class Product {
 						this.getQuantity() == foreign.getQuantity()&&
 						this.getDoublePrice() == foreign.getDoublePrice();
 	}//end compareProduct
+	
 	
 	
 }//end of class

@@ -101,9 +101,11 @@ public class CsvParser {
 		ParsedRow pr = new ParsedRow(keys);
 		Vector<String> data = new Vector<String>();
 		String[] lineArray = row.trim().split(separator);
-		for(String s: lineArray){
-			data.add(s.trim());
-		}
+		for(int i=0; i <keys.size();i++){
+			String s = lineArray[i].trim();
+			data.add(s);
+		}//end of looping through the items of the line
+		
 		pr.setRowData(data);
 		
 		return pr; 

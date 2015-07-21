@@ -102,16 +102,18 @@ public class ProductHelper {
 							prod.setRPrice(r.getElement(sup.getRetailPrice()));
 							//prod.setSupNum(r.getElement(sup.getSupItemNumber()));
 							
-							//TODO fix this so that the price formula is correctly read for a file!!!!
-							Double var1 = FileHelper.getPriceConfig(supplier).get(0);
-							Double var2 = FileHelper.getPriceConfig(supplier).get(1);
-							Double var3 = FileHelper.getPriceConfig(supplier).get(2);
-							Double var4 = FileHelper.getPriceConfig(supplier).get(3);
-							Double var5 = FileHelper.getPriceConfig(supplier).get(4);
-							Double kiloP = FileHelper.getPriceConfig(supplier).get(5);
-							
-							prod.setDoublePrice(prod.getPrice(var1,var2,var3,var4,var5,kiloP,FileHelper.getRemoveVAT(supplier)));
-							
+							try{
+								Double var1 = FileHelper.getPriceConfig(supplier).get(0);
+								Double var2 = FileHelper.getPriceConfig(supplier).get(1);
+								Double var3 = FileHelper.getPriceConfig(supplier).get(2);
+								Double var4 = FileHelper.getPriceConfig(supplier).get(3);
+								Double var5 = FileHelper.getPriceConfig(supplier).get(4);
+								Double kiloP = FileHelper.getPriceConfig(supplier).get(5);
+								
+								prod.setDoublePrice(prod.getPrice(var1,var2,var3,var4,var5,kiloP,FileHelper.getRemoveVAT(supplier)));
+							}catch(SupplierPriceNotFound e){
+								e.printStackTrace();
+							}
 							products.add(prod);
 						}//end if the nativeCategory is not null
 						else{
@@ -161,16 +163,18 @@ public class ProductHelper {
 			FileInputStream fis = new FileInputStream(f);
 			InputStreamReader isr = new InputStreamReader(fis,"UTF-8");
 			BufferedReader br = new BufferedReader(isr); 
-			String line = (br.readLine()).trim();
+			String line =(br.readLine() != null)? (br.readLine()).trim():br.readLine();
 			
-			line = br.readLine();
+			//line = br.readLine();
 			
 			while(line != null){
 				line = line.trim();
 				String[] lineArray = line.split(";");
 				if(lineArray.length != 16){
 					br.close();
+					System.out.println("ProductHelper.getOldProdFromFile:: "+ line);
 					throw new MalformedInputException(16);
+					
 				}else{
 					Product lineProd = new Product();
 					lineProd.setModel(lineArray[0]);

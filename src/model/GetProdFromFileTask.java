@@ -99,6 +99,7 @@ public class GetProdFromFileTask extends Task<Vector<Product>>{
 								//System.out.println("GetProdFromFile.call :: matching category found");
 								prod.setCategory(nativeCat);
 								prod.setDescription(r.getElement(sup.getDescription()));
+								
 								if(r.getElement(sup.getEan()).equals("")){
 									System.out.println("GetprodfromFiletask.call:: no ean found!!" );
 								}
@@ -118,6 +119,7 @@ public class GetProdFromFileTask extends Task<Vector<Product>>{
 										&&sup.getManuf()!=null && sup.getItemName()!= null){
 									prod.setMpn(r.getElement(sup.getMpn()));
 									prod.setManufact(r.getElement(sup.getManuf()));
+									//TODO
 									prod.setpName(r.getElement(sup.getItemName()));
 								}
 

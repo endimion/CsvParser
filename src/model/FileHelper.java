@@ -278,7 +278,7 @@ public class FileHelper {
 			CategoryMap cm;
 			
 			while(line != null){
-				if(line.contains(";")){
+				if( !line.equals("") && line.contains(";")&&line.split(";").length >=2){
 					String name = line.split(";")[0];
 					String rest = line.split(";")[1];
 					
@@ -320,7 +320,7 @@ public class FileHelper {
 		File valid = new File(getExecFolder() +fileSep+"valid.prod"); 
 		//try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
 		try{
-			FileOutputStream fos = new FileOutputStream(valid);
+			FileOutputStream fos = new FileOutputStream(valid,true);
 			OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
 		    out.append(prodID);
 		    out.flush();
@@ -340,7 +340,12 @@ public class FileHelper {
 		try{
 			FileOutputStream fos = new FileOutputStream(valid);
 			OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
-		    out.append("Supplier " + supplier + ": " +prod.toString(supplier));
+			String prodString="Error int prod " + prod.getModel();
+		    try{
+		    	prodString = prod.toString(supplier);
+		    }catch(SupplierPriceNotFound sE){sE.printStackTrace();}
+		    
+		    out.append("Supplier " + supplier + ": " +prodString);
 		    out.flush();
 		    out.close();
 		}catch (IOException e) { e.printStackTrace();}
@@ -404,8 +409,13 @@ public class FileHelper {
 		try{
 			FileOutputStream fos = new FileOutputStream(valid);
 			OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
-		    out.append("Suppliers " +supplier+ " Category : " + prod.getCategory() +" not found, in prod"
-		    																+prod.toString(supplier)+"\n");
+		    String prodString="Error int prod " + prod.getModel();
+		    try{
+		    	prodString = prod.toString(supplier);
+		    }catch(SupplierPriceNotFound sE){sE.printStackTrace();}
+			
+			out.append("Suppliers " +supplier+ " Category : " + prod.getCategory() +" not found, in prod"
+		    																+prodString+"\n");
 		    out.flush();
 		    out.close();
 		}catch (IOException e) { e.printStackTrace();}
@@ -534,7 +544,7 @@ public class FileHelper {
 	 * that are used to calculate a products price
 	 * and returns them as a vector
 	 */
-	public static Vector<Double> getPriceConfig(String supName){
+	public static Vector<Double> getPriceConfig(String supName) throws SupplierPriceNotFound{
 		Vector<Double> prices = new Vector<Double>();
 		File priceConf = new File(getExecFolder()+fileSep+"config"+fileSep+"price.config");
 		
@@ -544,6 +554,7 @@ public class FileHelper {
 			InputStreamReader isr = new InputStreamReader(fis,"UTF-8");
 			BufferedReader br = new BufferedReader(isr); 
 			String line = br.readLine();
+			boolean foundSupplier = false;
 			
 			while(line!= null){
 				String[] parsedLine = line.split(";");
@@ -554,6 +565,7 @@ public class FileHelper {
 				}//end inf the line has more or less than 8 elemets
 				
 				if(parsedLine[0].equals(supName)){
+					foundSupplier = true;
 					int i = 0;
 					for(String item: parsedLine){
 						//try{
@@ -565,7 +577,11 @@ public class FileHelper {
 				line = br.readLine();
 			}//end of looping through the lines
 			br.close();
-		}catch(Exception e){e.printStackTrace();}
+			if(!foundSupplier){
+				//if the supplier price is not found an exception is thrown
+				throw new SupplierPriceNotFound("Exception Thrown - Supplier not found");
+			}//end if supplier is not found
+		}catch(IOException e){e.printStackTrace();}
 		
 		return prices;
 	}//end of getPriceConfig
@@ -634,6 +650,9 @@ public class FileHelper {
 		
 		return null;
 	}//end 
+	
+	
+	
 	
 	
 }//end of class

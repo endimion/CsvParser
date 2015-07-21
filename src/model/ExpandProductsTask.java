@@ -71,14 +71,22 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 			prod.setStatus("1" ); 
 			prod.setTax_class("Κλάση Ι (23% ~ 16%)");
 			
-			Double var1 = FileHelper.getPriceConfig(supplier).get(0);
-			Double var2 = FileHelper.getPriceConfig(supplier).get(1);
-			Double var3 = FileHelper.getPriceConfig(supplier).get(2);
-			Double var4 = FileHelper.getPriceConfig(supplier).get(3);
-			Double var5 = FileHelper.getPriceConfig(supplier).get(4);
-			Double kiloP = FileHelper.getPriceConfig(supplier).get(5);
-			prod.setDoublePrice(prod.getPrice(var1,var2,var3,var4,var5,kiloP,
+			try{
+				Double var1 = FileHelper.getPriceConfig(supplier).get(0);
+				Double var2 = FileHelper.getPriceConfig(supplier).get(1);
+				Double var3 = FileHelper.getPriceConfig(supplier).get(2);
+				Double var4 = FileHelper.getPriceConfig(supplier).get(3);
+				Double var5 = FileHelper.getPriceConfig(supplier).get(4);
+				Double kiloP = FileHelper.getPriceConfig(supplier).get(5);
+				prod.setDoublePrice(prod.getPrice(var1,var2,var3,var4,var5,kiloP,
 															FileHelper.getRemoveVAT(supplier)));
+			}catch(SupplierPriceNotFound sE){
+				updateMessage("No price formula was found for supplier " + supplier + " abording..");
+				Thread.sleep(8000);
+				sE.printStackTrace();
+				break;
+			}//end if the supplier's price formula is not give and we should stop processing
+
 			
 			if(!isPreviouslyParsed(prod,oldProdsMap)){
 				
@@ -86,7 +94,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 						try{
 							add = true;
 							xml = ice.saveXmlToFile(FileHelper.getExecFolder()+fileSep+"iceXml", ice.getProductXml(prod.getEan()));
-							if(xml == null){System.out.println("ExpandProduuctsTask:: AAAAA!!!");}
+							if(xml == null){System.out.println("ExpandProduuctsTask:: iceXml IS NULL!!!");}
 							Node prodN =  xPar.getNode(xml, "Product").item(0);
 							
 							//check if the xml file we get contains any info.
@@ -151,8 +159,6 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 								}
 								
 								if(picName != null){
-									//if (i < 10){ //TODO remove this if 
-										
 										File dir = new File(FileHelper.getExecFolder() +fileSep+"pictures");
 										File extraDir = new File(FileHelper.getExecFolder() +fileSep+"pictures"+fileSep+"high");
 										
@@ -162,7 +168,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 												extraDir.mkdir();
 											}
 											 //System.out.println("DIR created");
-											//TODO 
+	
 											String picPath =  FileHelper.getExecFolder() +fileSep+"pictures"+fileSep+ picName;
 											String extraPicPath=""; 
 											 if(extraPic != null && !extraPic.equals(""))extraPicPath= FileHelper.getExecFolder() +fileSep+"pictures"+fileSep+"high"+fileSep+ extraPic;
@@ -212,7 +218,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 						}catch(Exception e){ 	e.printStackTrace();  	}//end of catching the exception
 						
 						
-						if(add){ 
+						if(add && prod.getDoublePrice() >= 0){ 
 							output.add(prod); //ADD the product to the output
 							fh.saveParsedProduct(supplier, prod);
 							//System.out.println("ProductHelper.expandProducts processed :  ADDED" + prod.toString(supplier) );
@@ -221,6 +227,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 			}//end if the product has NOT been parsed by the program in a previous run
 			else{
 				//if it has been parsed in a previous program run then it should be added to the output!!!
+				updateMessage("Product has been previously parsed ...");
 				output.add(oldProdsMap.get(prod.getModel()));
 			}//end if the product already exists in the validate file
 		
@@ -303,6 +310,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 			System.out.println("ExpandProductsTask.isPreviouslyParsed:: product not found");
 			return false;
 		}else{
+			System.out.println("ExpandProductsTask.isPreviouslyParsed:: product Found");
 			Product existingProd = oldProdsMap.get(prod.getModel());
 			return existingProd.compareProduct(prod);
 		}//check if the product has been previously parsed
