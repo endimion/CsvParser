@@ -169,35 +169,38 @@ public class ProductHelper {
 			
 			while(line != null){
 				line = line.trim();
-				String[] lineArray = line.split(";");
-				if(lineArray.length != 16){
-					br.close();
-					System.out.println("ProductHelper.getOldProdFromFile:: "+ line);
-					throw new MalformedInputException(16);
+					if(!line.equals("")){
+					String[] lineArray = line.split(";");
+					if(lineArray.length != 16){
+						br.close();
+						System.out.println("ProductHelper.getOldProdFromFile:: "+ line);
+						throw new MalformedInputException(16);
+						
+					}else{
+						Product lineProd = new Product();
+						lineProd.setModel(lineArray[0]);
+						lineProd.setEan(lineArray[2]);
+						lineProd.setMpn(lineArray[3]);
+						lineProd.setpName(lineArray[4]);
+						lineProd.setDescription(lineArray[5]);
+						lineProd.setCategory(lineArray[6]);
+						lineProd.setQuantity(Double.parseDouble(lineArray[7]));
+						lineProd.setStStatus(lineArray[8]);
+						lineProd.setStatus(lineArray[9]);
+						lineProd.setPic(lineArray[10]);
+						lineProd.setAddPic(lineArray[11]);
+						lineProd.setManufact(lineArray[12]);
+						lineProd.setDoublePrice(Double.parseDouble(lineArray[13]));
+						lineProd.setTax_class(lineArray[14]);
+						lineProd.setWeight(lineArray[15]);
 					
-				}else{
-					Product lineProd = new Product();
-					lineProd.setModel(lineArray[0]);
-					lineProd.setEan(lineArray[2]);
-					lineProd.setMpn(lineArray[3]);
-					lineProd.setpName(lineArray[4]);
-					lineProd.setDescription(lineArray[5]);
-					lineProd.setCategory(lineArray[6]);
-					lineProd.setQuantity(Double.parseDouble(lineArray[7]));
-					lineProd.setStStatus(lineArray[8]);
-					lineProd.setStatus(lineArray[9]);
-					lineProd.setPic(lineArray[10]);
-					lineProd.setAddPic(lineArray[11]);
-					lineProd.setManufact(lineArray[12]);
-					lineProd.setDoublePrice(Double.parseDouble(lineArray[13]));
-					lineProd.setTax_class(lineArray[14]);
-					lineProd.setWeight(lineArray[15]);
-				
-					res.add(lineProd);
-				}//if the size of the array is equal to 16 
-				//res.add(parseLine(line, keys, separator));
+						res.add(lineProd);
+					}//if the size of the array is equal to 16 
+					//res.add(parseLine(line, keys, separator));
+					
+				 }//end if line is not empty
 				line = br.readLine();
-			 }
+			}
 			 br.close();
 		}catch(Exception e){	e.printStackTrace();}
 		

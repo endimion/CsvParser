@@ -1,14 +1,13 @@
 package model;
 
 
-import java.io.BufferedReader;
+
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.nio.file.FileSystems;
+import java.util.HashMap;
 import java.util.Vector;
 
 public class CsvWriter {
@@ -63,36 +62,56 @@ public class CsvWriter {
 	 */
 	public static void updateProdCsvLine(int eanCol, File file, Vector<Product> prods, String sep){
 		//TODO
-		try {
-			FileInputStream fis = new FileInputStream(file);
-			InputStreamReader isr = new InputStreamReader(fis);
-			BufferedReader br = new BufferedReader(isr); 
-			String line = (br.readLine()).trim();
-			String fileContents="";
+		HashMap<String,Product> replaceProdMap = new HashMap<String,Product>();
+		//First we store the products to be replaced in a HashMap
+		for(Product prod: prods){
+			replaceProdMap.put(prod.getEan(), prod);
+		}//end of looping through the replace prods
+		
+		long startTime = System.nanoTime();
+		
+		Vector<Product> oldProd = ProductHelper.getOldProdFromFile(file);
+		Vector<Product> updatedProd = new Vector<Product>();
+		Product candidate;
+		
+		for(Product prod: oldProd){
+			candidate = replaceProdMap.get(prod.getEan().trim());
 			
-			while(line != null){
-				String toAppend = line +"\n";
-				String[] lineArr = line.split(sep);
-				
-				if(lineArr.length > 0){
-					for(Product prod : prods){
-						if(lineArr[eanCol].equals(prod.getEan())){
-							prod.setStatus("0");
-							toAppend = prod.toCsv() +"\n";
-							System.out.println("CsvWriter.updatProdCsvLine:: UPDATED " 
-																			+ prod.getEan() + " --" + prod.getModel());
-						}//end if the lineArr is an item we have to replace
-					}//end of looping through the products we have to replace
-					
-					fileContents += toAppend;
-				}//end if line is not the empty string
-				line = br.readLine();
-			}//end of looping through the lines of the file
-			br.close();
-	
+			if(candidate != null){
+				updatedProd.add(candidate);
+				System.out.println("CsvWriter.updatProdCsvLine:: UPDATED " 
+						+ candidate.getEan() + " --" + candidate.getModel());
+			}else{//end if the old product is contained in the products to replace
+				updatedProd.add(prod);
+			}//end if old prod is not to be replaced
+		}//end of looping through the old products
+		long endTime = System.nanoTime();
+		
+		
+		//old execution time 525698694734
+		// new                                     1893044425
+		
+		
+		
+			System.out.println("CsvWriter.updatProdCsvLine::  read ALL line in "+ (endTime - startTime )/1000 +"milliseconds" );
+		try{	
 			FileOutputStream fos = new FileOutputStream(file,false);
 			OutputStreamWriter out = new OutputStreamWriter(fos,"utf-8");
-			out.write(fileContents);
+			int linesWritten  = 0;
+			for(Product prod: updatedProd){
+				if(linesWritten == 0){
+					out.append(prod.toCsv() +"\n");
+				}else{
+					out.flush();
+					out.close();
+					fos = new FileOutputStream(file,true);
+					 out = new OutputStreamWriter(fos,"utf-8");
+					 out.append(prod.toCsv() +"\n");
+				}//end if  linesWritten is not 0
+				
+				linesWritten++;
+			}
+			out.flush();
 			out.close();
 		
 		}catch(IOException e){e.printStackTrace();}

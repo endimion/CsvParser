@@ -26,7 +26,7 @@ public class ProcessSupplierFileController {
 		private Button findFile;
 		
 		private Button editSup;
-		private Button commonProd;
+		//private Button commonProd;
 		
 		private FileChooser fc;
 		private Text path;
@@ -34,7 +34,8 @@ public class ProcessSupplierFileController {
 		
 		
 	public ProcessSupplierFileController(Stage st, Button addSupplier, Button addCategory, 
-																					Button editCategories, Button editSup, 	Button processFiles, Button editPrice){
+																					Button editCategories, Button editSup, 	Button processFiles, Button editPrice, 
+																					Button commonProd){
 		fc = new FileChooser();
 		//Vector<String> supplierNames = new Vector<String>();	
 		FileHelper fh = new FileHelper();
@@ -93,12 +94,6 @@ public class ProcessSupplierFileController {
 			}
 		});
 		
-		
-		commonProd = new Button("Common");
-		commonProd.setOnAction(event ->{
-			CommonProductController cpc = new CommonProductController(st);
-			
-		});
 		
 		psfv = new ProcessSupplierFileView(st, cBox, findFile,process, addSupplier,addCategory,
 																						editCategories,editSup,processFiles, editPrice, commonProd,path);

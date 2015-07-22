@@ -19,7 +19,7 @@ public class CommonProductsView {
 	 Vector<HBox> hBoxes ;
 	
 	
-	public CommonProductsView(Stage st,  Vector<HBox> hBoxes, Button save ){
+	public CommonProductsView(Stage st,  Vector<HBox> hBoxes, Button save , Button cancel){
 		this.stage = st;
 		this.hBoxes = hBoxes;
 		
@@ -39,7 +39,10 @@ public class CommonProductsView {
 		//center.getChildren().addAll(verticalBoxes);
 		BorderPane MaineBorder = new BorderPane();
 		MaineBorder.setId("mainPane");
-		verticalBoxes.getChildren().addAll(save);
+		HBox buttonBox = new HBox(20);
+		buttonBox.getChildren().addAll(save, cancel);
+		verticalBoxes.getChildren().addAll(buttonBox);
+		
 		MaineBorder.setCenter(verticalBoxes);
 		
 		Scene scene = new Scene(MaineBorder, stage.getWidth(),stage.getHeight());

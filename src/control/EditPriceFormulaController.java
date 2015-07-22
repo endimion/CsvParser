@@ -24,7 +24,7 @@ public class EditPriceFormulaController {
 	
 	
 	public EditPriceFormulaController(Stage st, Button addSupplier, Button addCategory, 
-			Button editCategories, Button editSup, 	Button processFiles, Button editPrice, String supplier){
+			Button editCategories, Button editSup, 	Button processFiles, Button editPrice, Button commonProd, String supplier){
 		
 		try{
 			Vector<Double> prices = FileHelper.getPriceConfig(supplier); 
@@ -63,7 +63,8 @@ public class EditPriceFormulaController {
 					FileHelper.savePriceFormula(nPrices,supplier,remVat);
 					
 					ProcessSupplierFileController psc = new 
-							ProcessSupplierFileController(st, addSupplier, addCategory, editCategories, editSup, processFiles, editPrice);
+							ProcessSupplierFileController(st, addSupplier, addCategory, editCategories, editSup, 
+									processFiles, editPrice,commonProd);
 					psc.displayView();
 				}//end if a supplier is selected to store the values
 			
@@ -91,7 +92,7 @@ public class EditPriceFormulaController {
 			    	  String selection =  boxItems.get(newV.intValue());
 			    	  EditPriceFormulaController epfc = 
 			    			  new EditPriceFormulaController(st, addSupplier, addCategory, editCategories, 
-			    					  editSup, processFiles, editPrice,selection);
+			    					  editSup, processFiles, editPrice,commonProd,selection);
 			    	 epfc.displayView(); 
 			      }
 			  });

@@ -14,7 +14,7 @@ public class CommonProductsHelper{
 
 
 	private final static String fileSep = FileSystems.getDefault().getSeparator();
-	private int noEanProds;
+	
 	HashMap<String,Vector<Product>> map ;
 	Vector<PairOfString> suplPairs ;
 	Vector<Vector<Product>>  commonProds;
@@ -25,7 +25,6 @@ public class CommonProductsHelper{
 	 */
 	public CommonProductsHelper(){
 		this.map =null;
-		noEanProds = 0;
 		suplPairs = new Vector<PairOfString>();
 		commonProds = new Vector<Vector<Product>>();
 	}//end of constructor
@@ -56,15 +55,15 @@ public class CommonProductsHelper{
 	public void addProductToMap(Product prod){
 		String ean = prod.getEan();
 		if(ean.trim().equals("")){
-			noEanProds++;
+			
 		}else{
 			//System.out.println("CoomonProducts.addProductToMap:: EAN " + ean);
 			Vector<Product> existingProds = 
 				getProdsForEan(ean);
 			existingProds.add(prod);
 			
-			System.out.println("CoomonProducts.addProductToMap:: EAN " + ean + " has " 
-					+ existingProds.size() + " other matches");
+			//System.out.println("CoomonProducts.addProductToMap:: EAN " + ean + " has " 
+				//	+ existingProds.size() + " other matches");
 		}//end if product has a VALID  EAN
 		
 		
@@ -168,7 +167,7 @@ public class CommonProductsHelper{
 		for(Vector<Product> eanProds : commonProds){
 		
 			if(eanProds.size() > 1){
-				System.out.println("CommonProductsHelper.buildSuppierPairs::  Ean " + eanProds.get(0).getEan() );
+				//System.out.println("CommonProductsHelper.buildSuppierPairs::  Ean " + eanProds.get(0).getEan() );
 				
 				for(int i = 0; i< eanProds.size()-1; i++){
 					//if(i < eanProds.size()-1){
@@ -177,8 +176,8 @@ public class CommonProductsHelper{
 						
 						String firstSupl = firstProd.getSupplierName();
 						String secondSupl = secondProd.getSupplierName();
-						System.out.println("CommonProductsHelper.buildSuppierPairs:: " 
-																	+ " testing pair " + firstSupl +" " + secondSupl);
+						//System.out.println("CommonProductsHelper.buildSuppierPairs:: " 
+							//										+ " testing pair " + firstSupl +" " + secondSupl);
 						
 						PairOfString suplPair = new PairOfString(firstSupl, secondSupl);
 						if(!hasSupplierPair(suplPair) && !(firstSupl.equals(secondSupl))){
@@ -221,9 +220,10 @@ public class CommonProductsHelper{
 	}//end of hasSupplierPair
 	
 	
-	
+	//TODO
+	//ADD COMMENTS
 	/**
-	 * 
+	 *
 	 * @param badSupl
 	 * @param goodSupl
 	 */
@@ -231,40 +231,57 @@ public class CommonProductsHelper{
 		
 		Vector<Product> replaceProds = new Vector<Product>();
 		
+		
 		for(Vector<Product> prods: commonProds){
 			
 			if(hasBothSuppliers(prods, goodSupl, badSupl)){
+				
 				for(Product prod : prods){
 					
 					if(prod.getSupplierName().equals(badSupl)){ 
-					
+						//System.out.println("CommonProductsHelper.setSuplPRodsUnavailable:: UPDATED PRODUCT "  
+						//		+prod.getModel()); 
 						prod.setStatus("0");
-						//TODO
-						//save the product to file!!!
-						
-						//System.out.println("CommonProductsHelper.setSuplPRodsUnavailable:: "+ badSupl +" -->"+
-							//										prod.toCsv());
 						replaceProds.add(prod);
 					}//end if the name of the product supplier is the badSupl
+					else{
+					//System.out.println("CommonProductsHelper.setSuplPRodsUnavailable:: Checked PRODUCT "  
+					//		+prod.getModel());
+					} 
 				}//end of looping through the products for one EAN number 
-				
-				//After finding all the products that are presented by both suppliers
-				// supl and badSupl, (and store the updated versions o replaceProds)
-				//then we can overwrite the file of the badSupplier
-				// to update the appearnce of these produces
-				if(replaceProds.size() > 0){
-					File savedProds = new File(FileHelper.getExecFolder() +fileSep +"config"+fileSep
-																					+ badSupl.trim() +".prods");
-					
-					CsvWriter.updateProdCsvLine(2,  savedProds, prods, ";");
-					System.out.println("CommonProductsHelper.setSuplPRodsUnavailable:: UPDATED FILE "  
-															+ savedProds.getName()); 
-				}//end of if replacePRods.size >0
-				
+				//	System.out.println("CommonProductsHelper.setSuplPRodsUnavailable:: "
+				//		+ "checked all products of ean" );
 			}//end of if the Vector<Products> has both suppliers
+		
+		
+	
+		//After finding all the products that are presented by both suppliers
+		// supl and badSupl, (and store the updated versions o replaceProds)
+		//then we can overwrite the file of the badSupplier
+		// to update the appearnce of these produces
+		
+		
 		}//end of looping through the Vector<Vector> products
+		
+		//System.out.println("CommonProductsHelper.setSuplPRodsUnavailable:: "
+			//	+ "checked all common products" );
 
 		
+		if(replaceProds.size() > 0){
+			File savedProdsFile = new File(FileHelper.getExecFolder() +fileSep +"config"+fileSep
+																			+ badSupl.trim() +".prods");
+			
+			System.out.println("CommonProductsHelper.setSuplPRodsUnavailable:: will UPDATED FILE "  
+					+ savedProdsFile.getName()); 
+			for(Product prod: replaceProds){
+				System.out.println("CommonProductsHelper.setSuplPRodsUnavailable:: Supplier "
+							+prod.getSupplierName()+" ||| "+ prod.toCsv() );
+			}
+			
+			CsvWriter.updateProdCsvLine(2,  savedProdsFile, replaceProds, ";");
+			System.out.println("CommonProductsHelper.setSuplPRodsUnavailable:: UPDATED FILE "  
+													+ savedProdsFile.getName()); 
+		}//end of if replacePRods.size >0
 		
 	}//end of setSuplProdsUnavailable
 	

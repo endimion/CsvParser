@@ -1,6 +1,5 @@
 package control;
 
-import java.util.HashMap;
 import java.util.Vector;
 
 import javafx.scene.control.Button;
@@ -10,8 +9,9 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import model.CommonProductsHelper;
 import model.CommonProductsHelper.PairOfString;
-import model.Product;
 import view.CommonProductsView;
+
+
 
 public class CommonProductController {
 
@@ -25,7 +25,9 @@ public class CommonProductController {
 	
 	
 	
-	public CommonProductController(Stage st){
+	public CommonProductController(Stage st,Button addSupplier, Button addCategory, Button editCategories, 
+																												Button editSup, Button processFiles, Button editPriceForm,
+																												Button commonProd){
 		stage = st;
 		save = new Button("Save");
 		
@@ -69,30 +71,37 @@ public class CommonProductController {
 				if(supl != null){
 					System.out.println("CommonProductController:: supplier was selected" 
 							+ supl + " and supplier " + badSupl  + " must have common products set to 0");
-					//TODO 
-					// now we must make the products of the bad supplier 0
+					
 					cph.setSuplProdsUnavailable(badSupl, supl);
 					
+					ProcessSupplierFileController psfc = new ProcessSupplierFileController(st, 
+							addSupplier, addCategory,editCategories, editSup,processFiles,editPriceForm,commonProd);
+					psfc.displayView();
+					
 				}//end if supl was not null
-				
-				
-				
 			}//loop through the lines
-			
 			
 		});//end of setOnAction
 		
+		Button cancel = new Button("Cancel");
+		cancel.setOnAction(event ->{
+			ProcessSupplierFileController psfc = new ProcessSupplierFileController(st, 
+					addSupplier, addCategory,editCategories, editSup,processFiles,editPriceForm,commonProd);
+			psfc.displayView();
+		});
 		
 		
+		cpv = new CommonProductsView(st, hBoxes,save, cancel);
 		
-		cpv = new CommonProductsView(st, hBoxes,save);
-		cpv.display();
 		
 	}//end of constructor
 	
 
 	
-
+	public void displayView(){
+		cpv.display();
+	}
+	
 	
 	
 	

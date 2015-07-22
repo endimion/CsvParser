@@ -12,6 +12,8 @@ public class MainControl extends Application{
 	private Button editCategories;
 	private Button processFiles;
 	private Button editSup;
+	private Button commonProd;
+	private Button editPriceForm ;
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -22,12 +24,18 @@ public class MainControl extends Application{
 		//AddCategoriesController acc = new AddCategoriesController(primaryStage);
 		//acc.displayView();
 		
+		commonProd = new Button("Common");
+		commonProd.setOnAction(event ->{
+			CommonProductController cpc = new CommonProductController(primaryStage,addSupplier, addCategory,
+					editCategories, editSup,processFiles,editPriceForm,commonProd);
+			cpc.displayView();
+		});
 		
-		
-		Button editPriceForm = new Button("Edit Price Formula");
+		 editPriceForm = new Button("Edit Price Formula");
 		editPriceForm.setOnAction(event ->{
 			EditPriceFormulaController epfc = 
-					new EditPriceFormulaController(primaryStage,addSupplier, addCategory,editCategories, editSup,processFiles,editPriceForm,"");
+					new EditPriceFormulaController(primaryStage,addSupplier, addCategory,editCategories, editSup,
+							processFiles,editPriceForm,commonProd,"");
 			epfc.displayView();
 		});
 		
@@ -60,7 +68,7 @@ public class MainControl extends Application{
 		processFiles = new Button("Process Supplier Files");
 		processFiles.setOnAction(event ->{
 			ProcessSupplierFileController psfc = new ProcessSupplierFileController(primaryStage, 
-					addSupplier, addCategory,editCategories, editSup,processFiles,editPriceForm);
+					addSupplier, addCategory,editCategories, editSup,processFiles,editPriceForm,commonProd);
 			psfc.displayView();
 		});
 		
@@ -70,7 +78,7 @@ public class MainControl extends Application{
 		
 		ProcessSupplierFileController psfc = new ProcessSupplierFileController(primaryStage, 
 				addSupplier, addCategory,editCategories, editSup, 
-				processFiles , editPriceForm);
+				processFiles , editPriceForm,commonProd);
 		psfc.displayView();
 		
 	}
