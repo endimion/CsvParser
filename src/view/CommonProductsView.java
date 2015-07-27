@@ -47,8 +47,10 @@ public class CommonProductsView {
 		
 		Scene scene = new Scene(MaineBorder, stage.getWidth(),stage.getHeight());
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			
+		
+	
 		this.stage.setScene(scene);
+		this.stage.sizeToScene();	
 		
 	}//end of constructor
 	

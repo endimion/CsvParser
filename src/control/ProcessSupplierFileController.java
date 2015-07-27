@@ -65,10 +65,8 @@ public class ProcessSupplierFileController {
 		process.setOnAction(event ->{
 			 String sup = cBox.getSelectionModel().getSelectedItem();
 			if(f != null && cBox.getSelectionModel().getSelectedItem() != null ){
-				 
-				Vector<Product> prods =  new Vector<Product>();  //ph.getProdFromFile(f, cBox.getSelectionModel().getSelectedItem() );
-				ProductProcessor pp = new ProductProcessor(f, sup, prods);
-				pp.process();
+				ProductProcessor pp = new ProductProcessor(f, sup);
+				pp.process(null);
 			}else{
 				//System.out.println("ProcessSupplierFileController:: Supplier file is null and supplier is " + sup);
 				SupplierCol supl = fh.getSupplierByName(sup);
@@ -81,11 +79,8 @@ public class ProcessSupplierFileController {
 					//System.out.println("ProcessSupplierFileController::  Supplier specifies a url:" + FileHelper.getExecFolder()+"/temp.xml");
 					SupplierXmlDownloader sxd = new SupplierXmlDownloader(user, pass, url);
 					f =sxd.getUrl();
-					
-					//f = sxd.getSupplierXmlToFile(FileHelper.getExecFolder()+"/temp.xml");
-					Vector<Product> prods =  new Vector<Product>();  
-					ProductProcessor pp = new ProductProcessor(f, sup, prods);
-					pp.process();
+					ProductProcessor pp = new ProductProcessor(f, sup);
+					pp.process(null);
 					
 				}else{
 					System.out.println("ProcessSupplierFileController::  Supplier file is null and  and no URL found for " + sup);
@@ -95,8 +90,12 @@ public class ProcessSupplierFileController {
 		});
 		
 		
+		
+		
 		psfv = new ProcessSupplierFileView(st, cBox, findFile,process, addSupplier,addCategory,
-																						editCategories,editSup,processFiles, editPrice, commonProd,path);
+																						editCategories,editSup,
+																						processFiles, editPrice, 
+																						commonProd,path);
 		
 	}//end of constructor
 	

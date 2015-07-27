@@ -22,7 +22,7 @@ public class CsvWriter {
 	 * @param path, the path of the file we will save the products to
 	 * @param prods, a Vector<Products> containing the products we want to save
 	 */
-	public void writeProdVectToCsv(String path, Vector<Product> prods){
+	public synchronized void writeProdVectToCsv(String path, Vector<Product> prods){
 		
 		File csv = new File(FileHelper.getExecFolder() +fileSep+"output.csv"); 
 		
@@ -62,6 +62,8 @@ public class CsvWriter {
 	 */
 	public static void updateProdCsvLine(int eanCol, File file, Vector<Product> prods, String sep){
 		//TODO
+		// write a new outputfile
+		
 		HashMap<String,Product> replaceProdMap = new HashMap<String,Product>();
 		//First we store the products to be replaced in a HashMap
 		for(Product prod: prods){

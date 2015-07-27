@@ -1,5 +1,6 @@
 package view;
 
+import control.ProcessAllSupplierController;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -61,9 +62,16 @@ public class ProcessSupplierFileView {
 		VBox center = new VBox();
 		center.getChildren().addAll(cbox,filePath);
 		
+		Button testBtn = new Button("test");
+		testBtn.setOnAction(event ->{
+			ProcessAllSupplierController pasc = new ProcessAllSupplierController(st,   addSupplier,  addCategory, 
+					 editCategories,  editSupplier, 	 processFiles,  editPrice, 
+					 commonProd);
+			pasc.display();
+		});
 		
 		HBox bBox = new HBox();
-		bBox.getChildren().addAll(process,fc);
+		bBox.getChildren().addAll(process,fc,testBtn);
 		
 		border.setTop(tabTitle);
 		border.setCenter(center);
@@ -76,8 +84,9 @@ public class ProcessSupplierFileView {
 		Scene scene = new Scene(MaineBorder, stage.getWidth(),stage.getHeight());
 	   scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		
+	  
 	    this.stage.setScene(scene);
-		
+	    this.stage.sizeToScene();
 		
 	}//end of constructor
 	

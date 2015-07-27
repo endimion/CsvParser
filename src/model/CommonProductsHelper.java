@@ -118,6 +118,7 @@ public class CommonProductsHelper{
 			
 			for(File f: files){
 				//in the next skip the . char has to be escaped because it denotes any character in a regular expression
+				if(f.getName().contains("."))
 				if(f.getName().split("\\.")[1].equals("prods")){
 					//System.out.println("CommonProductsMap.build:: "
 					//		+ "found a supplier product file " + f.getName() );

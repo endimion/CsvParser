@@ -322,7 +322,7 @@ public class FileHelper {
 		try{
 			FileOutputStream fos = new FileOutputStream(valid,true);
 			OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
-		    out.append(prodID);
+		    out.append(prodID + "\n");
 		    out.flush();
 		    out.close();
 		}catch (IOException e) { e.printStackTrace();}
@@ -338,14 +338,14 @@ public class FileHelper {
 		File valid = new File(getExecFolder() +fileSep+"notFound.prod"); 
 		//try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
 		try{
-			FileOutputStream fos = new FileOutputStream(valid);
+			FileOutputStream fos = new FileOutputStream(valid,true);
 			OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
-			String prodString="Error int prod " + prod.getModel();
+			String prodString="Product " + prod.getModel() + " is not in IceCat DB";
 		    try{
 		    	prodString = prod.toString(supplier);
 		    }catch(SupplierPriceNotFound sE){sE.printStackTrace();}
 		    
-		    out.append("Supplier " + supplier + ": " +prodString);
+		    out.append("Supplier " + supplier + ": " +prodString + "\n");
 		    out.flush();
 		    out.close();
 		}catch (IOException e) { e.printStackTrace();}
@@ -407,9 +407,9 @@ public class FileHelper {
 		File valid = new File(getExecFolder() +fileSep+"notFoundCategory.prod"); 
 		//try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(valid, true)))) {
 		try{
-			FileOutputStream fos = new FileOutputStream(valid);
+			FileOutputStream fos = new FileOutputStream(valid, true);
 			OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
-		    String prodString="Error int prod " + prod.getModel();
+		    String prodString="Category not found for:  " + prod.getModel();
 		    try{
 		    	prodString = prod.toString(supplier);
 		    }catch(SupplierPriceNotFound sE){sE.printStackTrace();}
@@ -499,7 +499,7 @@ public class FileHelper {
 			if(!newProds.containsKey(oldProd.getModel())){ 		
 				// If an old product does not exist in the new ones then it should be made invalid
 				Product invalidProd = oldProd;
-				System.out.println("FileHelper.ValidateSupplierPRoductList:: works!!!");
+				System.out.println("FileHelper.ValidateSupplierPRoductList::  product that is not present in new supplier list found!!!");
 				invalidProd.setStatus("0");
 				validatedProd.add(invalidProd);
 			}
