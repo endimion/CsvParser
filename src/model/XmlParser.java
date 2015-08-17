@@ -1,16 +1,17 @@
 package model;
 
+
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.util.Vector;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
 
 public class XmlParser {
 
@@ -154,10 +155,10 @@ public class XmlParser {
 	 * @return the value of the attribute attr, of the parent node, if that parent node has
 	 * a descendant called childN, which has an attribute cAttr with value cAttrVal. Else null is returned
 	 */
-	public String getParAtt(File xml, String parentN, String attr, 
+	public String getParAtt(String stringFile,File xml, String parentN, String attr, 
 			String childN, String cAttr, String cAttrVal){
 
-		NodeList pList = getNode(xml, parentN);
+		NodeList pList = getNode( xml, parentN);
 		Node c = null;
 		Node p = null;
 		boolean found = false;
@@ -212,11 +213,20 @@ public class XmlParser {
 	 * xml file
 	 */
 	private Document readyDocument(File f){
+	
 		try{
-			FileInputStream in = new FileInputStream(f);
-			Document doc =  db.parse(in,"UTF-8");
-			doc.getDocumentElement().normalize();
-			return doc;
+				FileInputStream fis = new FileInputStream(f);
+				InputStreamReader isr = new InputStreamReader(fis,"UTF-8");
+				InputSource inputSource = new InputSource(isr);
+				inputSource.setEncoding("UTF-8");
+				
+				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+			    DocumentBuilder builder = factory.newDocumentBuilder();
+			  
+			    Document doc =  builder.parse(inputSource);
+				doc.getDocumentElement().normalize();
+				return doc;
+			
 		}catch(Exception e){e.printStackTrace(); return null;}
 	}//end of readyDocument
 	
@@ -270,3 +280,6 @@ public class XmlParser {
 	
 	
 }//end of class
+
+
+

@@ -51,19 +51,21 @@ public class CategoryMap {
 	public void setMatchesArray(String[] match){
 		Vector<String> m = new Vector<String>();
 		for(String ma : match){
-			m.add(ma);
+			m.add(ma.trim());
 		}//end of for
 		
 		setMatches(m);
 	}//end of setMatchesArray
 	
 	/**
-	 * 
+	 * @param escapeCat, denotes wheter or not the name of the Category has to be escaped
 	 * @param name the name of a foreign category
 	 * @return true if the given name belongs to the foreign categories mapped to this Category
 	 */
-	public boolean hasCategory(String name){
+	public boolean hasCategory(String name, boolean escapeCat){
+		//System.out.println("CategoryMao looking if " + this.getName() + " has " + name );
 		for(String fCat: getMatches()){
+			if(escapeCat) fCat = StringHelper.escapeSpecialChars(fCat);
 			if(fCat.trim().equals(name.trim())) return true;
 		}//end of for loop
 		return false;

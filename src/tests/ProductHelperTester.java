@@ -15,7 +15,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class ProductHelperTester {
-
+/*
 	@Before
 	public void setUpTests(){
 	}// setUpTests
@@ -75,6 +75,6 @@ public class ProductHelperTester {
 	
 	
 	
-	
+	*/
 	
 }//end of test class

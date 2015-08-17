@@ -70,14 +70,14 @@ public class Product {
 	
 	
 	public String getCategory(){return this.category;}
-	public void setCategory(String cat){this.category = cleanString(cat);}
+	public void setCategory(String cat){this.category = StringHelper.cleanString(cat);}
 	
 	public String getNumber(){return this.number;}
-	public void setNumber(String n){this.number =cleanString(n);}
+	public void setNumber(String n){this.number =StringHelper.cleanString(n);}
 	
 	public String getDescription(){return this.description;}
 	public void setDescription(String desc){
-		this.description = cleanString(desc);
+		this.description = StringHelper.cleanString(desc);
 	}//end of setDescription
 	
 	//public String getSupNum(){return this.supNumber;}
@@ -87,24 +87,24 @@ public class Product {
 	public void setEan(String e){
 		e = e.trim();
 		if(e.contains(",")|| e.contains(";") ){
-			if(e.contains(",")) this.ean  = cleanString(e.split(",")[0].trim());
-			else  this.ean  = cleanString(e.split(";")[0].trim());
+			if(e.contains(",")) this.ean  = StringHelper.cleanString(e.split(",")[0].trim());
+			else  this.ean  = StringHelper.cleanString(e.split(";")[0].trim());
 		}else{
-			this.ean = cleanString(e);
+			this.ean = StringHelper.cleanString(e);
 		}
 	}//end of setEan
 	
 	public String getRPrice(){return this.rPrice;}
-	public void  setRPrice(String p){this.rPrice = cleanString(p);}
+	public void  setRPrice(String p){this.rPrice = p;}
 	
 	public double getQuantity(){return this.quantity;}
 	public void setQuantity(double q){this.quantity = q;}
 	
 	public String getWeight(){return this.weight;}
-	public void setWeight(String w){this.weight = cleanString(w);}
+	public void setWeight(String w){this.weight = w;}
 	
 	public String getModel(){return this.model;}
-	public void setModel(String model){this.model = cleanString(model);}
+	public void setModel(String model){this.model = StringHelper.cleanString(model);}
 	
 	/**
 	 * 
@@ -147,6 +147,7 @@ public class Product {
 
 		String retailS = (getRPrice().trim());
 		double res = 0;
+				
 		try{
 			if(StringUtils.countMatches(retailS,".") == 0){
 				retailS = (getRPrice().trim()).replace(",",".");
@@ -170,6 +171,7 @@ public class Product {
 				
 				}else res =  retailP  + (retailP * var5)/100 + getWeightDouble()*kiloPrice;
 			}
+		
 		}catch(NumberFormatException e){
 				e.printStackTrace();
 				return -1;
@@ -177,6 +179,7 @@ public class Product {
 
 		if(removeVAT) res = res * 0.813009;
 		res = round(res,2);
+		
 		return res;
 	}//end of getPrice
 	
@@ -240,29 +243,29 @@ public class Product {
 	//public void setSupNumber(String supNumber) {this.supNumber = supNumber;}
 
 	public String getMpn() {	return mpn;}
-	public void setMpn(String mpn) {this.mpn = cleanString(mpn);}
+	public void setMpn(String mpn) {this.mpn = StringHelper.cleanString(mpn);}
 
 	public String getpName() {return pName;}
-	public void setpName(String pName) {	this.pName = cleanString(pName);}
+	public void setpName(String pName) {	this.pName = StringHelper.cleanString(pName);}
 
 	public String getStatus() {return status;	}
-	public void setStatus(String status) {this.status = cleanString(status);}
+	public void setStatus(String status) {this.status = StringHelper.cleanString(status);}
 
 	public String getStStatus() {return stStatus;	}
-	public void setStStatus(String stStatus) {this.stStatus = cleanString(stStatus);}
+	public void setStStatus(String stStatus) {this.stStatus = StringHelper.cleanString(stStatus);}
 	
 	public String getAddPic() {return addPic;	}
 	public void setAddPic(String addPic) {this.addPic = addPic;}
 
 	public String getManufact() {return manufact;}
-	public void setManufact(String manufact) {	this.manufact = cleanString(manufact);	}
+	public void setManufact(String manufact) {	this.manufact = StringHelper.cleanString(manufact);	}
 
 	public String getTax_class() {return tax_class;}
-	public void setTax_class(String tax_class) {this.tax_class = cleanString(tax_class);}
+	public void setTax_class(String tax_class) {this.tax_class = StringHelper.cleanString(tax_class);}
 	
 	
 	public String getSupplierName(){return this.supplierName;}
-	public void setSupplierName(String name){this.supplierName = cleanString(name);}
+	public void setSupplierName(String name){this.supplierName = StringHelper.cleanString(name);}
 	
 	
 	/**
@@ -280,18 +283,7 @@ public class Product {
 	
 
 	
-	/**
-	 * 
-	 * @param s a Strings
-	 * @return a string that does not contain any of the 
-	 * special characters that can be used as a separator in 
-	 * a Csv file
-	 */
-	private String cleanString(String s){
-		s  = s.replaceAll("(\\r|\\n|\\r\\n)+", " ");
-		s = s.replace(";", "");
-		return s.replace(",", "");
-	}
+	
 	
 	/**
 	 * Compares the given product with a foreign one and returns true if they match in all attributes
@@ -315,7 +307,7 @@ public class Product {
 						this.getMpn().equals(foreign.getMpn())&&
 						//this.getNumber().equals(foreign.getNumber())&&
 						this.getpName().equals(foreign.getpName())&&
-						this.getQuantity() == foreign.getQuantity()&&
+						//this.getQuantity() == foreign.getQuantity()&&
 						this.getDoublePrice() == foreign.getDoublePrice();
 	}//end compareProduct
 	

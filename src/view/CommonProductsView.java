@@ -19,7 +19,7 @@ public class CommonProductsView {
 	 Vector<HBox> hBoxes ;
 	
 	
-	public CommonProductsView(Stage st,  Vector<HBox> hBoxes, Button save , Button cancel){
+	public CommonProductsView(Stage st,  Vector<HBox> hBoxes, Button save , Button cancel, Button revalidate){
 		this.stage = st;
 		this.hBoxes = hBoxes;
 		
@@ -40,7 +40,7 @@ public class CommonProductsView {
 		BorderPane MaineBorder = new BorderPane();
 		MaineBorder.setId("mainPane");
 		HBox buttonBox = new HBox(20);
-		buttonBox.getChildren().addAll(save, cancel);
+		buttonBox.getChildren().addAll(save, revalidate, cancel);
 		verticalBoxes.getChildren().addAll(buttonBox);
 		
 		MaineBorder.setCenter(verticalBoxes);

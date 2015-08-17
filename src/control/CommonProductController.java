@@ -91,7 +91,15 @@ public class CommonProductController {
 		});
 		
 		
-		cpv = new CommonProductsView(st, hBoxes,save, cancel);
+		Button revalidate = new Button("reCreate Output");
+		revalidate.setOnAction(event ->{
+			cph.reWriteOutput();
+			ProcessSupplierFileController psfc = new ProcessSupplierFileController(st, 
+					addSupplier, addCategory,editCategories, editSup,processFiles,editPriceForm,commonProd);
+			psfc.displayView();
+		});
+		
+		cpv = new CommonProductsView(st, hBoxes,save, cancel, revalidate);
 		
 		
 	}//end of constructor

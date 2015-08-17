@@ -25,8 +25,10 @@ public class CategoriesSet  extends Vector<CategoryMap>{
 	 * if none is found null is returned
 	 */
 	public CategoryMap getCategory(String name){
+		
+		
 		for(CategoryMap c: this){
-			if(c.getName().equals(name)){
+			if(c.getName().trim().equals(name.trim())){
 				return c;
 			}
 		}
@@ -35,16 +37,20 @@ public class CategoriesSet  extends Vector<CategoryMap>{
 	
 	
 	/**
-	 * 
+	 * @param escapeLocalCate, denotes whether or not the local categories have to be escaped
 	 * @param name, the name of the foreign category whose native one we are looking for
 	 * @return the name of the native category if it exists, else null
 	 */
-	public String getContainingCat(String name){
+	public String getContainingCat(String name, boolean escapeLocalCat){
 		String res=null;
+		//System.out.println("CategorySet.getCategory:: Looking for category" + name);
+		
 		if(name!= null){
 			for(CategoryMap cm : this){
-				if(cm.hasCategory(name.trim())){
+				//System.out.println("CategorySet.getCategory:: Looking for category" + name + " in " + cm.getName());;
+				if(cm.hasCategory(name.trim(),escapeLocalCat)){
 					res = cm.getName().trim();
+					//System.out.println("CategorySet.getCategory:: Looking for category" + name + " FOUND");
 					break;
 				}//end if the cm has the given foreign category
 				

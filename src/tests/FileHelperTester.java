@@ -82,7 +82,7 @@ public class FileHelperTester {
 		fh.saveCategory(cm);
 		
 		CategoriesSet cs = fh.getCategories();
-		assertEquals(cs.getContainingCat("Colour negative film"),"ΦΩΤΟΓΡΑΦΙΑ///ΑΝΑΛΩΣΙΜΑ");
+		assertEquals(cs.getContainingCat("Colour negative film",false),"ΦΩΤΟΓΡΑΦΙΑ///ΑΝΑΛΩΣΙΜΑ");
 		
 	}//end of testGetSuppliers
 	

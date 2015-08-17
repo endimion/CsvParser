@@ -19,6 +19,9 @@ public class CommonProductsHelper{
 	Vector<PairOfString> suplPairs ;
 	Vector<Vector<Product>>  commonProds;
 	
+	Vector<Vector<Product>> allOldProds ; //stores all the previously parsed products 
+	
+	
 	/**
 	 * defines a HashMap of products by different suppliers
 	 * which share the same key
@@ -27,6 +30,7 @@ public class CommonProductsHelper{
 		this.map =null;
 		suplPairs = new Vector<PairOfString>();
 		commonProds = new Vector<Vector<Product>>();
+		 allOldProds = new Vector<Vector<Product>>();
 	}//end of constructor
 	
 	
@@ -95,15 +99,12 @@ public class CommonProductsHelper{
 	}//end of getProdsFroEan
 	
 	
-	/* Initializes the HashMap. First we read all the files of the config 
-	 * folder and look for any with the extension of .prods
-	 * Then, these files are used to read the products from the supplier
-	 * from previous runs of the application. Next, we loook for all these
-	 * products for ones containing IDENTICAL NTO EMPTY EAN NUMBERS
-	 * and these are used  to create pairs of <ean, Vector<Products>>
-	 * 
+	
+	/**
+	 * reads all the products parsed form previous runs of the application
+	 * and stores them in the map
 	 */
-	public void buildMap(){
+	public void initProductMap(){
 		
 		File confDir = new File(FileHelper.getExecFolder() + fileSep+"config");
 		if(!confDir.exists()){
@@ -111,7 +112,6 @@ public class CommonProductsHelper{
 			confDir.mkdir();
 			this.map = new HashMap<String, Vector<Product>>();
 		}else{
-			
 			this.map = new HashMap<String, Vector<Product>>();
 			ArrayList<File> files = 
 					new ArrayList<File>(Arrays.asList(confDir.listFiles()));
@@ -122,11 +122,13 @@ public class CommonProductsHelper{
 				if(f.getName().split("\\.")[1].equals("prods")){
 					//System.out.println("CommonProductsMap.build:: "
 					//		+ "found a supplier product file " + f.getName() );
-					
 					String supplierName = f.getName().split("\\.")[0].trim();
 					
 					Vector<Product> oldProds = 
 							ProductHelper.getOldProdFromFile(f);
+					
+					allOldProds.addElement(oldProds); //we save the old products for this supplier
+					
 					//System.out.println("CommonProductsMap.build:: "
 					//		+ "file contains " + oldProds.size() +" items");
 					//after retrieving all the old products from the file
@@ -136,25 +138,34 @@ public class CommonProductsHelper{
 					}//end of looping through the old products of the supplier file
 				}//end if the extension of the file is prods, i.e. a supplier parsed product file
 			}//end of looping through the files of the config directory
-			
-			//System.out.println("CommonProductsMap.build:: "
-			//		+ "after reading all supplier files if found map size of " + map.size()
-		//+" and no EAN in " + noEanProds);
-			
-			
-			Iterator<Entry<String, Vector<Product>>> it =map.entrySet().iterator();
-			while(it.hasNext()){
-				Map.Entry<String, Vector<Product>> pair = (Map.Entry<String, Vector<Product>>)it.next();
-				//String ean = pair.getKey();
-				Vector<Product> eanProds = pair.getValue();
-				if(eanProds.size() > 1){
-					
-					commonProds.addElement(eanProds);
-				}
-			}//end of iteriting through the prods of the map
+			}
+	}//end of intiMap
+	
+	
+	
+	/* Initializes the HashMap. First we read all the files of the config 
+	 * folder and look for any with the extension of .prods
+	 * Then, these files are used to read the products from the supplier
+	 * from previous runs of the application. Next, we loook for all these
+	 * products for ones containing IDENTICAL NTO EMPTY EAN NUMBERS
+	 * and these are used  to create pairs of <ean, Vector<Products>>
+	 */
+	public void buildMap(){
 		
-		}//end if the configDir exists in the filesystem
-		
+		//first we read the existing products from the file	
+		initProductMap();
+		//the we iterate through them to find the common ones and store them in the commonProds vector
+		if(map.size() > 0){
+				Iterator<Entry<String, Vector<Product>>> it =map.entrySet().iterator();
+				while(it.hasNext()){
+					Map.Entry<String, Vector<Product>> pair = (Map.Entry<String, Vector<Product>>)it.next();
+					//String ean = pair.getKey();
+					Vector<Product> eanProds = pair.getValue();
+					if(eanProds.size() > 1){
+						commonProds.addElement(eanProds);
+					}
+				}//end of iteriting through the prods of the map
+		}//end if there exists products in the map
 	}//end of buildMap
 	
 
@@ -324,6 +335,28 @@ public class CommonProductsHelper{
 		public String getFirst(){return s1;}
 		public String getSecond(){return s2;}
 	}//end of private class
+	
+	
+	
+	/**
+	 * Uses, the existing parsed products files
+	 * to re-create the output.csv file 
+	 */
+	public void reWriteOutput(){
+		if(getMap()!= null){
+			//the we iterate through them to find the common ones and store them in the commonProds vector
+			if(allOldProds.size() > 0){
+					for(Vector<Product> oldP : allOldProds){
+						CsvWriter csvw = new CsvWriter();
+						csvw.writeProdVectToCsv(FileHelper.getExecFolder()+fileSep+"out2.csv", oldP);
+					}//end of iterating through the prods of the map
+					
+			}//end if the size of the map is >0
+			
+			
+		}//end of checking if the hashMap is null
+	}//end of reWriteOutput
+	
 	
 	
 	

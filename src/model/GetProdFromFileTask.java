@@ -10,6 +10,7 @@ import javafx.concurrent.Task;
 public class GetProdFromFileTask extends Task<Vector<Product>>{
 		
 	File f; 
+	String stringF;
 	String supplier;
 	Vector<Product> products ;
 	
@@ -46,7 +47,7 @@ public class GetProdFromFileTask extends Task<Vector<Product>>{
 				else{
 					XmlParser xmlp = new XmlParser();
 					String sep = sup.getSeparator();
-					rows = xmlp.getFileToVect(f, sep, keys);
+					 rows = xmlp.getFileToVect(f, sep, keys);
 				}//end if supplier info is xml
 					
 					if(rows.size() >= 1)
@@ -74,7 +75,7 @@ public class GetProdFromFileTask extends Task<Vector<Product>>{
 								String rest = supAvail.split(">=")[1].trim();
 								//find the number part in the expression
 								try{
-									Double threshold = Double.parseDouble(rest);
+										Double threshold = Double.parseDouble(rest);
 										Double rowQuantity = Double.parseDouble(r.getElement(sup.getAvailability()));
 										
 										if(rowQuantity >= threshold ){
@@ -90,36 +91,30 @@ public class GetProdFromFileTask extends Task<Vector<Product>>{
 							prod.setAddPic(r.getElement(sup.getAddImg().trim()));
 							prod.setWeight(r.getElement(sup.getWeight().trim()));
 							
+							prod.setRPrice(r.getElement(sup.getRetailPrice()));
+							
 							//Converting the foreign category read from the file to a native category
-							String foreignCat = r.getElement(sup.getCategory());
-							String nativeCat = catSet.getContainingCat(foreignCat);
+							String foreignCat = r.getElement(sup.getCategory().trim());
+							String nativeCat="";
+							
+							nativeCat = catSet.getContainingCat(foreignCat.trim(),false);
 							
 							//if the nativeCategory is not null then the product is added to the output csv file
 							if(nativeCat != null){
 								//System.out.println("GetProdFromFile.call :: matching category found");
 								prod.setCategory(nativeCat);
 								prod.setDescription(r.getElement(sup.getDescription()));
-								
-								if(r.getElement(sup.getEan()).equals("")){
-									System.out.println("GetprodfromFiletask.call:: no ean found!!" );
-								}
 								prod.setEan(r.getElement(sup.getEan()));
 								prod.setNumber(r.getElement(sup.getItemNumber()));
-								prod.setRPrice(r.getElement(sup.getRetailPrice()));
-								//prod.setSupNum(r.getElement(sup.getSupItemNumber()));
-								
 								//set the model number of the product
 								prod.setModel(sup.getModelPrefix().trim()
 										+	r.getElement(sup.getItemNumber()).trim()   );
-								
-								
-								
+
 								//Additional information
 								if(sup.getMpn()!=null 
 										&&sup.getManuf()!=null && sup.getItemName()!= null){
 									prod.setMpn(r.getElement(sup.getMpn()));
 									prod.setManufact(r.getElement(sup.getManuf()));
-									//TODO
 									prod.setpName(r.getElement(sup.getItemName()));
 								}
 
@@ -135,9 +130,11 @@ public class GetProdFromFileTask extends Task<Vector<Product>>{
 								prod.setDescription(r.getElement(sup.getDescription()));
 								prod.setEan(r.getElement(sup.getEan()));
 								prod.setNumber(r.getElement(sup.getItemNumber()));
-								prod.setRPrice(r.getElement(sup.getRetailPrice()));
+								//prod.setRPrice(r.getElement(sup.getRetailPrice()));
 								//prod.setSupNum(r.getElement(sup.getSupItemNumber()));
 								
+								//System.out.println("GetProdFromFileTask:: CATEGORY NOT FOUND!!!");
+								//System.out.println("GetProdFromFileTask::" + prod.toCsv());
 								fh.saveNotFoundCategory(prod, supplier);
 							
 							}//end if the nativeCategory was null, i.e. the product does not fit into any category of our site
@@ -145,7 +142,8 @@ public class GetProdFromFileTask extends Task<Vector<Product>>{
 			}//if we found a supplier matching the requested one to read the file
 			
 		
-		return products;
+			
+			return products;
 	}//end of call
 
 	

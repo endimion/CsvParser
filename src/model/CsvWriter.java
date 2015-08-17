@@ -24,8 +24,8 @@ public class CsvWriter {
 	 */
 	public synchronized void writeProdVectToCsv(String path, Vector<Product> prods){
 		
-		File csv = new File(FileHelper.getExecFolder() +fileSep+"output.csv"); 
-		
+		//File csv = new File(FileHelper.getExecFolder() +fileSep+"output.csv"); 
+		File csv = new File(path);
 		
 		try {
 		   

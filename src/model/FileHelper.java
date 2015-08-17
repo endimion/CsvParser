@@ -275,20 +275,23 @@ public class FileHelper {
 			InputStreamReader isr = new InputStreamReader(fis,"UTF-8");
 			BufferedReader br = new BufferedReader(isr); 
 			String line = br.readLine();
-			CategoryMap cm;
+			CategoryMap cm; //= new CategoryMap();
 			
 			while(line != null){
 				if( !line.equals("") && line.contains(";")&&line.split(";").length >=2){
 					String name = line.split(";")[0];
 					String rest = line.split(";")[1];
-					
 					cm = new CategoryMap();
+					
+					//System.out.println("Filehelper.getCategories " + name);
 					cm.setName(name);
 					cm.setMatchesArray(rest.split("&&"));
 					catSet.addMap(cm);
+					
 				}//end if line has a ;
 				line = br.readLine();
 			}//end of looping through the lines
+			
 			br.close();
 		}catch(Exception e){e.printStackTrace();}
 		
@@ -443,6 +446,28 @@ public class FileHelper {
 					out.close();
 				}catch (IOException e) { e.printStackTrace();}
 			}//if the product does not exist in the file we append it
+			else{
+				try{
+					Vector<Product> oldProds = 
+							ProductHelper.getOldProdFromFile(valid);
+					
+					FileOutputStream fos = new FileOutputStream(valid,false);
+					OutputStreamWriter out = new OutputStreamWriter(fos,"UTF-8");
+					
+					for(Product oldProd: oldProds){
+						if(prod.getModel().equals(oldProd.getModel())){
+							out.append(prod.toCsv()+"\n");
+						}//if we found the mactching product
+						else{
+							out.append(oldProd.toCsv()+"\n");
+						}
+					}//end of looping through the old products
+					
+					out.flush();
+					out.close();
+				}catch (IOException e) { e.printStackTrace();}
+				
+			}//end if the priduct EXISTS in teh file
 			 
 		}//end if we have a file which already contains the products parsed by the supplier
 		else{
@@ -548,42 +573,46 @@ public class FileHelper {
 		Vector<Double> prices = new Vector<Double>();
 		File priceConf = new File(getExecFolder()+fileSep+"config"+fileSep+"price.config");
 		
-		//System.out.println("Filehelper.getPriceConfig :: Fetching price!!");
-		try{
-			FileInputStream fis = new FileInputStream(priceConf);
-			InputStreamReader isr = new InputStreamReader(fis,"UTF-8");
-			BufferedReader br = new BufferedReader(isr); 
-			String line = br.readLine();
-			boolean foundSupplier = false;
-			
-			while(line!= null){
-				String[] parsedLine = line.split(";");
-				if(parsedLine.length != 8){
-					System.out.println("MalformedInput for line:: " + line);
-					br.close();
-					throw new MalformedInputException(0);
-				}//end inf the line has more or less than 8 elemets
+		if(supName.equals("")){
+			return prices;
+			}else{
+			//System.out.println("Filehelper.getPriceConfig :: Fetching price!!");
+			try{
+				FileInputStream fis = new FileInputStream(priceConf);
+				InputStreamReader isr = new InputStreamReader(fis,"UTF-8");
+				BufferedReader br = new BufferedReader(isr); 
+				String line = br.readLine();
+				boolean foundSupplier = false;
 				
-				if(parsedLine[0].equals(supName)){
-					foundSupplier = true;
-					int i = 0;
-					for(String item: parsedLine){
-						//try{
-							if(i != 0 && i < parsedLine.length-1) prices.add(Double.parseDouble(item.trim()));
-						//}catch(Exception e){br.close();e.printStackTrace();}
-						i++;
-					}//end of loo0ping through the elements of the parsedLine
-				}//end if the name of the line is the prefix of the supplier
-				line = br.readLine();
-			}//end of looping through the lines
-			br.close();
-			if(!foundSupplier){
-				//if the supplier price is not found an exception is thrown
-				throw new SupplierPriceNotFound("Exception Thrown - Supplier not found");
-			}//end if supplier is not found
-		}catch(IOException e){e.printStackTrace();}
-		
-		return prices;
+				while(line!= null){
+					String[] parsedLine = line.split(";");
+					if(parsedLine.length != 8){
+						System.out.println("MalformedInput for line:: " + line);
+						br.close();
+						throw new MalformedInputException(0);
+					}//end inf the line has more or less than 8 elemets
+					
+					if(parsedLine[0].equals(supName)){
+						foundSupplier = true;
+						int i = 0;
+						for(String item: parsedLine){
+							//try{
+								if(i != 0 && i < parsedLine.length-1) prices.add(Double.parseDouble(item.trim()));
+							//}catch(Exception e){br.close();e.printStackTrace();}
+							i++;
+						}//end of loo0ping through the elements of the parsedLine
+					}//end if the name of the line is the prefix of the supplier
+					line = br.readLine();
+				}//end of looping through the lines
+				br.close();
+				if(!foundSupplier){
+					//if the supplier price is not found an exception is thrown
+					throw new SupplierPriceNotFound("Exception Thrown - Supplier not found " + supName +"!");
+				}//end if supplier is not found
+			}catch(IOException e){e.printStackTrace();}
+			
+			return prices;
+		}//end if sup name is not emptu
 	}//end of getPriceConfig
 	
 

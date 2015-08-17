@@ -24,7 +24,7 @@ public class ProductHelper {
 	 * @param supplier, the name of the supplier providing the information
 	 * @return a Vector<Product> containing the parsed contents of the given file as Product objects
 	 */
-	public static Vector<Product> getProdFromFile(File f, String supplier){
+	public static Vector<Product> getProdFromFile(String stringF,File f, String supplier){
 		
 		Vector<Product> products = new Vector<Product>();
 		FileHelper fh = new FileHelper();
@@ -47,6 +47,8 @@ public class ProductHelper {
 			}//end if the supplier does not send info as xml
 			else{
 				XmlParser xmlp = new XmlParser();
+				//TODO
+				//= xmlp.getFileToVect(stringF, null, "product", keys);
 				rows = xmlp.getFileToVect(f, "product", keys);
 				//for(String key : keys){
 				//	System.out.println("ProductHelper.getProdFromFile  key: " + key );
@@ -91,7 +93,7 @@ public class ProductHelper {
 						
 						//Converting the foreign category read from the file to a native category
 						String foreignCat = r.getElement(sup.getCategory());
-						String nativeCat = catSet.getContainingCat(foreignCat);
+						String nativeCat = catSet.getContainingCat(foreignCat,false);
 						
 						//if the nativeCategory is not null then the product is added to the output csv file
 						if(nativeCat != null){
@@ -238,7 +240,7 @@ public class ProductHelper {
 					//else store the product to the not found file
 					if( !xPar.getValue("Code",prodN).equals("-1")){
 						
-						weight = xPar.getParAtt(xml, "ProductFeature",   "Presentation_Value", "Name", "Value", "Βάρος");
+						weight = xPar.getParAtt(null,xml, "ProductFeature",   "Presentation_Value", "Name", "Value", "Βάρος");
 						//System.out.println("finished "+ i + " found weight " + weight);
 						descPL =  xPar.getNode(xml, "SummaryDescription");
 						picPL = xPar.getNode(xml,"Product");
@@ -319,3 +321,5 @@ public class ProductHelper {
 	
 	
 }//end of class
+
+

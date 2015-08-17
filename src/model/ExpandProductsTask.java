@@ -32,7 +32,6 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 		File xml ;
 		String weight;
 		String descr = null;
-//		int i = 0;
 		FileHelper fh = new FileHelper();
 		NodeList descPL ;
 		NodeList picPL ;
@@ -43,7 +42,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 		
 		
 		Vector<Product> output = new Vector<Product>();
-		boolean add = false ;
+
 		
 		//create and intiallize the ftp connection to upload the files
 		FtpHelper ftp = new FtpHelper();
@@ -71,28 +70,22 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 			prod.setStatus("1" ); 
 			prod.setTax_class("Κλάση Ι (23% ~ 16%)");
 			
+			//we update the price of the product
 			try{
-				Double var1 = FileHelper.getPriceConfig(supplier).get(0);
-				Double var2 = FileHelper.getPriceConfig(supplier).get(1);
-				Double var3 = FileHelper.getPriceConfig(supplier).get(2);
-				Double var4 = FileHelper.getPriceConfig(supplier).get(3);
-				Double var5 = FileHelper.getPriceConfig(supplier).get(4);
-				Double kiloP = FileHelper.getPriceConfig(supplier).get(5);
-				prod.setDoublePrice(prod.getPrice(var1,var2,var3,var4,var5,kiloP,
-															FileHelper.getRemoveVAT(supplier)));
+				updatePrice(supplier, prod);
 			}catch(SupplierPriceNotFound sE){
 				updateMessage("No price formula was found for supplier " + supplier + " abording..");
 				Thread.sleep(8000);
 				sE.printStackTrace();
 				break;
 			}//end if the supplier's price formula is not give and we should stop processing
-
+		
 			
 			if(!isPreviouslyParsed(prod,oldProdsMap)){
 				
 					if(!fh.belongs(prod.getModel() , FileHelper.getExecFolder() +fileSep+"valid.prod")){
 						try{
-							add = true;
+							
 							xml = ice.saveXmlToFile(FileHelper.getExecFolder()+fileSep+"iceXml", ice.getProductXml(prod.getEan()));
 							if(xml == null){System.out.println("ExpandProduuctsTask:: iceXml IS NULL!!!");}
 							Node prodN =  xPar.getNode(xml, "Product").item(0);
@@ -100,15 +93,10 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 							//check if the xml file we get contains any info.
 							//else store the product to the not found file
 							if( !xPar.getValue("Code",prodN).equals("-1")){
-								if(xPar.getValue("ErrorMessage",prodN).contains("IP address is not included")){
-									progressMessage += "\n IP is not on ICECAT";
-									updateMessage(progressMessage);
-								}else{
-									progressMessage += "\n Product found in IceCat!";
-									updateMessage(progressMessage);
-								}//end if the errorMessage does not inform us that the IP is not on icecat
-								
-								weight = xPar.getParAtt(xml, "ProductFeature",   "Presentation_Value", "Name", "Value", "Βάρος");
+								progressMessage += "\n Product found in IceCat!";
+								updateMessage(progressMessage);
+							
+								weight = xPar.getParAtt(null,xml, "ProductFeature",   "Presentation_Value", "Name", "Value", "Βάρος");
 								//System.out.println("finished "+ i + " found weight " + weight);
 								descPL =  xPar.getNode(xml, "SummaryDescription");
 								picPL = xPar.getNode(xml,"Product");
@@ -120,7 +108,7 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 									
 									 picURL =  xPar.getValue("HighPic",picPL.item(0));
 									try{
-										Node extraPicN = xPar.getNode(xml, "ProductPicture").item(0);
+										Node extraPicN = xPar.getNode( xml,"ProductPicture").item(0);
 										extraPicURL= xPar.getValue("Pic",extraPicN);
 									}catch(Exception e){e.printStackTrace(); 
 										System.out.println("ExpandProducts.call:: additional picture not found");
@@ -149,6 +137,12 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 									prod.setWeight("10kg");
 								}else{
 									prod.setWeight(weight);
+									//if a weight value was found on icecat we should
+									//re-calculate the price of the product
+									try{
+										updatePrice(supplier, prod);
+									}catch(SupplierPriceNotFound e){e.printStackTrace();}
+								
 								}//end of setting the weight of an object
 			
 								if(descPL == null || descr == null) {
@@ -193,36 +187,49 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 				
 							
 								fh.saveValidProd(prod.getModel());
-							}else{
-								progressMessage += "\n Product  NOT found in IceCat!";
-								updateMessage(progressMessage);
+							}else{ 
+								//If the iceCat xml code is equal to -1, i.e. product not found on icecat
+								if(xPar.getValue("ErrorMessage",prodN).contains("IP address is not included")){
+									progressMessage += "\n IP is not on ICECAT!!!";
+									updateMessage(progressMessage);
+									Thread.sleep(8000);
+									 //break; // inform the user and aboard
+								}else{
+									progressMessage += "\n Product  NOT found in IceCat!";
+									updateMessage(progressMessage);
+								}
 								
 								String[] nameArr = prod.getPic().split("/");
 								if(prod.getPic() != null && !prod.getPic().equals("") && nameArr.length >= 1){
 									System.out.println("ExpandProductsTask:: i need no icecate downloading...");
 									picName = nameArr[nameArr.length -1];
 									picURL = prod.getPic();
+									
+									if(extraPic != null && !extraPic.equals("")){
+										nameArr = prod.getPic().split("/");
+										extraPic = nameArr[nameArr.length -1];
+										extraPicURL = prod.getAddPic();
+									}//end if extraPic is not null or empty
+	
 									saveAndUploadPic(picName, extraPic, picURL, 
 											extraPicURL, prod, ice, ftp);
 									//once it is uploaded then we store to the product object the correct path for the server
-									//prod.setPic("csvpic/" +prod.getModel().trim() +".jpg" );
+									prod.setPic("csvpic/" +prod.getModel().trim() +".jpg" );
 								}//end if the product has a picture in it
 								
 								
 								fh.saveNotFound(prod ,supplier);
-								//add = false; //if the iceCatXml does not contain the file it
-														 //should not be added
 							}//end if the product was not found inside ICeCAT
-							
-							//i++;
+
 						}catch(Exception e){ 	e.printStackTrace();  	}//end of catching the exception
 						
 						
-						if(add && prod.getDoublePrice() >= 0){ 
+						if(prod.getDoublePrice() >= 0){ 
 							output.add(prod); //ADD the product to the output
-							fh.saveParsedProduct(supplier, prod);
-							//System.out.println("ProductHelper.expandProducts processed :  ADDED" + prod.toString(supplier) );
 						}
+						fh.saveParsedProduct(supplier, prod);
+						System.out.println("ProductHelper.expandProducts processed :  ADDED" + prod.toString(supplier) );
+						
 					}//end if the product does NOT exist in the vaildate file 
 			}//end if the product has NOT been parsed by the program in a previous run
 			else{
@@ -317,8 +324,22 @@ public class ExpandProductsTask extends Task<Vector<Product>> {
 		
 	}//end if isPeriviouslyParsed
 	
-	
-	
+	/**
+	 * Updates the double price of the product 
+	 *  (after reading weight from icecat and so on)
+	 * @param supplier
+	 * @param prod
+	 */
+	private void updatePrice(String supplier, Product prod) throws SupplierPriceNotFound{
+			Double var1 = FileHelper.getPriceConfig(supplier).get(0);
+			Double var2 = FileHelper.getPriceConfig(supplier).get(1);
+			Double var3 = FileHelper.getPriceConfig(supplier).get(2);
+			Double var4 = FileHelper.getPriceConfig(supplier).get(3);
+			Double var5 = FileHelper.getPriceConfig(supplier).get(4);
+			Double kiloP = FileHelper.getPriceConfig(supplier).get(5);
+			prod.setDoublePrice(prod.getPrice(var1,var2,var3,var4,var5,kiloP,
+														FileHelper.getRemoveVAT(supplier)));
+	}//end of updatePrice
 	
 	
 }//end of class

@@ -89,7 +89,9 @@ public class ProcessAllSupplierController {
 					String user = supl.getXmlUser();
 					SupplierXmlDownloader sxd = 
 							new SupplierXmlDownloader(user, pass, url);
-				
+					
+					//String xmlFileString = sxd.getUrlAsString();
+					
             		ProductProcessor pp = new ProductProcessor(f, supl.getName());	
 					processProductsTasks.add(pp.getMainTask(sxd));
 				 
